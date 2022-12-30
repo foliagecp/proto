@@ -1,0 +1,96 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbcmdb;
+
+option java_outer_classname = "Core";
+option java_package = "org.listware.sdk.pbcmdb";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbcmdb";
+
+import "pbtypes/pbfunction.proto";
+
+enum Method {
+	CREATE = 0;
+	CREATE_CHILD = 1;
+	UPDATE = 2;
+	DELETE = 3;
+	CREATE_TRIGGER = 4;
+	DELETE_TRIGGER = 5;
+}
+
+message Trigger {
+	string type = 1;
+	pbtypes.FunctionType function_type = 2 [json_name = "function_type"];
+}
+
+message ObjectMessage {
+	Method method = 1;
+	string type = 2;
+	string name = 3;
+	bytes payload = 4;
+
+	// add links from func to object uuid
+	repeated pbtypes.FunctionMessage functions = 5;
+}
+
+message TypeMessage {
+	Method method = 1;
+	string name = 2;
+	bytes payload = 3;
+
+	// add links from func to object uuid
+	repeated pbtypes.FunctionMessage functions = 4;
+}
+
+message LinkMessage {
+	Method method = 1;
+	string name = 2;
+	string type = 3;
+	string to = 4;
+	bytes payload = 5;
+}
+
+message RegisterTypeMessage {
+	string id = 1;
+	TypeMessage type_message = 2;
+}
+
+message RegisterObjectMessage {
+	string id = 1;
+	ObjectMessage object_message = 2;
+}
+
+message RegisterLinkMessage {
+	string id = 1;
+	LinkMessage link_message = 2;
+}
+
+message RegisterFunctionMessage {
+	string id = 1;
+	pbtypes.FunctionMessage function_message = 2;
+}
+
+message RegisterMessage {
+	repeated RegisterTypeMessage type_messages = 1;
+	repeated RegisterObjectMessage object_messages = 2;
+	repeated RegisterLinkMessage link_messages = 3;
+	repeated RegisterFunctionMessage function_messages = 4;
+}
+
+message Meta {
+	string key = 1;
+	string id = 2;
+	string rev = 3;
+}
+
+message Request {
+	string key = 1;
+	string collection = 2;
+	bytes payload = 3;
+}
+
+message Response {
+	Meta meta = 1;
+	bytes payload = 2;
+}

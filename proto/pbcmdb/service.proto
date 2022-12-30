@@ -1,0 +1,46 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbcmdb;
+
+option java_outer_classname = "Service";
+option java_package = "org.listware.sdk.pbcmdb";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbcmdb";
+
+import "pbcmdb/pbcmdb.proto";
+
+service VertexService {
+	rpc Create(Request) returns (Response) {}
+	rpc Read(Request) returns (Response) {}
+	rpc Update(Request) returns (Response) {}
+	rpc Remove(Request) returns (Response) {}
+}
+
+service EdgeService {
+	rpc Create(Request) returns (Response) {}
+	rpc Read(Request) returns (Response) {}
+	rpc Update(Request) returns (Response) {}
+	rpc Remove(Request) returns (Response) {}
+}
+
+service ObjectService {
+	rpc Create(Request) returns (Response) {}
+	rpc Read(Request) returns (Response) {}
+	rpc Update(Request) returns (Response) {}
+	rpc Remove(Request) returns (Response) {}
+}
+
+service TypeService {
+	rpc Create(Request) returns (Response) {}
+	rpc Read(Request) returns (Response) {}
+	rpc Update(Request) returns (Response) {}
+	rpc Remove(Request) returns (Response) {}
+}
+
+service LinkService {
+	rpc Create(Request) returns (Response) {}
+	rpc Read(Request) returns (Response) {}
+	rpc Update(Request) returns (Response) {}
+	rpc Remove(Request) returns (Response) {}
+}

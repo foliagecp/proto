@@ -1,0 +1,41 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbcmdb.pbqdsl;
+
+option java_outer_classname = "QDSL";
+option java_package = "org.listware.sdk.pbcmdb.pbqdsl";
+option go_package = "git.fg-tech.ru/flistware/proto/sdk/pbcmdb/pbqdsl";
+
+message Options {
+	bool id = 1;
+	bool key = 2;
+	bool name = 3;
+	bool type = 4;
+	bool object = 5;
+	bool link = 6;
+	bool linkId = 7;
+	bool path = 8;
+	bool remove = 9;
+}
+
+message Query {
+	string query = 1;
+	Options options = 2;
+}
+
+message Element {
+	string id = 1;
+	string key = 2;
+	string name = 3;
+	string type = 4;
+	bytes object = 5;
+	string linkId = 6;
+	bytes link = 7;
+	bytes path = 8;
+}
+
+message Elements {
+	repeated Element Elements = 1;
+}

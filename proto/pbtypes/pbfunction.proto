@@ -1,0 +1,66 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbtypes;
+
+option java_outer_classname = "Functions";
+option java_package = "org.listware.sdk";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbtypes";
+
+import "google/protobuf/any.proto";
+
+// Function - is a CMDB object which represent Flink's stateful function
+message Function {
+	FunctionType type = 1 [json_name="function_type"];
+	string description = 2;
+	repeated FunctionParameter params = 3;
+}
+
+message FunctionParameter {
+	string type = 1;
+	string name = 2;
+	google.protobuf.Any default = 3;
+}
+
+message FunctionType {
+	string namespace = 1;
+	string type = 2;
+}
+
+message ReplyEgress {
+	string namespace = 1;
+	string topic = 2;
+	string id = 3;
+}
+
+message FunctionResult {
+	ReplyEgress reply_egress = 1;
+	bool complete = 2;
+	string error = 3;
+}
+
+message FunctionContext {
+	FunctionType function_type = 1 [json_name="function_type"];
+	string id = 2;
+	bytes value = 3;
+	FunctionContext callback = 4;
+	string url = 5;
+	bytes context = 6;
+	ReplyEgress reply_egress = 7 [json_name="reply_egress"];
+}
+
+// FunctionTypeRoute - is a LinkMessage from cmdb.Type to Function
+message FunctionTypeRoute {
+	bool grounded = 1;
+}
+
+// FunctionRoute - is a LinkMessage from cmdb.Object to Function
+message FunctionRoute {
+	string url = 1;
+}
+
+message FunctionMessage {
+	string type = 1;
+	FunctionRoute route = 2;
+}

@@ -1,0 +1,15 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbcmdb.pbqdsl;
+
+option java_outer_classname = "Service";
+option java_package = "org.listware.sdk.pbcmdb.pbqdsl";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbcmdb/pbqdsl";
+
+import "pbcmdb/pbqdsl/pbqdsl.proto";
+
+service QdslService {
+	rpc Qdsl(Query) returns (Elements) {}
+}
