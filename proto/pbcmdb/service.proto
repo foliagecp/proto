@@ -23,24 +23,3 @@ service EdgeService {
 	rpc Update(Request) returns (Response) {}
 	rpc Remove(Request) returns (Response) {}
 }
-
-service ObjectService {
-	rpc Create(Request) returns (Response) {}
-	rpc Read(Request) returns (Response) {}
-	rpc Update(Request) returns (Response) {}
-	rpc Remove(Request) returns (Response) {}
-}
-
-service TypeService {
-	rpc Create(Request) returns (Response) {}
-	rpc Read(Request) returns (Response) {}
-	rpc Update(Request) returns (Response) {}
-	rpc Remove(Request) returns (Response) {}
-}
-
-service LinkService {
-	rpc Create(Request) returns (Response) {}
-	rpc Read(Request) returns (Response) {}
-	rpc Update(Request) returns (Response) {}
-	rpc Remove(Request) returns (Response) {}
-}

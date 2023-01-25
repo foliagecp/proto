@@ -1,0 +1,21 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbcmdb.pbfinder;
+
+option java_outer_classname = "Finder";
+option java_package = "org.listware.sdk.pbcmdb.pbfinder";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbcmdb/pbfinder";
+
+import "pbcmdb/pbcmdb.proto";
+
+message Request {
+	string from = 1;
+	string to = 2;
+	string name = 3;
+}
+
+message Response {
+	repeated pbcmdb.Response Links = 1;
+}

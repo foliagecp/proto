@@ -1,0 +1,22 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbtypes;
+
+option java_outer_classname = "Result";
+option java_package = "org.listware.sdk";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbtypes";
+
+message ReplyResult {
+	string namespace = 1;
+	string topic = 2;
+	string id = 3;
+	string key = 4;
+}
+
+message FunctionResult {
+	ReplyResult reply_egress = 1;
+	bool complete = 2;
+	repeated string errors = 3;
+}

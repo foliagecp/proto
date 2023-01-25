@@ -1,0 +1,15 @@
+/* Copyright 2022 Listware */
+
+syntax = "proto3";
+
+package org.listware.sdk.pbcmdb.pbfinder;
+
+option java_outer_classname = "Service";
+option java_package = "org.listware.sdk.pbcmdb.pbfinder";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbcmdb/pbfinder";
+
+import "pbcmdb/pbfinder/pbfinder.proto";
+
+service FinderService {
+	rpc Links(Request) returns (Response) {}
+}

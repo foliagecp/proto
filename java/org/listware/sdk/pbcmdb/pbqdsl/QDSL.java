@@ -3852,10 +3852,10 @@ public final class QDSL {
       "\014\n\004name\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\022\016\n\006object\030\005 " +
       "\001(\014\022\016\n\006linkId\030\006 \001(\t\022\014\n\004link\030\007 \001(\014\022\014\n\004pat" +
       "h\030\010 \001(\014\"E\n\010Elements\0229\n\010Elements\030\001 \003(\0132\'." +
-      "org.listware.sdk.pbcmdb.pbqdsl.ElementBX" +
-      "\n\036org.listware.sdk.pbcmdb.pbqdslB\004QDSLZ0" +
-      "git.fg-tech.ru/flistware/proto/sdk/pbcmd" +
-      "b/pbqdslb\006proto3"
+      "org.listware.sdk.pbcmdb.pbqdsl.ElementBW" +
+      "\n\036org.listware.sdk.pbcmdb.pbqdslB\004QDSLZ/" +
+      "git.fg-tech.ru/listware/proto/sdk/pbcmdb" +
+      "/pbqdslb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -9,7 +9,6 @@
 package pbqdsl
 
 import (
-	pbqdsl "git.fg-tech.ru/flistware/proto/sdk/pbcmdb/pbqdsl"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -47,8 +46,8 @@ var file_pbcmdb_pbqdsl_service_proto_rawDesc = []byte{
 }
 
 var file_pbcmdb_pbqdsl_service_proto_goTypes = []interface{}{
-	(*pbqdsl.Query)(nil),    // 0: org.listware.sdk.pbcmdb.pbqdsl.Query
-	(*pbqdsl.Elements)(nil), // 1: org.listware.sdk.pbcmdb.pbqdsl.Elements
+	(*Query)(nil),    // 0: org.listware.sdk.pbcmdb.pbqdsl.Query
+	(*Elements)(nil), // 1: org.listware.sdk.pbcmdb.pbqdsl.Elements
 }
 var file_pbcmdb_pbqdsl_service_proto_depIdxs = []int32{
 	0, // 0: org.listware.sdk.pbcmdb.pbqdsl.QdslService.Qdsl:input_type -> org.listware.sdk.pbcmdb.pbqdsl.Query
@@ -65,6 +64,7 @@ func file_pbcmdb_pbqdsl_service_proto_init() {
 	if File_pbcmdb_pbqdsl_service_proto != nil {
 		return
 	}
+	file_pbcmdb_pbqdsl_pbqdsl_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

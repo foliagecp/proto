@@ -41,35 +41,9 @@ public final class Service {
       ".listware.sdk.pbcmdb.Request\032!.org.listw" +
       "are.sdk.pbcmdb.Response\"\000\022O\n\006Remove\022 .or" +
       "g.listware.sdk.pbcmdb.Request\032!.org.list" +
-      "ware.sdk.pbcmdb.Response\"\0002\321\002\n\rObjectSer" +
-      "vice\022O\n\006Create\022 .org.listware.sdk.pbcmdb" +
-      ".Request\032!.org.listware.sdk.pbcmdb.Respo" +
-      "nse\"\000\022M\n\004Read\022 .org.listware.sdk.pbcmdb." +
-      "Request\032!.org.listware.sdk.pbcmdb.Respon" +
-      "se\"\000\022O\n\006Update\022 .org.listware.sdk.pbcmdb" +
-      ".Request\032!.org.listware.sdk.pbcmdb.Respo" +
-      "nse\"\000\022O\n\006Remove\022 .org.listware.sdk.pbcmd" +
-      "b.Request\032!.org.listware.sdk.pbcmdb.Resp" +
-      "onse\"\0002\317\002\n\013TypeService\022O\n\006Create\022 .org.l" +
-      "istware.sdk.pbcmdb.Request\032!.org.listwar" +
-      "e.sdk.pbcmdb.Response\"\000\022M\n\004Read\022 .org.li" +
-      "stware.sdk.pbcmdb.Request\032!.org.listware" +
-      ".sdk.pbcmdb.Response\"\000\022O\n\006Update\022 .org.l" +
-      "istware.sdk.pbcmdb.Request\032!.org.listwar" +
-      "e.sdk.pbcmdb.Response\"\000\022O\n\006Remove\022 .org." +
-      "listware.sdk.pbcmdb.Request\032!.org.listwa" +
-      "re.sdk.pbcmdb.Response\"\0002\317\002\n\013LinkService" +
-      "\022O\n\006Create\022 .org.listware.sdk.pbcmdb.Req" +
-      "uest\032!.org.listware.sdk.pbcmdb.Response\"" +
-      "\000\022M\n\004Read\022 .org.listware.sdk.pbcmdb.Requ" +
-      "est\032!.org.listware.sdk.pbcmdb.Response\"\000" +
-      "\022O\n\006Update\022 .org.listware.sdk.pbcmdb.Req" +
-      "uest\032!.org.listware.sdk.pbcmdb.Response\"" +
-      "\000\022O\n\006Remove\022 .org.listware.sdk.pbcmdb.Re" +
-      "quest\032!.org.listware.sdk.pbcmdb.Response" +
-      "\"\000BL\n\027org.listware.sdk.pbcmdbB\007ServiceZ(" +
-      "git.fg-tech.ru/listware/proto/sdk/pbcmdb" +
-      "b\006proto3"
+      "ware.sdk.pbcmdb.Response\"\000BL\n\027org.listwa" +
+      "re.sdk.pbcmdbB\007ServiceZ(git.fg-tech.ru/l" +
+      "istware/proto/sdk/pbcmdbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

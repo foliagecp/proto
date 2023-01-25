@@ -1,6 +1,4 @@
-/* Copyright 2022 Listware */
-
-syntax = "proto3";
+/* Copyright 2022 Listware */ syntax = "proto3";
 
 package org.listware.sdk.pbcmdb;
 
@@ -17,11 +15,6 @@ enum Method {
 	DELETE = 3;
 	CREATE_TRIGGER = 4;
 	DELETE_TRIGGER = 5;
-}
-
-message Trigger {
-	string type = 1;
-	pbtypes.FunctionType function_type = 2 [json_name = "function_type"];
 }
 
 message ObjectMessage {
@@ -51,31 +44,9 @@ message LinkMessage {
 	bytes payload = 5;
 }
 
-message RegisterTypeMessage {
-	string id = 1;
-	TypeMessage type_message = 2;
-}
-
-message RegisterObjectMessage {
-	string id = 1;
-	ObjectMessage object_message = 2;
-}
-
-message RegisterLinkMessage {
-	string id = 1;
-	LinkMessage link_message = 2;
-}
-
-message RegisterFunctionMessage {
-	string id = 1;
-	pbtypes.FunctionMessage function_message = 2;
-}
-
-message RegisterMessage {
-	repeated RegisterTypeMessage type_messages = 1;
-	repeated RegisterObjectMessage object_messages = 2;
-	repeated RegisterLinkMessage link_messages = 3;
-	repeated RegisterFunctionMessage function_messages = 4;
+message Trigger {
+	string type = 1;
+	pbtypes.FunctionType function_type = 2 [json_name = "function_type"];
 }
 
 message Meta {
@@ -93,4 +64,37 @@ message Request {
 message Response {
 	Meta meta = 1;
 	bytes payload = 2;
+}
+
+message RegisterTypeMessage {
+	string id = 1;
+	bool async = 2;
+	bool router = 3;
+	TypeMessage type_message = 4;
+}
+
+message RegisterObjectMessage {
+	string id = 1;
+	bool async = 2;
+	bool router = 3;
+	ObjectMessage object_message = 4;
+}
+
+message RegisterLinkMessage {
+	string id = 1;
+	bool async = 2;
+	LinkMessage link_message = 4;
+}
+
+message RegisterFunctionMessage {
+	string id = 1;
+	bool async = 2;
+	pbtypes.FunctionMessage function_message = 4;
+}
+
+message RegisterMessage {
+	repeated RegisterTypeMessage type_messages = 1;
+	repeated RegisterObjectMessage object_messages = 2;
+	repeated RegisterLinkMessage link_messages = 3;
+	repeated RegisterFunctionMessage function_messages = 4;
 }

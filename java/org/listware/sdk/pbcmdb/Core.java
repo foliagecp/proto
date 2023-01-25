@@ -148,749 +148,6 @@ public final class Core {
     // @@protoc_insertion_point(enum_scope:org.listware.sdk.pbcmdb.Method)
   }
 
-  public interface TriggerOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.Trigger)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string type = 1;</code>
-     */
-    java.lang.String getType();
-    /**
-     * <code>string type = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getTypeBytes();
-
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-     */
-    boolean hasFunctionType();
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-     */
-    org.listware.sdk.Functions.FunctionType getFunctionType();
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-     */
-    org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder();
-  }
-  /**
-   * Protobuf type {@code org.listware.sdk.pbcmdb.Trigger}
-   */
-  public  static final class Trigger extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.Trigger)
-      TriggerOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Trigger.newBuilder() to construct.
-    private Trigger(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Trigger() {
-      type_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Trigger(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              type_ = s;
-              break;
-            }
-            case 18: {
-              org.listware.sdk.Functions.FunctionType.Builder subBuilder = null;
-              if (functionType_ != null) {
-                subBuilder = functionType_.toBuilder();
-              }
-              functionType_ = input.readMessage(org.listware.sdk.Functions.FunctionType.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(functionType_);
-                functionType_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              org.listware.sdk.pbcmdb.Core.Trigger.class, org.listware.sdk.pbcmdb.Core.Trigger.Builder.class);
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object type_;
-    /**
-     * <code>string type = 1;</code>
-     */
-    public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string type = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FUNCTION_TYPE_FIELD_NUMBER = 2;
-    private org.listware.sdk.Functions.FunctionType functionType_;
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-     */
-    public boolean hasFunctionType() {
-      return functionType_ != null;
-    }
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-     */
-    public org.listware.sdk.Functions.FunctionType getFunctionType() {
-      return functionType_ == null ? org.listware.sdk.Functions.FunctionType.getDefaultInstance() : functionType_;
-    }
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-     */
-    public org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder() {
-      return getFunctionType();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
-      }
-      if (functionType_ != null) {
-        output.writeMessage(2, getFunctionType());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
-      }
-      if (functionType_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getFunctionType());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.Trigger)) {
-        return super.equals(obj);
-      }
-      org.listware.sdk.pbcmdb.Core.Trigger other = (org.listware.sdk.pbcmdb.Core.Trigger) obj;
-
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (hasFunctionType() != other.hasFunctionType()) return false;
-      if (hasFunctionType()) {
-        if (!getFunctionType()
-            .equals(other.getFunctionType())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
-      if (hasFunctionType()) {
-        hash = (37 * hash) + FUNCTION_TYPE_FIELD_NUMBER;
-        hash = (53 * hash) + getFunctionType().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.Trigger prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code org.listware.sdk.pbcmdb.Trigger}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.Trigger)
-        org.listware.sdk.pbcmdb.Core.TriggerOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                org.listware.sdk.pbcmdb.Core.Trigger.class, org.listware.sdk.pbcmdb.Core.Trigger.Builder.class);
-      }
-
-      // Construct using org.listware.sdk.pbcmdb.Core.Trigger.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        type_ = "";
-
-        if (functionTypeBuilder_ == null) {
-          functionType_ = null;
-        } else {
-          functionType_ = null;
-          functionTypeBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.Trigger getDefaultInstanceForType() {
-        return org.listware.sdk.pbcmdb.Core.Trigger.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.Trigger build() {
-        org.listware.sdk.pbcmdb.Core.Trigger result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.Trigger buildPartial() {
-        org.listware.sdk.pbcmdb.Core.Trigger result = new org.listware.sdk.pbcmdb.Core.Trigger(this);
-        result.type_ = type_;
-        if (functionTypeBuilder_ == null) {
-          result.functionType_ = functionType_;
-        } else {
-          result.functionType_ = functionTypeBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.listware.sdk.pbcmdb.Core.Trigger) {
-          return mergeFrom((org.listware.sdk.pbcmdb.Core.Trigger)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.Trigger other) {
-        if (other == org.listware.sdk.pbcmdb.Core.Trigger.getDefaultInstance()) return this;
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          onChanged();
-        }
-        if (other.hasFunctionType()) {
-          mergeFunctionType(other.getFunctionType());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        org.listware.sdk.pbcmdb.Core.Trigger parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.listware.sdk.pbcmdb.Core.Trigger) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object type_ = "";
-      /**
-       * <code>string type = 1;</code>
-       */
-      public java.lang.String getType() {
-        java.lang.Object ref = type_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string type = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTypeBytes() {
-        java.lang.Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string type = 1;</code>
-       */
-      public Builder setType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string type = 1;</code>
-       */
-      public Builder clearType() {
-        
-        type_ = getDefaultInstance().getType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string type = 1;</code>
-       */
-      public Builder setTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-
-      private org.listware.sdk.Functions.FunctionType functionType_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder> functionTypeBuilder_;
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public boolean hasFunctionType() {
-        return functionTypeBuilder_ != null || functionType_ != null;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public org.listware.sdk.Functions.FunctionType getFunctionType() {
-        if (functionTypeBuilder_ == null) {
-          return functionType_ == null ? org.listware.sdk.Functions.FunctionType.getDefaultInstance() : functionType_;
-        } else {
-          return functionTypeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public Builder setFunctionType(org.listware.sdk.Functions.FunctionType value) {
-        if (functionTypeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          functionType_ = value;
-          onChanged();
-        } else {
-          functionTypeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public Builder setFunctionType(
-          org.listware.sdk.Functions.FunctionType.Builder builderForValue) {
-        if (functionTypeBuilder_ == null) {
-          functionType_ = builderForValue.build();
-          onChanged();
-        } else {
-          functionTypeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public Builder mergeFunctionType(org.listware.sdk.Functions.FunctionType value) {
-        if (functionTypeBuilder_ == null) {
-          if (functionType_ != null) {
-            functionType_ =
-              org.listware.sdk.Functions.FunctionType.newBuilder(functionType_).mergeFrom(value).buildPartial();
-          } else {
-            functionType_ = value;
-          }
-          onChanged();
-        } else {
-          functionTypeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public Builder clearFunctionType() {
-        if (functionTypeBuilder_ == null) {
-          functionType_ = null;
-          onChanged();
-        } else {
-          functionType_ = null;
-          functionTypeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public org.listware.sdk.Functions.FunctionType.Builder getFunctionTypeBuilder() {
-        
-        onChanged();
-        return getFunctionTypeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      public org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder() {
-        if (functionTypeBuilder_ != null) {
-          return functionTypeBuilder_.getMessageOrBuilder();
-        } else {
-          return functionType_ == null ?
-              org.listware.sdk.Functions.FunctionType.getDefaultInstance() : functionType_;
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder> 
-          getFunctionTypeFieldBuilder() {
-        if (functionTypeBuilder_ == null) {
-          functionTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder>(
-                  getFunctionType(),
-                  getParentForChildren(),
-                  isClean());
-          functionType_ = null;
-        }
-        return functionTypeBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.Trigger)
-    }
-
-    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.Trigger)
-    private static final org.listware.sdk.pbcmdb.Core.Trigger DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.Trigger();
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.Trigger getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Trigger>
-        PARSER = new com.google.protobuf.AbstractParser<Trigger>() {
-      @java.lang.Override
-      public Trigger parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Trigger(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Trigger> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Trigger> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public org.listware.sdk.pbcmdb.Core.Trigger getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ObjectMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.ObjectMessage)
       com.google.protobuf.MessageOrBuilder {
@@ -4397,47 +3654,47 @@ public final class Core {
 
   }
 
-  public interface RegisterTypeMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterTypeMessage)
+  public interface TriggerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.Trigger)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1;</code>
+     * <code>string type = 1;</code>
      */
-    java.lang.String getId();
+    java.lang.String getType();
     /**
-     * <code>string id = 1;</code>
+     * <code>string type = 1;</code>
      */
     com.google.protobuf.ByteString
-        getIdBytes();
+        getTypeBytes();
 
     /**
-     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
      */
-    boolean hasTypeMessage();
+    boolean hasFunctionType();
     /**
-     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
      */
-    org.listware.sdk.pbcmdb.Core.TypeMessage getTypeMessage();
+    org.listware.sdk.Functions.FunctionType getFunctionType();
     /**
-     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
      */
-    org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder getTypeMessageOrBuilder();
+    org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder();
   }
   /**
-   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterTypeMessage}
+   * Protobuf type {@code org.listware.sdk.pbcmdb.Trigger}
    */
-  public  static final class RegisterTypeMessage extends
+  public  static final class Trigger extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterTypeMessage)
-      RegisterTypeMessageOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.Trigger)
+      TriggerOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use RegisterTypeMessage.newBuilder() to construct.
-    private RegisterTypeMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Trigger.newBuilder() to construct.
+    private Trigger(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RegisterTypeMessage() {
-      id_ = "";
+    private Trigger() {
+      type_ = "";
     }
 
     @java.lang.Override
@@ -4445,7 +3702,7 @@ public final class Core {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RegisterTypeMessage(
+    private Trigger(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4467,18 +3724,18 @@ public final class Core {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              id_ = s;
+              type_ = s;
               break;
             }
             case 18: {
-              org.listware.sdk.pbcmdb.Core.TypeMessage.Builder subBuilder = null;
-              if (typeMessage_ != null) {
-                subBuilder = typeMessage_.toBuilder();
+              org.listware.sdk.Functions.FunctionType.Builder subBuilder = null;
+              if (functionType_ != null) {
+                subBuilder = functionType_.toBuilder();
               }
-              typeMessage_ = input.readMessage(org.listware.sdk.pbcmdb.Core.TypeMessage.parser(), extensionRegistry);
+              functionType_ = input.readMessage(org.listware.sdk.Functions.FunctionType.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(typeMessage_);
-                typeMessage_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(functionType_);
+                functionType_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4504,70 +3761,70 @@ public final class Core {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor;
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_fieldAccessorTable
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.class, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder.class);
+              org.listware.sdk.pbcmdb.Core.Trigger.class, org.listware.sdk.pbcmdb.Core.Trigger.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object type_;
     /**
-     * <code>string id = 1;</code>
+     * <code>string type = 1;</code>
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        type_ = s;
         return s;
       }
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>string type = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getTypeBytes() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int TYPE_MESSAGE_FIELD_NUMBER = 2;
-    private org.listware.sdk.pbcmdb.Core.TypeMessage typeMessage_;
+    public static final int FUNCTION_TYPE_FIELD_NUMBER = 2;
+    private org.listware.sdk.Functions.FunctionType functionType_;
     /**
-     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
      */
-    public boolean hasTypeMessage() {
-      return typeMessage_ != null;
+    public boolean hasFunctionType() {
+      return functionType_ != null;
     }
     /**
-     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
      */
-    public org.listware.sdk.pbcmdb.Core.TypeMessage getTypeMessage() {
-      return typeMessage_ == null ? org.listware.sdk.pbcmdb.Core.TypeMessage.getDefaultInstance() : typeMessage_;
+    public org.listware.sdk.Functions.FunctionType getFunctionType() {
+      return functionType_ == null ? org.listware.sdk.Functions.FunctionType.getDefaultInstance() : functionType_;
     }
     /**
-     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
      */
-    public org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder getTypeMessageOrBuilder() {
-      return getTypeMessage();
+    public org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder() {
+      return getFunctionType();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4584,11 +3841,11 @@ public final class Core {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
       }
-      if (typeMessage_ != null) {
-        output.writeMessage(2, getTypeMessage());
+      if (functionType_ != null) {
+        output.writeMessage(2, getFunctionType());
       }
       unknownFields.writeTo(output);
     }
@@ -4599,12 +3856,12 @@ public final class Core {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
       }
-      if (typeMessage_ != null) {
+      if (functionType_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTypeMessage());
+          .computeMessageSize(2, getFunctionType());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4616,17 +3873,17 @@ public final class Core {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterTypeMessage)) {
+      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.Trigger)) {
         return super.equals(obj);
       }
-      org.listware.sdk.pbcmdb.Core.RegisterTypeMessage other = (org.listware.sdk.pbcmdb.Core.RegisterTypeMessage) obj;
+      org.listware.sdk.pbcmdb.Core.Trigger other = (org.listware.sdk.pbcmdb.Core.Trigger) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasTypeMessage() != other.hasTypeMessage()) return false;
-      if (hasTypeMessage()) {
-        if (!getTypeMessage()
-            .equals(other.getTypeMessage())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (hasFunctionType() != other.hasFunctionType()) return false;
+      if (hasFunctionType()) {
+        if (!getFunctionType()
+            .equals(other.getFunctionType())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -4639,80 +3896,80 @@ public final class Core {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasTypeMessage()) {
-        hash = (37 * hash) + TYPE_MESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getTypeMessage().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      if (hasFunctionType()) {
+        hash = (37 * hash) + FUNCTION_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getFunctionType().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(byte[] data)
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(java.io.InputStream input)
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseDelimitedFrom(java.io.InputStream input)
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseDelimitedFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+    public static org.listware.sdk.pbcmdb.Core.Trigger parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4725,7 +3982,7 @@ public final class Core {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage prototype) {
+    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.Trigger prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4741,26 +3998,26 @@ public final class Core {
       return builder;
     }
     /**
-     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterTypeMessage}
+     * Protobuf type {@code org.listware.sdk.pbcmdb.Trigger}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterTypeMessage)
-        org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.Trigger)
+        org.listware.sdk.pbcmdb.Core.TriggerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor;
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_fieldAccessorTable
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.class, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder.class);
+                org.listware.sdk.pbcmdb.Core.Trigger.class, org.listware.sdk.pbcmdb.Core.Trigger.Builder.class);
       }
 
-      // Construct using org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.newBuilder()
+      // Construct using org.listware.sdk.pbcmdb.Core.Trigger.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4778,13 +4035,13 @@ public final class Core {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
+        type_ = "";
 
-        if (typeMessageBuilder_ == null) {
-          typeMessage_ = null;
+        if (functionTypeBuilder_ == null) {
+          functionType_ = null;
         } else {
-          typeMessage_ = null;
-          typeMessageBuilder_ = null;
+          functionType_ = null;
+          functionTypeBuilder_ = null;
         }
         return this;
       }
@@ -4792,17 +4049,17 @@ public final class Core {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor;
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
       }
 
       @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getDefaultInstanceForType() {
-        return org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance();
+      public org.listware.sdk.pbcmdb.Core.Trigger getDefaultInstanceForType() {
+        return org.listware.sdk.pbcmdb.Core.Trigger.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage build() {
-        org.listware.sdk.pbcmdb.Core.RegisterTypeMessage result = buildPartial();
+      public org.listware.sdk.pbcmdb.Core.Trigger build() {
+        org.listware.sdk.pbcmdb.Core.Trigger result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4810,13 +4067,13 @@ public final class Core {
       }
 
       @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage buildPartial() {
-        org.listware.sdk.pbcmdb.Core.RegisterTypeMessage result = new org.listware.sdk.pbcmdb.Core.RegisterTypeMessage(this);
-        result.id_ = id_;
-        if (typeMessageBuilder_ == null) {
-          result.typeMessage_ = typeMessage_;
+      public org.listware.sdk.pbcmdb.Core.Trigger buildPartial() {
+        org.listware.sdk.pbcmdb.Core.Trigger result = new org.listware.sdk.pbcmdb.Core.Trigger(this);
+        result.type_ = type_;
+        if (functionTypeBuilder_ == null) {
+          result.functionType_ = functionType_;
         } else {
-          result.typeMessage_ = typeMessageBuilder_.build();
+          result.functionType_ = functionTypeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4856,22 +4113,22 @@ public final class Core {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterTypeMessage) {
-          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterTypeMessage)other);
+        if (other instanceof org.listware.sdk.pbcmdb.Core.Trigger) {
+          return mergeFrom((org.listware.sdk.pbcmdb.Core.Trigger)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage other) {
-        if (other == org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
+      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.Trigger other) {
+        if (other == org.listware.sdk.pbcmdb.Core.Trigger.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
-        if (other.hasTypeMessage()) {
-          mergeTypeMessage(other.getTypeMessage());
+        if (other.hasFunctionType()) {
+          mergeFunctionType(other.getFunctionType());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4888,11 +4145,11 @@ public final class Core {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parsedMessage = null;
+        org.listware.sdk.pbcmdb.Core.Trigger parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterTypeMessage) e.getUnfinishedMessage();
+          parsedMessage = (org.listware.sdk.pbcmdb.Core.Trigger) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4902,190 +4159,190 @@ public final class Core {
         return this;
       }
 
-      private java.lang.Object id_ = "";
+      private java.lang.Object type_ = "";
       /**
-       * <code>string id = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string type = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
+          getTypeBytes() {
+        java.lang.Object ref = type_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          id_ = b;
+          type_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public Builder setId(
+      public Builder setType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        id_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public Builder clearId() {
+      public Builder clearType() {
         
-        id_ = getDefaultInstance().getId();
+        type_ = getDefaultInstance().getType();
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public Builder setIdBytes(
+      public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        id_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
 
-      private org.listware.sdk.pbcmdb.Core.TypeMessage typeMessage_;
+      private org.listware.sdk.Functions.FunctionType functionType_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.TypeMessage, org.listware.sdk.pbcmdb.Core.TypeMessage.Builder, org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder> typeMessageBuilder_;
+          org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder> functionTypeBuilder_;
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public boolean hasTypeMessage() {
-        return typeMessageBuilder_ != null || typeMessage_ != null;
+      public boolean hasFunctionType() {
+        return functionTypeBuilder_ != null || functionType_ != null;
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public org.listware.sdk.pbcmdb.Core.TypeMessage getTypeMessage() {
-        if (typeMessageBuilder_ == null) {
-          return typeMessage_ == null ? org.listware.sdk.pbcmdb.Core.TypeMessage.getDefaultInstance() : typeMessage_;
+      public org.listware.sdk.Functions.FunctionType getFunctionType() {
+        if (functionTypeBuilder_ == null) {
+          return functionType_ == null ? org.listware.sdk.Functions.FunctionType.getDefaultInstance() : functionType_;
         } else {
-          return typeMessageBuilder_.getMessage();
+          return functionTypeBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public Builder setTypeMessage(org.listware.sdk.pbcmdb.Core.TypeMessage value) {
-        if (typeMessageBuilder_ == null) {
+      public Builder setFunctionType(org.listware.sdk.Functions.FunctionType value) {
+        if (functionTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          typeMessage_ = value;
+          functionType_ = value;
           onChanged();
         } else {
-          typeMessageBuilder_.setMessage(value);
+          functionTypeBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public Builder setTypeMessage(
-          org.listware.sdk.pbcmdb.Core.TypeMessage.Builder builderForValue) {
-        if (typeMessageBuilder_ == null) {
-          typeMessage_ = builderForValue.build();
+      public Builder setFunctionType(
+          org.listware.sdk.Functions.FunctionType.Builder builderForValue) {
+        if (functionTypeBuilder_ == null) {
+          functionType_ = builderForValue.build();
           onChanged();
         } else {
-          typeMessageBuilder_.setMessage(builderForValue.build());
+          functionTypeBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public Builder mergeTypeMessage(org.listware.sdk.pbcmdb.Core.TypeMessage value) {
-        if (typeMessageBuilder_ == null) {
-          if (typeMessage_ != null) {
-            typeMessage_ =
-              org.listware.sdk.pbcmdb.Core.TypeMessage.newBuilder(typeMessage_).mergeFrom(value).buildPartial();
+      public Builder mergeFunctionType(org.listware.sdk.Functions.FunctionType value) {
+        if (functionTypeBuilder_ == null) {
+          if (functionType_ != null) {
+            functionType_ =
+              org.listware.sdk.Functions.FunctionType.newBuilder(functionType_).mergeFrom(value).buildPartial();
           } else {
-            typeMessage_ = value;
+            functionType_ = value;
           }
           onChanged();
         } else {
-          typeMessageBuilder_.mergeFrom(value);
+          functionTypeBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public Builder clearTypeMessage() {
-        if (typeMessageBuilder_ == null) {
-          typeMessage_ = null;
+      public Builder clearFunctionType() {
+        if (functionTypeBuilder_ == null) {
+          functionType_ = null;
           onChanged();
         } else {
-          typeMessage_ = null;
-          typeMessageBuilder_ = null;
+          functionType_ = null;
+          functionTypeBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public org.listware.sdk.pbcmdb.Core.TypeMessage.Builder getTypeMessageBuilder() {
+      public org.listware.sdk.Functions.FunctionType.Builder getFunctionTypeBuilder() {
         
         onChanged();
-        return getTypeMessageFieldBuilder().getBuilder();
+        return getFunctionTypeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
-      public org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder getTypeMessageOrBuilder() {
-        if (typeMessageBuilder_ != null) {
-          return typeMessageBuilder_.getMessageOrBuilder();
+      public org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder() {
+        if (functionTypeBuilder_ != null) {
+          return functionTypeBuilder_.getMessageOrBuilder();
         } else {
-          return typeMessage_ == null ?
-              org.listware.sdk.pbcmdb.Core.TypeMessage.getDefaultInstance() : typeMessage_;
+          return functionType_ == null ?
+              org.listware.sdk.Functions.FunctionType.getDefaultInstance() : functionType_;
         }
       }
       /**
-       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 2;</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.TypeMessage, org.listware.sdk.pbcmdb.Core.TypeMessage.Builder, org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder> 
-          getTypeMessageFieldBuilder() {
-        if (typeMessageBuilder_ == null) {
-          typeMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.listware.sdk.pbcmdb.Core.TypeMessage, org.listware.sdk.pbcmdb.Core.TypeMessage.Builder, org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder>(
-                  getTypeMessage(),
+          org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder> 
+          getFunctionTypeFieldBuilder() {
+        if (functionTypeBuilder_ == null) {
+          functionTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder>(
+                  getFunctionType(),
                   getParentForChildren(),
                   isClean());
-          typeMessage_ = null;
+          functionType_ = null;
         }
-        return typeMessageBuilder_;
+        return functionTypeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5100,4152 +4357,41 @@ public final class Core {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterTypeMessage)
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.Trigger)
     }
 
-    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterTypeMessage)
-    private static final org.listware.sdk.pbcmdb.Core.RegisterTypeMessage DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.Trigger)
+    private static final org.listware.sdk.pbcmdb.Core.Trigger DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterTypeMessage();
+      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.Trigger();
     }
 
-    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getDefaultInstance() {
+    public static org.listware.sdk.pbcmdb.Core.Trigger getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RegisterTypeMessage>
-        PARSER = new com.google.protobuf.AbstractParser<RegisterTypeMessage>() {
+    private static final com.google.protobuf.Parser<Trigger>
+        PARSER = new com.google.protobuf.AbstractParser<Trigger>() {
       @java.lang.Override
-      public RegisterTypeMessage parsePartialFrom(
+      public Trigger parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RegisterTypeMessage(input, extensionRegistry);
+        return new Trigger(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<RegisterTypeMessage> parser() {
+    public static com.google.protobuf.Parser<Trigger> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RegisterTypeMessage> getParserForType() {
+    public com.google.protobuf.Parser<Trigger> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RegisterObjectMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterObjectMessage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-     */
-    boolean hasObjectMessage();
-    /**
-     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.ObjectMessage getObjectMessage();
-    /**
-     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder getObjectMessageOrBuilder();
-  }
-  /**
-   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterObjectMessage}
-   */
-  public  static final class RegisterObjectMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterObjectMessage)
-      RegisterObjectMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RegisterObjectMessage.newBuilder() to construct.
-    private RegisterObjectMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private RegisterObjectMessage() {
-      id_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RegisterObjectMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder subBuilder = null;
-              if (objectMessage_ != null) {
-                subBuilder = objectMessage_.toBuilder();
-              }
-              objectMessage_ = input.readMessage(org.listware.sdk.pbcmdb.Core.ObjectMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(objectMessage_);
-                objectMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.class, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OBJECT_MESSAGE_FIELD_NUMBER = 2;
-    private org.listware.sdk.pbcmdb.Core.ObjectMessage objectMessage_;
-    /**
-     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-     */
-    public boolean hasObjectMessage() {
-      return objectMessage_ != null;
-    }
-    /**
-     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.ObjectMessage getObjectMessage() {
-      return objectMessage_ == null ? org.listware.sdk.pbcmdb.Core.ObjectMessage.getDefaultInstance() : objectMessage_;
-    }
-    /**
-     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder getObjectMessageOrBuilder() {
-      return getObjectMessage();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (objectMessage_ != null) {
-        output.writeMessage(2, getObjectMessage());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (objectMessage_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getObjectMessage());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterObjectMessage)) {
-        return super.equals(obj);
-      }
-      org.listware.sdk.pbcmdb.Core.RegisterObjectMessage other = (org.listware.sdk.pbcmdb.Core.RegisterObjectMessage) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasObjectMessage() != other.hasObjectMessage()) return false;
-      if (hasObjectMessage()) {
-        if (!getObjectMessage()
-            .equals(other.getObjectMessage())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasObjectMessage()) {
-        hash = (37 * hash) + OBJECT_MESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getObjectMessage().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterObjectMessage}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterObjectMessage)
-        org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.class, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder.class);
-      }
-
-      // Construct using org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        if (objectMessageBuilder_ == null) {
-          objectMessage_ = null;
-        } else {
-          objectMessage_ = null;
-          objectMessageBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getDefaultInstanceForType() {
-        return org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage build() {
-        org.listware.sdk.pbcmdb.Core.RegisterObjectMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage buildPartial() {
-        org.listware.sdk.pbcmdb.Core.RegisterObjectMessage result = new org.listware.sdk.pbcmdb.Core.RegisterObjectMessage(this);
-        result.id_ = id_;
-        if (objectMessageBuilder_ == null) {
-          result.objectMessage_ = objectMessage_;
-        } else {
-          result.objectMessage_ = objectMessageBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterObjectMessage) {
-          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterObjectMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage other) {
-        if (other == org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (other.hasObjectMessage()) {
-          mergeObjectMessage(other.getObjectMessage());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterObjectMessage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private org.listware.sdk.pbcmdb.Core.ObjectMessage objectMessage_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.ObjectMessage, org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder> objectMessageBuilder_;
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public boolean hasObjectMessage() {
-        return objectMessageBuilder_ != null || objectMessage_ != null;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.ObjectMessage getObjectMessage() {
-        if (objectMessageBuilder_ == null) {
-          return objectMessage_ == null ? org.listware.sdk.pbcmdb.Core.ObjectMessage.getDefaultInstance() : objectMessage_;
-        } else {
-          return objectMessageBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public Builder setObjectMessage(org.listware.sdk.pbcmdb.Core.ObjectMessage value) {
-        if (objectMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          objectMessage_ = value;
-          onChanged();
-        } else {
-          objectMessageBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public Builder setObjectMessage(
-          org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder builderForValue) {
-        if (objectMessageBuilder_ == null) {
-          objectMessage_ = builderForValue.build();
-          onChanged();
-        } else {
-          objectMessageBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public Builder mergeObjectMessage(org.listware.sdk.pbcmdb.Core.ObjectMessage value) {
-        if (objectMessageBuilder_ == null) {
-          if (objectMessage_ != null) {
-            objectMessage_ =
-              org.listware.sdk.pbcmdb.Core.ObjectMessage.newBuilder(objectMessage_).mergeFrom(value).buildPartial();
-          } else {
-            objectMessage_ = value;
-          }
-          onChanged();
-        } else {
-          objectMessageBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public Builder clearObjectMessage() {
-        if (objectMessageBuilder_ == null) {
-          objectMessage_ = null;
-          onChanged();
-        } else {
-          objectMessage_ = null;
-          objectMessageBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder getObjectMessageBuilder() {
-        
-        onChanged();
-        return getObjectMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder getObjectMessageOrBuilder() {
-        if (objectMessageBuilder_ != null) {
-          return objectMessageBuilder_.getMessageOrBuilder();
-        } else {
-          return objectMessage_ == null ?
-              org.listware.sdk.pbcmdb.Core.ObjectMessage.getDefaultInstance() : objectMessage_;
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.ObjectMessage, org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder> 
-          getObjectMessageFieldBuilder() {
-        if (objectMessageBuilder_ == null) {
-          objectMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.listware.sdk.pbcmdb.Core.ObjectMessage, org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder>(
-                  getObjectMessage(),
-                  getParentForChildren(),
-                  isClean());
-          objectMessage_ = null;
-        }
-        return objectMessageBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterObjectMessage)
-    }
-
-    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterObjectMessage)
-    private static final org.listware.sdk.pbcmdb.Core.RegisterObjectMessage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterObjectMessage();
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RegisterObjectMessage>
-        PARSER = new com.google.protobuf.AbstractParser<RegisterObjectMessage>() {
-      @java.lang.Override
-      public RegisterObjectMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RegisterObjectMessage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<RegisterObjectMessage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RegisterObjectMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RegisterLinkMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterLinkMessage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-     */
-    boolean hasLinkMessage();
-    /**
-     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.LinkMessage getLinkMessage();
-    /**
-     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder getLinkMessageOrBuilder();
-  }
-  /**
-   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterLinkMessage}
-   */
-  public  static final class RegisterLinkMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterLinkMessage)
-      RegisterLinkMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RegisterLinkMessage.newBuilder() to construct.
-    private RegisterLinkMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private RegisterLinkMessage() {
-      id_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RegisterLinkMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              org.listware.sdk.pbcmdb.Core.LinkMessage.Builder subBuilder = null;
-              if (linkMessage_ != null) {
-                subBuilder = linkMessage_.toBuilder();
-              }
-              linkMessage_ = input.readMessage(org.listware.sdk.pbcmdb.Core.LinkMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(linkMessage_);
-                linkMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.class, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LINK_MESSAGE_FIELD_NUMBER = 2;
-    private org.listware.sdk.pbcmdb.Core.LinkMessage linkMessage_;
-    /**
-     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-     */
-    public boolean hasLinkMessage() {
-      return linkMessage_ != null;
-    }
-    /**
-     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.LinkMessage getLinkMessage() {
-      return linkMessage_ == null ? org.listware.sdk.pbcmdb.Core.LinkMessage.getDefaultInstance() : linkMessage_;
-    }
-    /**
-     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder getLinkMessageOrBuilder() {
-      return getLinkMessage();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (linkMessage_ != null) {
-        output.writeMessage(2, getLinkMessage());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (linkMessage_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLinkMessage());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterLinkMessage)) {
-        return super.equals(obj);
-      }
-      org.listware.sdk.pbcmdb.Core.RegisterLinkMessage other = (org.listware.sdk.pbcmdb.Core.RegisterLinkMessage) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasLinkMessage() != other.hasLinkMessage()) return false;
-      if (hasLinkMessage()) {
-        if (!getLinkMessage()
-            .equals(other.getLinkMessage())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasLinkMessage()) {
-        hash = (37 * hash) + LINK_MESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getLinkMessage().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterLinkMessage}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterLinkMessage)
-        org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.class, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder.class);
-      }
-
-      // Construct using org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        if (linkMessageBuilder_ == null) {
-          linkMessage_ = null;
-        } else {
-          linkMessage_ = null;
-          linkMessageBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getDefaultInstanceForType() {
-        return org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage build() {
-        org.listware.sdk.pbcmdb.Core.RegisterLinkMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage buildPartial() {
-        org.listware.sdk.pbcmdb.Core.RegisterLinkMessage result = new org.listware.sdk.pbcmdb.Core.RegisterLinkMessage(this);
-        result.id_ = id_;
-        if (linkMessageBuilder_ == null) {
-          result.linkMessage_ = linkMessage_;
-        } else {
-          result.linkMessage_ = linkMessageBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterLinkMessage) {
-          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterLinkMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage other) {
-        if (other == org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (other.hasLinkMessage()) {
-          mergeLinkMessage(other.getLinkMessage());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterLinkMessage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private org.listware.sdk.pbcmdb.Core.LinkMessage linkMessage_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.LinkMessage, org.listware.sdk.pbcmdb.Core.LinkMessage.Builder, org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder> linkMessageBuilder_;
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public boolean hasLinkMessage() {
-        return linkMessageBuilder_ != null || linkMessage_ != null;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.LinkMessage getLinkMessage() {
-        if (linkMessageBuilder_ == null) {
-          return linkMessage_ == null ? org.listware.sdk.pbcmdb.Core.LinkMessage.getDefaultInstance() : linkMessage_;
-        } else {
-          return linkMessageBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public Builder setLinkMessage(org.listware.sdk.pbcmdb.Core.LinkMessage value) {
-        if (linkMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          linkMessage_ = value;
-          onChanged();
-        } else {
-          linkMessageBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public Builder setLinkMessage(
-          org.listware.sdk.pbcmdb.Core.LinkMessage.Builder builderForValue) {
-        if (linkMessageBuilder_ == null) {
-          linkMessage_ = builderForValue.build();
-          onChanged();
-        } else {
-          linkMessageBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public Builder mergeLinkMessage(org.listware.sdk.pbcmdb.Core.LinkMessage value) {
-        if (linkMessageBuilder_ == null) {
-          if (linkMessage_ != null) {
-            linkMessage_ =
-              org.listware.sdk.pbcmdb.Core.LinkMessage.newBuilder(linkMessage_).mergeFrom(value).buildPartial();
-          } else {
-            linkMessage_ = value;
-          }
-          onChanged();
-        } else {
-          linkMessageBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public Builder clearLinkMessage() {
-        if (linkMessageBuilder_ == null) {
-          linkMessage_ = null;
-          onChanged();
-        } else {
-          linkMessage_ = null;
-          linkMessageBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.LinkMessage.Builder getLinkMessageBuilder() {
-        
-        onChanged();
-        return getLinkMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder getLinkMessageOrBuilder() {
-        if (linkMessageBuilder_ != null) {
-          return linkMessageBuilder_.getMessageOrBuilder();
-        } else {
-          return linkMessage_ == null ?
-              org.listware.sdk.pbcmdb.Core.LinkMessage.getDefaultInstance() : linkMessage_;
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.LinkMessage, org.listware.sdk.pbcmdb.Core.LinkMessage.Builder, org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder> 
-          getLinkMessageFieldBuilder() {
-        if (linkMessageBuilder_ == null) {
-          linkMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.listware.sdk.pbcmdb.Core.LinkMessage, org.listware.sdk.pbcmdb.Core.LinkMessage.Builder, org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder>(
-                  getLinkMessage(),
-                  getParentForChildren(),
-                  isClean());
-          linkMessage_ = null;
-        }
-        return linkMessageBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterLinkMessage)
-    }
-
-    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterLinkMessage)
-    private static final org.listware.sdk.pbcmdb.Core.RegisterLinkMessage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterLinkMessage();
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RegisterLinkMessage>
-        PARSER = new com.google.protobuf.AbstractParser<RegisterLinkMessage>() {
-      @java.lang.Override
-      public RegisterLinkMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RegisterLinkMessage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<RegisterLinkMessage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RegisterLinkMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RegisterFunctionMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-     */
-    boolean hasFunctionMessage();
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-     */
-    org.listware.sdk.Functions.FunctionMessage getFunctionMessage();
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-     */
-    org.listware.sdk.Functions.FunctionMessageOrBuilder getFunctionMessageOrBuilder();
-  }
-  /**
-   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterFunctionMessage}
-   */
-  public  static final class RegisterFunctionMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
-      RegisterFunctionMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RegisterFunctionMessage.newBuilder() to construct.
-    private RegisterFunctionMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private RegisterFunctionMessage() {
-      id_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RegisterFunctionMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              org.listware.sdk.Functions.FunctionMessage.Builder subBuilder = null;
-              if (functionMessage_ != null) {
-                subBuilder = functionMessage_.toBuilder();
-              }
-              functionMessage_ = input.readMessage(org.listware.sdk.Functions.FunctionMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(functionMessage_);
-                functionMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.class, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FUNCTION_MESSAGE_FIELD_NUMBER = 2;
-    private org.listware.sdk.Functions.FunctionMessage functionMessage_;
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-     */
-    public boolean hasFunctionMessage() {
-      return functionMessage_ != null;
-    }
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-     */
-    public org.listware.sdk.Functions.FunctionMessage getFunctionMessage() {
-      return functionMessage_ == null ? org.listware.sdk.Functions.FunctionMessage.getDefaultInstance() : functionMessage_;
-    }
-    /**
-     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-     */
-    public org.listware.sdk.Functions.FunctionMessageOrBuilder getFunctionMessageOrBuilder() {
-      return getFunctionMessage();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (functionMessage_ != null) {
-        output.writeMessage(2, getFunctionMessage());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (functionMessage_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getFunctionMessage());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage)) {
-        return super.equals(obj);
-      }
-      org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage other = (org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasFunctionMessage() != other.hasFunctionMessage()) return false;
-      if (hasFunctionMessage()) {
-        if (!getFunctionMessage()
-            .equals(other.getFunctionMessage())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasFunctionMessage()) {
-        hash = (37 * hash) + FUNCTION_MESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getFunctionMessage().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterFunctionMessage}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
-        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.class, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder.class);
-      }
-
-      // Construct using org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        if (functionMessageBuilder_ == null) {
-          functionMessage_ = null;
-        } else {
-          functionMessage_ = null;
-          functionMessageBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getDefaultInstanceForType() {
-        return org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage build() {
-        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage buildPartial() {
-        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage result = new org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage(this);
-        result.id_ = id_;
-        if (functionMessageBuilder_ == null) {
-          result.functionMessage_ = functionMessage_;
-        } else {
-          result.functionMessage_ = functionMessageBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage) {
-          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage other) {
-        if (other == org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (other.hasFunctionMessage()) {
-          mergeFunctionMessage(other.getFunctionMessage());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private org.listware.sdk.Functions.FunctionMessage functionMessage_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.Functions.FunctionMessage, org.listware.sdk.Functions.FunctionMessage.Builder, org.listware.sdk.Functions.FunctionMessageOrBuilder> functionMessageBuilder_;
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public boolean hasFunctionMessage() {
-        return functionMessageBuilder_ != null || functionMessage_ != null;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public org.listware.sdk.Functions.FunctionMessage getFunctionMessage() {
-        if (functionMessageBuilder_ == null) {
-          return functionMessage_ == null ? org.listware.sdk.Functions.FunctionMessage.getDefaultInstance() : functionMessage_;
-        } else {
-          return functionMessageBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public Builder setFunctionMessage(org.listware.sdk.Functions.FunctionMessage value) {
-        if (functionMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          functionMessage_ = value;
-          onChanged();
-        } else {
-          functionMessageBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public Builder setFunctionMessage(
-          org.listware.sdk.Functions.FunctionMessage.Builder builderForValue) {
-        if (functionMessageBuilder_ == null) {
-          functionMessage_ = builderForValue.build();
-          onChanged();
-        } else {
-          functionMessageBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public Builder mergeFunctionMessage(org.listware.sdk.Functions.FunctionMessage value) {
-        if (functionMessageBuilder_ == null) {
-          if (functionMessage_ != null) {
-            functionMessage_ =
-              org.listware.sdk.Functions.FunctionMessage.newBuilder(functionMessage_).mergeFrom(value).buildPartial();
-          } else {
-            functionMessage_ = value;
-          }
-          onChanged();
-        } else {
-          functionMessageBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public Builder clearFunctionMessage() {
-        if (functionMessageBuilder_ == null) {
-          functionMessage_ = null;
-          onChanged();
-        } else {
-          functionMessage_ = null;
-          functionMessageBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public org.listware.sdk.Functions.FunctionMessage.Builder getFunctionMessageBuilder() {
-        
-        onChanged();
-        return getFunctionMessageFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      public org.listware.sdk.Functions.FunctionMessageOrBuilder getFunctionMessageOrBuilder() {
-        if (functionMessageBuilder_ != null) {
-          return functionMessageBuilder_.getMessageOrBuilder();
-        } else {
-          return functionMessage_ == null ?
-              org.listware.sdk.Functions.FunctionMessage.getDefaultInstance() : functionMessage_;
-        }
-      }
-      /**
-       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.listware.sdk.Functions.FunctionMessage, org.listware.sdk.Functions.FunctionMessage.Builder, org.listware.sdk.Functions.FunctionMessageOrBuilder> 
-          getFunctionMessageFieldBuilder() {
-        if (functionMessageBuilder_ == null) {
-          functionMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.listware.sdk.Functions.FunctionMessage, org.listware.sdk.Functions.FunctionMessage.Builder, org.listware.sdk.Functions.FunctionMessageOrBuilder>(
-                  getFunctionMessage(),
-                  getParentForChildren(),
-                  isClean());
-          functionMessage_ = null;
-        }
-        return functionMessageBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
-    }
-
-    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
-    private static final org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage();
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RegisterFunctionMessage>
-        PARSER = new com.google.protobuf.AbstractParser<RegisterFunctionMessage>() {
-      @java.lang.Override
-      public RegisterFunctionMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RegisterFunctionMessage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<RegisterFunctionMessage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RegisterFunctionMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RegisterMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterMessage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> 
-        getTypeMessagesList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getTypeMessages(int index);
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    int getTypeMessagesCount();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
-        getTypeMessagesOrBuilderList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder getTypeMessagesOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> 
-        getObjectMessagesList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getObjectMessages(int index);
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    int getObjectMessagesCount();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
-        getObjectMessagesOrBuilderList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder getObjectMessagesOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> 
-        getLinkMessagesList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getLinkMessages(int index);
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    int getLinkMessagesCount();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
-        getLinkMessagesOrBuilderList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder getLinkMessagesOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> 
-        getFunctionMessagesList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getFunctionMessages(int index);
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    int getFunctionMessagesCount();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
-        getFunctionMessagesOrBuilderList();
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder getFunctionMessagesOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterMessage}
-   */
-  public  static final class RegisterMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterMessage)
-      RegisterMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RegisterMessage.newBuilder() to construct.
-    private RegisterMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private RegisterMessage() {
-      typeMessages_ = java.util.Collections.emptyList();
-      objectMessages_ = java.util.Collections.emptyList();
-      linkMessages_ = java.util.Collections.emptyList();
-      functionMessages_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RegisterMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                typeMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              typeMessages_.add(
-                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.parser(), extensionRegistry));
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                objectMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              objectMessages_.add(
-                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                linkMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              linkMessages_.add(
-                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                functionMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              functionMessages_.add(
-                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          typeMessages_ = java.util.Collections.unmodifiableList(typeMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          objectMessages_ = java.util.Collections.unmodifiableList(objectMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          linkMessages_ = java.util.Collections.unmodifiableList(linkMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          functionMessages_ = java.util.Collections.unmodifiableList(functionMessages_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              org.listware.sdk.pbcmdb.Core.RegisterMessage.class, org.listware.sdk.pbcmdb.Core.RegisterMessage.Builder.class);
-    }
-
-    public static final int TYPE_MESSAGES_FIELD_NUMBER = 1;
-    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> typeMessages_;
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> getTypeMessagesList() {
-      return typeMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
-        getTypeMessagesOrBuilderList() {
-      return typeMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    public int getTypeMessagesCount() {
-      return typeMessages_.size();
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getTypeMessages(int index) {
-      return typeMessages_.get(index);
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder getTypeMessagesOrBuilder(
-        int index) {
-      return typeMessages_.get(index);
-    }
-
-    public static final int OBJECT_MESSAGES_FIELD_NUMBER = 2;
-    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> objectMessages_;
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> getObjectMessagesList() {
-      return objectMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
-        getObjectMessagesOrBuilderList() {
-      return objectMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    public int getObjectMessagesCount() {
-      return objectMessages_.size();
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getObjectMessages(int index) {
-      return objectMessages_.get(index);
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder getObjectMessagesOrBuilder(
-        int index) {
-      return objectMessages_.get(index);
-    }
-
-    public static final int LINK_MESSAGES_FIELD_NUMBER = 3;
-    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> linkMessages_;
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> getLinkMessagesList() {
-      return linkMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
-        getLinkMessagesOrBuilderList() {
-      return linkMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    public int getLinkMessagesCount() {
-      return linkMessages_.size();
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getLinkMessages(int index) {
-      return linkMessages_.get(index);
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder getLinkMessagesOrBuilder(
-        int index) {
-      return linkMessages_.get(index);
-    }
-
-    public static final int FUNCTION_MESSAGES_FIELD_NUMBER = 4;
-    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> functionMessages_;
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> getFunctionMessagesList() {
-      return functionMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
-        getFunctionMessagesOrBuilderList() {
-      return functionMessages_;
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    public int getFunctionMessagesCount() {
-      return functionMessages_.size();
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getFunctionMessages(int index) {
-      return functionMessages_.get(index);
-    }
-    /**
-     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-     */
-    public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder getFunctionMessagesOrBuilder(
-        int index) {
-      return functionMessages_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < typeMessages_.size(); i++) {
-        output.writeMessage(1, typeMessages_.get(i));
-      }
-      for (int i = 0; i < objectMessages_.size(); i++) {
-        output.writeMessage(2, objectMessages_.get(i));
-      }
-      for (int i = 0; i < linkMessages_.size(); i++) {
-        output.writeMessage(3, linkMessages_.get(i));
-      }
-      for (int i = 0; i < functionMessages_.size(); i++) {
-        output.writeMessage(4, functionMessages_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < typeMessages_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, typeMessages_.get(i));
-      }
-      for (int i = 0; i < objectMessages_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, objectMessages_.get(i));
-      }
-      for (int i = 0; i < linkMessages_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, linkMessages_.get(i));
-      }
-      for (int i = 0; i < functionMessages_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, functionMessages_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterMessage)) {
-        return super.equals(obj);
-      }
-      org.listware.sdk.pbcmdb.Core.RegisterMessage other = (org.listware.sdk.pbcmdb.Core.RegisterMessage) obj;
-
-      if (!getTypeMessagesList()
-          .equals(other.getTypeMessagesList())) return false;
-      if (!getObjectMessagesList()
-          .equals(other.getObjectMessagesList())) return false;
-      if (!getLinkMessagesList()
-          .equals(other.getLinkMessagesList())) return false;
-      if (!getFunctionMessagesList()
-          .equals(other.getFunctionMessagesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTypeMessagesCount() > 0) {
-        hash = (37 * hash) + TYPE_MESSAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getTypeMessagesList().hashCode();
-      }
-      if (getObjectMessagesCount() > 0) {
-        hash = (37 * hash) + OBJECT_MESSAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getObjectMessagesList().hashCode();
-      }
-      if (getLinkMessagesCount() > 0) {
-        hash = (37 * hash) + LINK_MESSAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getLinkMessagesList().hashCode();
-      }
-      if (getFunctionMessagesCount() > 0) {
-        hash = (37 * hash) + FUNCTION_MESSAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getFunctionMessagesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterMessage}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterMessage)
-        org.listware.sdk.pbcmdb.Core.RegisterMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                org.listware.sdk.pbcmdb.Core.RegisterMessage.class, org.listware.sdk.pbcmdb.Core.RegisterMessage.Builder.class);
-      }
-
-      // Construct using org.listware.sdk.pbcmdb.Core.RegisterMessage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTypeMessagesFieldBuilder();
-          getObjectMessagesFieldBuilder();
-          getLinkMessagesFieldBuilder();
-          getFunctionMessagesFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (typeMessagesBuilder_ == null) {
-          typeMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          typeMessagesBuilder_.clear();
-        }
-        if (objectMessagesBuilder_ == null) {
-          objectMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          objectMessagesBuilder_.clear();
-        }
-        if (linkMessagesBuilder_ == null) {
-          linkMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          linkMessagesBuilder_.clear();
-        }
-        if (functionMessagesBuilder_ == null) {
-          functionMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          functionMessagesBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterMessage getDefaultInstanceForType() {
-        return org.listware.sdk.pbcmdb.Core.RegisterMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterMessage build() {
-        org.listware.sdk.pbcmdb.Core.RegisterMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public org.listware.sdk.pbcmdb.Core.RegisterMessage buildPartial() {
-        org.listware.sdk.pbcmdb.Core.RegisterMessage result = new org.listware.sdk.pbcmdb.Core.RegisterMessage(this);
-        int from_bitField0_ = bitField0_;
-        if (typeMessagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            typeMessages_ = java.util.Collections.unmodifiableList(typeMessages_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.typeMessages_ = typeMessages_;
-        } else {
-          result.typeMessages_ = typeMessagesBuilder_.build();
-        }
-        if (objectMessagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            objectMessages_ = java.util.Collections.unmodifiableList(objectMessages_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.objectMessages_ = objectMessages_;
-        } else {
-          result.objectMessages_ = objectMessagesBuilder_.build();
-        }
-        if (linkMessagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            linkMessages_ = java.util.Collections.unmodifiableList(linkMessages_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.linkMessages_ = linkMessages_;
-        } else {
-          result.linkMessages_ = linkMessagesBuilder_.build();
-        }
-        if (functionMessagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            functionMessages_ = java.util.Collections.unmodifiableList(functionMessages_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.functionMessages_ = functionMessages_;
-        } else {
-          result.functionMessages_ = functionMessagesBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterMessage) {
-          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterMessage other) {
-        if (other == org.listware.sdk.pbcmdb.Core.RegisterMessage.getDefaultInstance()) return this;
-        if (typeMessagesBuilder_ == null) {
-          if (!other.typeMessages_.isEmpty()) {
-            if (typeMessages_.isEmpty()) {
-              typeMessages_ = other.typeMessages_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureTypeMessagesIsMutable();
-              typeMessages_.addAll(other.typeMessages_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.typeMessages_.isEmpty()) {
-            if (typeMessagesBuilder_.isEmpty()) {
-              typeMessagesBuilder_.dispose();
-              typeMessagesBuilder_ = null;
-              typeMessages_ = other.typeMessages_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              typeMessagesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTypeMessagesFieldBuilder() : null;
-            } else {
-              typeMessagesBuilder_.addAllMessages(other.typeMessages_);
-            }
-          }
-        }
-        if (objectMessagesBuilder_ == null) {
-          if (!other.objectMessages_.isEmpty()) {
-            if (objectMessages_.isEmpty()) {
-              objectMessages_ = other.objectMessages_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureObjectMessagesIsMutable();
-              objectMessages_.addAll(other.objectMessages_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.objectMessages_.isEmpty()) {
-            if (objectMessagesBuilder_.isEmpty()) {
-              objectMessagesBuilder_.dispose();
-              objectMessagesBuilder_ = null;
-              objectMessages_ = other.objectMessages_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              objectMessagesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getObjectMessagesFieldBuilder() : null;
-            } else {
-              objectMessagesBuilder_.addAllMessages(other.objectMessages_);
-            }
-          }
-        }
-        if (linkMessagesBuilder_ == null) {
-          if (!other.linkMessages_.isEmpty()) {
-            if (linkMessages_.isEmpty()) {
-              linkMessages_ = other.linkMessages_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureLinkMessagesIsMutable();
-              linkMessages_.addAll(other.linkMessages_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.linkMessages_.isEmpty()) {
-            if (linkMessagesBuilder_.isEmpty()) {
-              linkMessagesBuilder_.dispose();
-              linkMessagesBuilder_ = null;
-              linkMessages_ = other.linkMessages_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              linkMessagesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getLinkMessagesFieldBuilder() : null;
-            } else {
-              linkMessagesBuilder_.addAllMessages(other.linkMessages_);
-            }
-          }
-        }
-        if (functionMessagesBuilder_ == null) {
-          if (!other.functionMessages_.isEmpty()) {
-            if (functionMessages_.isEmpty()) {
-              functionMessages_ = other.functionMessages_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureFunctionMessagesIsMutable();
-              functionMessages_.addAll(other.functionMessages_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.functionMessages_.isEmpty()) {
-            if (functionMessagesBuilder_.isEmpty()) {
-              functionMessagesBuilder_.dispose();
-              functionMessagesBuilder_ = null;
-              functionMessages_ = other.functionMessages_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              functionMessagesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getFunctionMessagesFieldBuilder() : null;
-            } else {
-              functionMessagesBuilder_.addAllMessages(other.functionMessages_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        org.listware.sdk.pbcmdb.Core.RegisterMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterMessage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> typeMessages_ =
-        java.util.Collections.emptyList();
-      private void ensureTypeMessagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          typeMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage>(typeMessages_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterTypeMessage, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> typeMessagesBuilder_;
-
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> getTypeMessagesList() {
-        if (typeMessagesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(typeMessages_);
-        } else {
-          return typeMessagesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public int getTypeMessagesCount() {
-        if (typeMessagesBuilder_ == null) {
-          return typeMessages_.size();
-        } else {
-          return typeMessagesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getTypeMessages(int index) {
-        if (typeMessagesBuilder_ == null) {
-          return typeMessages_.get(index);
-        } else {
-          return typeMessagesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder setTypeMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage value) {
-        if (typeMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTypeMessagesIsMutable();
-          typeMessages_.set(index, value);
-          onChanged();
-        } else {
-          typeMessagesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder setTypeMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder builderForValue) {
-        if (typeMessagesBuilder_ == null) {
-          ensureTypeMessagesIsMutable();
-          typeMessages_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          typeMessagesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder addTypeMessages(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage value) {
-        if (typeMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTypeMessagesIsMutable();
-          typeMessages_.add(value);
-          onChanged();
-        } else {
-          typeMessagesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder addTypeMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage value) {
-        if (typeMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTypeMessagesIsMutable();
-          typeMessages_.add(index, value);
-          onChanged();
-        } else {
-          typeMessagesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder addTypeMessages(
-          org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder builderForValue) {
-        if (typeMessagesBuilder_ == null) {
-          ensureTypeMessagesIsMutable();
-          typeMessages_.add(builderForValue.build());
-          onChanged();
-        } else {
-          typeMessagesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder addTypeMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder builderForValue) {
-        if (typeMessagesBuilder_ == null) {
-          ensureTypeMessagesIsMutable();
-          typeMessages_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          typeMessagesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder addAllTypeMessages(
-          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> values) {
-        if (typeMessagesBuilder_ == null) {
-          ensureTypeMessagesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, typeMessages_);
-          onChanged();
-        } else {
-          typeMessagesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder clearTypeMessages() {
-        if (typeMessagesBuilder_ == null) {
-          typeMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          typeMessagesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public Builder removeTypeMessages(int index) {
-        if (typeMessagesBuilder_ == null) {
-          ensureTypeMessagesIsMutable();
-          typeMessages_.remove(index);
-          onChanged();
-        } else {
-          typeMessagesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder getTypeMessagesBuilder(
-          int index) {
-        return getTypeMessagesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder getTypeMessagesOrBuilder(
-          int index) {
-        if (typeMessagesBuilder_ == null) {
-          return typeMessages_.get(index);  } else {
-          return typeMessagesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
-           getTypeMessagesOrBuilderList() {
-        if (typeMessagesBuilder_ != null) {
-          return typeMessagesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(typeMessages_);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder addTypeMessagesBuilder() {
-        return getTypeMessagesFieldBuilder().addBuilder(
-            org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder addTypeMessagesBuilder(
-          int index) {
-        return getTypeMessagesFieldBuilder().addBuilder(
-            index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder> 
-           getTypeMessagesBuilderList() {
-        return getTypeMessagesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterTypeMessage, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
-          getTypeMessagesFieldBuilder() {
-        if (typeMessagesBuilder_ == null) {
-          typeMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.listware.sdk.pbcmdb.Core.RegisterTypeMessage, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder>(
-                  typeMessages_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          typeMessages_ = null;
-        }
-        return typeMessagesBuilder_;
-      }
-
-      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> objectMessages_ =
-        java.util.Collections.emptyList();
-      private void ensureObjectMessagesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          objectMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage>(objectMessages_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterObjectMessage, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> objectMessagesBuilder_;
-
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> getObjectMessagesList() {
-        if (objectMessagesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(objectMessages_);
-        } else {
-          return objectMessagesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public int getObjectMessagesCount() {
-        if (objectMessagesBuilder_ == null) {
-          return objectMessages_.size();
-        } else {
-          return objectMessagesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getObjectMessages(int index) {
-        if (objectMessagesBuilder_ == null) {
-          return objectMessages_.get(index);
-        } else {
-          return objectMessagesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder setObjectMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage value) {
-        if (objectMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObjectMessagesIsMutable();
-          objectMessages_.set(index, value);
-          onChanged();
-        } else {
-          objectMessagesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder setObjectMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder builderForValue) {
-        if (objectMessagesBuilder_ == null) {
-          ensureObjectMessagesIsMutable();
-          objectMessages_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          objectMessagesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder addObjectMessages(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage value) {
-        if (objectMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObjectMessagesIsMutable();
-          objectMessages_.add(value);
-          onChanged();
-        } else {
-          objectMessagesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder addObjectMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage value) {
-        if (objectMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureObjectMessagesIsMutable();
-          objectMessages_.add(index, value);
-          onChanged();
-        } else {
-          objectMessagesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder addObjectMessages(
-          org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder builderForValue) {
-        if (objectMessagesBuilder_ == null) {
-          ensureObjectMessagesIsMutable();
-          objectMessages_.add(builderForValue.build());
-          onChanged();
-        } else {
-          objectMessagesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder addObjectMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder builderForValue) {
-        if (objectMessagesBuilder_ == null) {
-          ensureObjectMessagesIsMutable();
-          objectMessages_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          objectMessagesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder addAllObjectMessages(
-          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> values) {
-        if (objectMessagesBuilder_ == null) {
-          ensureObjectMessagesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, objectMessages_);
-          onChanged();
-        } else {
-          objectMessagesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder clearObjectMessages() {
-        if (objectMessagesBuilder_ == null) {
-          objectMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          objectMessagesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public Builder removeObjectMessages(int index) {
-        if (objectMessagesBuilder_ == null) {
-          ensureObjectMessagesIsMutable();
-          objectMessages_.remove(index);
-          onChanged();
-        } else {
-          objectMessagesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder getObjectMessagesBuilder(
-          int index) {
-        return getObjectMessagesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder getObjectMessagesOrBuilder(
-          int index) {
-        if (objectMessagesBuilder_ == null) {
-          return objectMessages_.get(index);  } else {
-          return objectMessagesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
-           getObjectMessagesOrBuilderList() {
-        if (objectMessagesBuilder_ != null) {
-          return objectMessagesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(objectMessages_);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder addObjectMessagesBuilder() {
-        return getObjectMessagesFieldBuilder().addBuilder(
-            org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder addObjectMessagesBuilder(
-          int index) {
-        return getObjectMessagesFieldBuilder().addBuilder(
-            index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder> 
-           getObjectMessagesBuilderList() {
-        return getObjectMessagesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterObjectMessage, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
-          getObjectMessagesFieldBuilder() {
-        if (objectMessagesBuilder_ == null) {
-          objectMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.listware.sdk.pbcmdb.Core.RegisterObjectMessage, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder>(
-                  objectMessages_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          objectMessages_ = null;
-        }
-        return objectMessagesBuilder_;
-      }
-
-      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> linkMessages_ =
-        java.util.Collections.emptyList();
-      private void ensureLinkMessagesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          linkMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage>(linkMessages_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterLinkMessage, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> linkMessagesBuilder_;
-
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> getLinkMessagesList() {
-        if (linkMessagesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(linkMessages_);
-        } else {
-          return linkMessagesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public int getLinkMessagesCount() {
-        if (linkMessagesBuilder_ == null) {
-          return linkMessages_.size();
-        } else {
-          return linkMessagesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getLinkMessages(int index) {
-        if (linkMessagesBuilder_ == null) {
-          return linkMessages_.get(index);
-        } else {
-          return linkMessagesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder setLinkMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage value) {
-        if (linkMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLinkMessagesIsMutable();
-          linkMessages_.set(index, value);
-          onChanged();
-        } else {
-          linkMessagesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder setLinkMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder builderForValue) {
-        if (linkMessagesBuilder_ == null) {
-          ensureLinkMessagesIsMutable();
-          linkMessages_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          linkMessagesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder addLinkMessages(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage value) {
-        if (linkMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLinkMessagesIsMutable();
-          linkMessages_.add(value);
-          onChanged();
-        } else {
-          linkMessagesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder addLinkMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage value) {
-        if (linkMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLinkMessagesIsMutable();
-          linkMessages_.add(index, value);
-          onChanged();
-        } else {
-          linkMessagesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder addLinkMessages(
-          org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder builderForValue) {
-        if (linkMessagesBuilder_ == null) {
-          ensureLinkMessagesIsMutable();
-          linkMessages_.add(builderForValue.build());
-          onChanged();
-        } else {
-          linkMessagesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder addLinkMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder builderForValue) {
-        if (linkMessagesBuilder_ == null) {
-          ensureLinkMessagesIsMutable();
-          linkMessages_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          linkMessagesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder addAllLinkMessages(
-          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> values) {
-        if (linkMessagesBuilder_ == null) {
-          ensureLinkMessagesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, linkMessages_);
-          onChanged();
-        } else {
-          linkMessagesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder clearLinkMessages() {
-        if (linkMessagesBuilder_ == null) {
-          linkMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          linkMessagesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public Builder removeLinkMessages(int index) {
-        if (linkMessagesBuilder_ == null) {
-          ensureLinkMessagesIsMutable();
-          linkMessages_.remove(index);
-          onChanged();
-        } else {
-          linkMessagesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder getLinkMessagesBuilder(
-          int index) {
-        return getLinkMessagesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder getLinkMessagesOrBuilder(
-          int index) {
-        if (linkMessagesBuilder_ == null) {
-          return linkMessages_.get(index);  } else {
-          return linkMessagesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
-           getLinkMessagesOrBuilderList() {
-        if (linkMessagesBuilder_ != null) {
-          return linkMessagesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(linkMessages_);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder addLinkMessagesBuilder() {
-        return getLinkMessagesFieldBuilder().addBuilder(
-            org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder addLinkMessagesBuilder(
-          int index) {
-        return getLinkMessagesFieldBuilder().addBuilder(
-            index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder> 
-           getLinkMessagesBuilderList() {
-        return getLinkMessagesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterLinkMessage, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
-          getLinkMessagesFieldBuilder() {
-        if (linkMessagesBuilder_ == null) {
-          linkMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.listware.sdk.pbcmdb.Core.RegisterLinkMessage, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder>(
-                  linkMessages_,
-                  ((bitField0_ & 0x00000004) != 0),
-                  getParentForChildren(),
-                  isClean());
-          linkMessages_ = null;
-        }
-        return linkMessagesBuilder_;
-      }
-
-      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> functionMessages_ =
-        java.util.Collections.emptyList();
-      private void ensureFunctionMessagesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          functionMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage>(functionMessages_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> functionMessagesBuilder_;
-
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> getFunctionMessagesList() {
-        if (functionMessagesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(functionMessages_);
-        } else {
-          return functionMessagesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public int getFunctionMessagesCount() {
-        if (functionMessagesBuilder_ == null) {
-          return functionMessages_.size();
-        } else {
-          return functionMessagesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getFunctionMessages(int index) {
-        if (functionMessagesBuilder_ == null) {
-          return functionMessages_.get(index);
-        } else {
-          return functionMessagesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder setFunctionMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage value) {
-        if (functionMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFunctionMessagesIsMutable();
-          functionMessages_.set(index, value);
-          onChanged();
-        } else {
-          functionMessagesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder setFunctionMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder builderForValue) {
-        if (functionMessagesBuilder_ == null) {
-          ensureFunctionMessagesIsMutable();
-          functionMessages_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          functionMessagesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder addFunctionMessages(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage value) {
-        if (functionMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFunctionMessagesIsMutable();
-          functionMessages_.add(value);
-          onChanged();
-        } else {
-          functionMessagesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder addFunctionMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage value) {
-        if (functionMessagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureFunctionMessagesIsMutable();
-          functionMessages_.add(index, value);
-          onChanged();
-        } else {
-          functionMessagesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder addFunctionMessages(
-          org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder builderForValue) {
-        if (functionMessagesBuilder_ == null) {
-          ensureFunctionMessagesIsMutable();
-          functionMessages_.add(builderForValue.build());
-          onChanged();
-        } else {
-          functionMessagesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder addFunctionMessages(
-          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder builderForValue) {
-        if (functionMessagesBuilder_ == null) {
-          ensureFunctionMessagesIsMutable();
-          functionMessages_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          functionMessagesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder addAllFunctionMessages(
-          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> values) {
-        if (functionMessagesBuilder_ == null) {
-          ensureFunctionMessagesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, functionMessages_);
-          onChanged();
-        } else {
-          functionMessagesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder clearFunctionMessages() {
-        if (functionMessagesBuilder_ == null) {
-          functionMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          functionMessagesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public Builder removeFunctionMessages(int index) {
-        if (functionMessagesBuilder_ == null) {
-          ensureFunctionMessagesIsMutable();
-          functionMessages_.remove(index);
-          onChanged();
-        } else {
-          functionMessagesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder getFunctionMessagesBuilder(
-          int index) {
-        return getFunctionMessagesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder getFunctionMessagesOrBuilder(
-          int index) {
-        if (functionMessagesBuilder_ == null) {
-          return functionMessages_.get(index);  } else {
-          return functionMessagesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
-           getFunctionMessagesOrBuilderList() {
-        if (functionMessagesBuilder_ != null) {
-          return functionMessagesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(functionMessages_);
-        }
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder addFunctionMessagesBuilder() {
-        return getFunctionMessagesFieldBuilder().addBuilder(
-            org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder addFunctionMessagesBuilder(
-          int index) {
-        return getFunctionMessagesFieldBuilder().addBuilder(
-            index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
-       */
-      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder> 
-           getFunctionMessagesBuilderList() {
-        return getFunctionMessagesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
-          getFunctionMessagesFieldBuilder() {
-        if (functionMessagesBuilder_ == null) {
-          functionMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder>(
-                  functionMessages_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          functionMessages_ = null;
-        }
-        return functionMessagesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterMessage)
-    }
-
-    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterMessage)
-    private static final org.listware.sdk.pbcmdb.Core.RegisterMessage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterMessage();
-    }
-
-    public static org.listware.sdk.pbcmdb.Core.RegisterMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RegisterMessage>
-        PARSER = new com.google.protobuf.AbstractParser<RegisterMessage>() {
-      @java.lang.Override
-      public RegisterMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RegisterMessage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<RegisterMessage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RegisterMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public org.listware.sdk.pbcmdb.Core.RegisterMessage getDefaultInstanceForType() {
+    public org.listware.sdk.pbcmdb.Core.Trigger getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11498,11 +6644,5238 @@ public final class Core {
 
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable;
+  public interface RegisterTypeMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterTypeMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>bool async = 2;</code>
+     */
+    boolean getAsync();
+
+    /**
+     * <code>bool router = 3;</code>
+     */
+    boolean getRouter();
+
+    /**
+     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+     */
+    boolean hasTypeMessage();
+    /**
+     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.TypeMessage getTypeMessage();
+    /**
+     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder getTypeMessageOrBuilder();
+  }
+  /**
+   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterTypeMessage}
+   */
+  public  static final class RegisterTypeMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterTypeMessage)
+      RegisterTypeMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterTypeMessage.newBuilder() to construct.
+    private RegisterTypeMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterTypeMessage() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegisterTypeMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+
+              async_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              router_ = input.readBool();
+              break;
+            }
+            case 34: {
+              org.listware.sdk.pbcmdb.Core.TypeMessage.Builder subBuilder = null;
+              if (typeMessage_ != null) {
+                subBuilder = typeMessage_.toBuilder();
+              }
+              typeMessage_ = input.readMessage(org.listware.sdk.pbcmdb.Core.TypeMessage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(typeMessage_);
+                typeMessage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.class, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASYNC_FIELD_NUMBER = 2;
+    private boolean async_;
+    /**
+     * <code>bool async = 2;</code>
+     */
+    public boolean getAsync() {
+      return async_;
+    }
+
+    public static final int ROUTER_FIELD_NUMBER = 3;
+    private boolean router_;
+    /**
+     * <code>bool router = 3;</code>
+     */
+    public boolean getRouter() {
+      return router_;
+    }
+
+    public static final int TYPE_MESSAGE_FIELD_NUMBER = 4;
+    private org.listware.sdk.pbcmdb.Core.TypeMessage typeMessage_;
+    /**
+     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+     */
+    public boolean hasTypeMessage() {
+      return typeMessage_ != null;
+    }
+    /**
+     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.TypeMessage getTypeMessage() {
+      return typeMessage_ == null ? org.listware.sdk.pbcmdb.Core.TypeMessage.getDefaultInstance() : typeMessage_;
+    }
+    /**
+     * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder getTypeMessageOrBuilder() {
+      return getTypeMessage();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (async_ != false) {
+        output.writeBool(2, async_);
+      }
+      if (router_ != false) {
+        output.writeBool(3, router_);
+      }
+      if (typeMessage_ != null) {
+        output.writeMessage(4, getTypeMessage());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (async_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, async_);
+      }
+      if (router_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, router_);
+      }
+      if (typeMessage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTypeMessage());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterTypeMessage)) {
+        return super.equals(obj);
+      }
+      org.listware.sdk.pbcmdb.Core.RegisterTypeMessage other = (org.listware.sdk.pbcmdb.Core.RegisterTypeMessage) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getAsync()
+          != other.getAsync()) return false;
+      if (getRouter()
+          != other.getRouter()) return false;
+      if (hasTypeMessage() != other.hasTypeMessage()) return false;
+      if (hasTypeMessage()) {
+        if (!getTypeMessage()
+            .equals(other.getTypeMessage())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ASYNC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAsync());
+      hash = (37 * hash) + ROUTER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRouter());
+      if (hasTypeMessage()) {
+        hash = (37 * hash) + TYPE_MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getTypeMessage().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterTypeMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterTypeMessage)
+        org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.class, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder.class);
+      }
+
+      // Construct using org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        async_ = false;
+
+        router_ = false;
+
+        if (typeMessageBuilder_ == null) {
+          typeMessage_ = null;
+        } else {
+          typeMessage_ = null;
+          typeMessageBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getDefaultInstanceForType() {
+        return org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage build() {
+        org.listware.sdk.pbcmdb.Core.RegisterTypeMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage buildPartial() {
+        org.listware.sdk.pbcmdb.Core.RegisterTypeMessage result = new org.listware.sdk.pbcmdb.Core.RegisterTypeMessage(this);
+        result.id_ = id_;
+        result.async_ = async_;
+        result.router_ = router_;
+        if (typeMessageBuilder_ == null) {
+          result.typeMessage_ = typeMessage_;
+        } else {
+          result.typeMessage_ = typeMessageBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterTypeMessage) {
+          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterTypeMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage other) {
+        if (other == org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.getAsync() != false) {
+          setAsync(other.getAsync());
+        }
+        if (other.getRouter() != false) {
+          setRouter(other.getRouter());
+        }
+        if (other.hasTypeMessage()) {
+          mergeTypeMessage(other.getTypeMessage());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.listware.sdk.pbcmdb.Core.RegisterTypeMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterTypeMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean async_ ;
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public boolean getAsync() {
+        return async_;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder setAsync(boolean value) {
+        
+        async_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder clearAsync() {
+        
+        async_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean router_ ;
+      /**
+       * <code>bool router = 3;</code>
+       */
+      public boolean getRouter() {
+        return router_;
+      }
+      /**
+       * <code>bool router = 3;</code>
+       */
+      public Builder setRouter(boolean value) {
+        
+        router_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool router = 3;</code>
+       */
+      public Builder clearRouter() {
+        
+        router_ = false;
+        onChanged();
+        return this;
+      }
+
+      private org.listware.sdk.pbcmdb.Core.TypeMessage typeMessage_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.TypeMessage, org.listware.sdk.pbcmdb.Core.TypeMessage.Builder, org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder> typeMessageBuilder_;
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public boolean hasTypeMessage() {
+        return typeMessageBuilder_ != null || typeMessage_ != null;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.TypeMessage getTypeMessage() {
+        if (typeMessageBuilder_ == null) {
+          return typeMessage_ == null ? org.listware.sdk.pbcmdb.Core.TypeMessage.getDefaultInstance() : typeMessage_;
+        } else {
+          return typeMessageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public Builder setTypeMessage(org.listware.sdk.pbcmdb.Core.TypeMessage value) {
+        if (typeMessageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          typeMessage_ = value;
+          onChanged();
+        } else {
+          typeMessageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public Builder setTypeMessage(
+          org.listware.sdk.pbcmdb.Core.TypeMessage.Builder builderForValue) {
+        if (typeMessageBuilder_ == null) {
+          typeMessage_ = builderForValue.build();
+          onChanged();
+        } else {
+          typeMessageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public Builder mergeTypeMessage(org.listware.sdk.pbcmdb.Core.TypeMessage value) {
+        if (typeMessageBuilder_ == null) {
+          if (typeMessage_ != null) {
+            typeMessage_ =
+              org.listware.sdk.pbcmdb.Core.TypeMessage.newBuilder(typeMessage_).mergeFrom(value).buildPartial();
+          } else {
+            typeMessage_ = value;
+          }
+          onChanged();
+        } else {
+          typeMessageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public Builder clearTypeMessage() {
+        if (typeMessageBuilder_ == null) {
+          typeMessage_ = null;
+          onChanged();
+        } else {
+          typeMessage_ = null;
+          typeMessageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.TypeMessage.Builder getTypeMessageBuilder() {
+        
+        onChanged();
+        return getTypeMessageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder getTypeMessageOrBuilder() {
+        if (typeMessageBuilder_ != null) {
+          return typeMessageBuilder_.getMessageOrBuilder();
+        } else {
+          return typeMessage_ == null ?
+              org.listware.sdk.pbcmdb.Core.TypeMessage.getDefaultInstance() : typeMessage_;
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.TypeMessage type_message = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.TypeMessage, org.listware.sdk.pbcmdb.Core.TypeMessage.Builder, org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder> 
+          getTypeMessageFieldBuilder() {
+        if (typeMessageBuilder_ == null) {
+          typeMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.listware.sdk.pbcmdb.Core.TypeMessage, org.listware.sdk.pbcmdb.Core.TypeMessage.Builder, org.listware.sdk.pbcmdb.Core.TypeMessageOrBuilder>(
+                  getTypeMessage(),
+                  getParentForChildren(),
+                  isClean());
+          typeMessage_ = null;
+        }
+        return typeMessageBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterTypeMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterTypeMessage)
+    private static final org.listware.sdk.pbcmdb.Core.RegisterTypeMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterTypeMessage();
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterTypeMessage>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterTypeMessage>() {
+      @java.lang.Override
+      public RegisterTypeMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegisterTypeMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterTypeMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterTypeMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterObjectMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterObjectMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>bool async = 2;</code>
+     */
+    boolean getAsync();
+
+    /**
+     * <code>bool router = 3;</code>
+     */
+    boolean getRouter();
+
+    /**
+     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+     */
+    boolean hasObjectMessage();
+    /**
+     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.ObjectMessage getObjectMessage();
+    /**
+     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder getObjectMessageOrBuilder();
+  }
+  /**
+   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterObjectMessage}
+   */
+  public  static final class RegisterObjectMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterObjectMessage)
+      RegisterObjectMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterObjectMessage.newBuilder() to construct.
+    private RegisterObjectMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterObjectMessage() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegisterObjectMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+
+              async_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              router_ = input.readBool();
+              break;
+            }
+            case 34: {
+              org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder subBuilder = null;
+              if (objectMessage_ != null) {
+                subBuilder = objectMessage_.toBuilder();
+              }
+              objectMessage_ = input.readMessage(org.listware.sdk.pbcmdb.Core.ObjectMessage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(objectMessage_);
+                objectMessage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.class, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASYNC_FIELD_NUMBER = 2;
+    private boolean async_;
+    /**
+     * <code>bool async = 2;</code>
+     */
+    public boolean getAsync() {
+      return async_;
+    }
+
+    public static final int ROUTER_FIELD_NUMBER = 3;
+    private boolean router_;
+    /**
+     * <code>bool router = 3;</code>
+     */
+    public boolean getRouter() {
+      return router_;
+    }
+
+    public static final int OBJECT_MESSAGE_FIELD_NUMBER = 4;
+    private org.listware.sdk.pbcmdb.Core.ObjectMessage objectMessage_;
+    /**
+     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+     */
+    public boolean hasObjectMessage() {
+      return objectMessage_ != null;
+    }
+    /**
+     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.ObjectMessage getObjectMessage() {
+      return objectMessage_ == null ? org.listware.sdk.pbcmdb.Core.ObjectMessage.getDefaultInstance() : objectMessage_;
+    }
+    /**
+     * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder getObjectMessageOrBuilder() {
+      return getObjectMessage();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (async_ != false) {
+        output.writeBool(2, async_);
+      }
+      if (router_ != false) {
+        output.writeBool(3, router_);
+      }
+      if (objectMessage_ != null) {
+        output.writeMessage(4, getObjectMessage());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (async_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, async_);
+      }
+      if (router_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, router_);
+      }
+      if (objectMessage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getObjectMessage());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterObjectMessage)) {
+        return super.equals(obj);
+      }
+      org.listware.sdk.pbcmdb.Core.RegisterObjectMessage other = (org.listware.sdk.pbcmdb.Core.RegisterObjectMessage) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getAsync()
+          != other.getAsync()) return false;
+      if (getRouter()
+          != other.getRouter()) return false;
+      if (hasObjectMessage() != other.hasObjectMessage()) return false;
+      if (hasObjectMessage()) {
+        if (!getObjectMessage()
+            .equals(other.getObjectMessage())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ASYNC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAsync());
+      hash = (37 * hash) + ROUTER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRouter());
+      if (hasObjectMessage()) {
+        hash = (37 * hash) + OBJECT_MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectMessage().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterObjectMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterObjectMessage)
+        org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.class, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder.class);
+      }
+
+      // Construct using org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        async_ = false;
+
+        router_ = false;
+
+        if (objectMessageBuilder_ == null) {
+          objectMessage_ = null;
+        } else {
+          objectMessage_ = null;
+          objectMessageBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getDefaultInstanceForType() {
+        return org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage build() {
+        org.listware.sdk.pbcmdb.Core.RegisterObjectMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage buildPartial() {
+        org.listware.sdk.pbcmdb.Core.RegisterObjectMessage result = new org.listware.sdk.pbcmdb.Core.RegisterObjectMessage(this);
+        result.id_ = id_;
+        result.async_ = async_;
+        result.router_ = router_;
+        if (objectMessageBuilder_ == null) {
+          result.objectMessage_ = objectMessage_;
+        } else {
+          result.objectMessage_ = objectMessageBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterObjectMessage) {
+          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterObjectMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage other) {
+        if (other == org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.getAsync() != false) {
+          setAsync(other.getAsync());
+        }
+        if (other.getRouter() != false) {
+          setRouter(other.getRouter());
+        }
+        if (other.hasObjectMessage()) {
+          mergeObjectMessage(other.getObjectMessage());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.listware.sdk.pbcmdb.Core.RegisterObjectMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterObjectMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean async_ ;
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public boolean getAsync() {
+        return async_;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder setAsync(boolean value) {
+        
+        async_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder clearAsync() {
+        
+        async_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean router_ ;
+      /**
+       * <code>bool router = 3;</code>
+       */
+      public boolean getRouter() {
+        return router_;
+      }
+      /**
+       * <code>bool router = 3;</code>
+       */
+      public Builder setRouter(boolean value) {
+        
+        router_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool router = 3;</code>
+       */
+      public Builder clearRouter() {
+        
+        router_ = false;
+        onChanged();
+        return this;
+      }
+
+      private org.listware.sdk.pbcmdb.Core.ObjectMessage objectMessage_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.ObjectMessage, org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder> objectMessageBuilder_;
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public boolean hasObjectMessage() {
+        return objectMessageBuilder_ != null || objectMessage_ != null;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.ObjectMessage getObjectMessage() {
+        if (objectMessageBuilder_ == null) {
+          return objectMessage_ == null ? org.listware.sdk.pbcmdb.Core.ObjectMessage.getDefaultInstance() : objectMessage_;
+        } else {
+          return objectMessageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public Builder setObjectMessage(org.listware.sdk.pbcmdb.Core.ObjectMessage value) {
+        if (objectMessageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          objectMessage_ = value;
+          onChanged();
+        } else {
+          objectMessageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public Builder setObjectMessage(
+          org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder builderForValue) {
+        if (objectMessageBuilder_ == null) {
+          objectMessage_ = builderForValue.build();
+          onChanged();
+        } else {
+          objectMessageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public Builder mergeObjectMessage(org.listware.sdk.pbcmdb.Core.ObjectMessage value) {
+        if (objectMessageBuilder_ == null) {
+          if (objectMessage_ != null) {
+            objectMessage_ =
+              org.listware.sdk.pbcmdb.Core.ObjectMessage.newBuilder(objectMessage_).mergeFrom(value).buildPartial();
+          } else {
+            objectMessage_ = value;
+          }
+          onChanged();
+        } else {
+          objectMessageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public Builder clearObjectMessage() {
+        if (objectMessageBuilder_ == null) {
+          objectMessage_ = null;
+          onChanged();
+        } else {
+          objectMessage_ = null;
+          objectMessageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder getObjectMessageBuilder() {
+        
+        onChanged();
+        return getObjectMessageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder getObjectMessageOrBuilder() {
+        if (objectMessageBuilder_ != null) {
+          return objectMessageBuilder_.getMessageOrBuilder();
+        } else {
+          return objectMessage_ == null ?
+              org.listware.sdk.pbcmdb.Core.ObjectMessage.getDefaultInstance() : objectMessage_;
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.ObjectMessage object_message = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.ObjectMessage, org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder> 
+          getObjectMessageFieldBuilder() {
+        if (objectMessageBuilder_ == null) {
+          objectMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.listware.sdk.pbcmdb.Core.ObjectMessage, org.listware.sdk.pbcmdb.Core.ObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.ObjectMessageOrBuilder>(
+                  getObjectMessage(),
+                  getParentForChildren(),
+                  isClean());
+          objectMessage_ = null;
+        }
+        return objectMessageBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterObjectMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterObjectMessage)
+    private static final org.listware.sdk.pbcmdb.Core.RegisterObjectMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterObjectMessage();
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterObjectMessage>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterObjectMessage>() {
+      @java.lang.Override
+      public RegisterObjectMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegisterObjectMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterObjectMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterObjectMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterLinkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterLinkMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>bool async = 2;</code>
+     */
+    boolean getAsync();
+
+    /**
+     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+     */
+    boolean hasLinkMessage();
+    /**
+     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.LinkMessage getLinkMessage();
+    /**
+     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder getLinkMessageOrBuilder();
+  }
+  /**
+   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterLinkMessage}
+   */
+  public  static final class RegisterLinkMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterLinkMessage)
+      RegisterLinkMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterLinkMessage.newBuilder() to construct.
+    private RegisterLinkMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterLinkMessage() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegisterLinkMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+
+              async_ = input.readBool();
+              break;
+            }
+            case 34: {
+              org.listware.sdk.pbcmdb.Core.LinkMessage.Builder subBuilder = null;
+              if (linkMessage_ != null) {
+                subBuilder = linkMessage_.toBuilder();
+              }
+              linkMessage_ = input.readMessage(org.listware.sdk.pbcmdb.Core.LinkMessage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(linkMessage_);
+                linkMessage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.class, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASYNC_FIELD_NUMBER = 2;
+    private boolean async_;
+    /**
+     * <code>bool async = 2;</code>
+     */
+    public boolean getAsync() {
+      return async_;
+    }
+
+    public static final int LINK_MESSAGE_FIELD_NUMBER = 4;
+    private org.listware.sdk.pbcmdb.Core.LinkMessage linkMessage_;
+    /**
+     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+     */
+    public boolean hasLinkMessage() {
+      return linkMessage_ != null;
+    }
+    /**
+     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.LinkMessage getLinkMessage() {
+      return linkMessage_ == null ? org.listware.sdk.pbcmdb.Core.LinkMessage.getDefaultInstance() : linkMessage_;
+    }
+    /**
+     * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder getLinkMessageOrBuilder() {
+      return getLinkMessage();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (async_ != false) {
+        output.writeBool(2, async_);
+      }
+      if (linkMessage_ != null) {
+        output.writeMessage(4, getLinkMessage());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (async_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, async_);
+      }
+      if (linkMessage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLinkMessage());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterLinkMessage)) {
+        return super.equals(obj);
+      }
+      org.listware.sdk.pbcmdb.Core.RegisterLinkMessage other = (org.listware.sdk.pbcmdb.Core.RegisterLinkMessage) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getAsync()
+          != other.getAsync()) return false;
+      if (hasLinkMessage() != other.hasLinkMessage()) return false;
+      if (hasLinkMessage()) {
+        if (!getLinkMessage()
+            .equals(other.getLinkMessage())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ASYNC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAsync());
+      if (hasLinkMessage()) {
+        hash = (37 * hash) + LINK_MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLinkMessage().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterLinkMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterLinkMessage)
+        org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.class, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder.class);
+      }
+
+      // Construct using org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        async_ = false;
+
+        if (linkMessageBuilder_ == null) {
+          linkMessage_ = null;
+        } else {
+          linkMessage_ = null;
+          linkMessageBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getDefaultInstanceForType() {
+        return org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage build() {
+        org.listware.sdk.pbcmdb.Core.RegisterLinkMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage buildPartial() {
+        org.listware.sdk.pbcmdb.Core.RegisterLinkMessage result = new org.listware.sdk.pbcmdb.Core.RegisterLinkMessage(this);
+        result.id_ = id_;
+        result.async_ = async_;
+        if (linkMessageBuilder_ == null) {
+          result.linkMessage_ = linkMessage_;
+        } else {
+          result.linkMessage_ = linkMessageBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterLinkMessage) {
+          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterLinkMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage other) {
+        if (other == org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.getAsync() != false) {
+          setAsync(other.getAsync());
+        }
+        if (other.hasLinkMessage()) {
+          mergeLinkMessage(other.getLinkMessage());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.listware.sdk.pbcmdb.Core.RegisterLinkMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterLinkMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean async_ ;
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public boolean getAsync() {
+        return async_;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder setAsync(boolean value) {
+        
+        async_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder clearAsync() {
+        
+        async_ = false;
+        onChanged();
+        return this;
+      }
+
+      private org.listware.sdk.pbcmdb.Core.LinkMessage linkMessage_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.LinkMessage, org.listware.sdk.pbcmdb.Core.LinkMessage.Builder, org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder> linkMessageBuilder_;
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public boolean hasLinkMessage() {
+        return linkMessageBuilder_ != null || linkMessage_ != null;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.LinkMessage getLinkMessage() {
+        if (linkMessageBuilder_ == null) {
+          return linkMessage_ == null ? org.listware.sdk.pbcmdb.Core.LinkMessage.getDefaultInstance() : linkMessage_;
+        } else {
+          return linkMessageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public Builder setLinkMessage(org.listware.sdk.pbcmdb.Core.LinkMessage value) {
+        if (linkMessageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          linkMessage_ = value;
+          onChanged();
+        } else {
+          linkMessageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public Builder setLinkMessage(
+          org.listware.sdk.pbcmdb.Core.LinkMessage.Builder builderForValue) {
+        if (linkMessageBuilder_ == null) {
+          linkMessage_ = builderForValue.build();
+          onChanged();
+        } else {
+          linkMessageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public Builder mergeLinkMessage(org.listware.sdk.pbcmdb.Core.LinkMessage value) {
+        if (linkMessageBuilder_ == null) {
+          if (linkMessage_ != null) {
+            linkMessage_ =
+              org.listware.sdk.pbcmdb.Core.LinkMessage.newBuilder(linkMessage_).mergeFrom(value).buildPartial();
+          } else {
+            linkMessage_ = value;
+          }
+          onChanged();
+        } else {
+          linkMessageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public Builder clearLinkMessage() {
+        if (linkMessageBuilder_ == null) {
+          linkMessage_ = null;
+          onChanged();
+        } else {
+          linkMessage_ = null;
+          linkMessageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.LinkMessage.Builder getLinkMessageBuilder() {
+        
+        onChanged();
+        return getLinkMessageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder getLinkMessageOrBuilder() {
+        if (linkMessageBuilder_ != null) {
+          return linkMessageBuilder_.getMessageOrBuilder();
+        } else {
+          return linkMessage_ == null ?
+              org.listware.sdk.pbcmdb.Core.LinkMessage.getDefaultInstance() : linkMessage_;
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbcmdb.LinkMessage link_message = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.LinkMessage, org.listware.sdk.pbcmdb.Core.LinkMessage.Builder, org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder> 
+          getLinkMessageFieldBuilder() {
+        if (linkMessageBuilder_ == null) {
+          linkMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.listware.sdk.pbcmdb.Core.LinkMessage, org.listware.sdk.pbcmdb.Core.LinkMessage.Builder, org.listware.sdk.pbcmdb.Core.LinkMessageOrBuilder>(
+                  getLinkMessage(),
+                  getParentForChildren(),
+                  isClean());
+          linkMessage_ = null;
+        }
+        return linkMessageBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterLinkMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterLinkMessage)
+    private static final org.listware.sdk.pbcmdb.Core.RegisterLinkMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterLinkMessage();
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterLinkMessage>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterLinkMessage>() {
+      @java.lang.Override
+      public RegisterLinkMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegisterLinkMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterLinkMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterLinkMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterFunctionMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>bool async = 2;</code>
+     */
+    boolean getAsync();
+
+    /**
+     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+     */
+    boolean hasFunctionMessage();
+    /**
+     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+     */
+    org.listware.sdk.Functions.FunctionMessage getFunctionMessage();
+    /**
+     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+     */
+    org.listware.sdk.Functions.FunctionMessageOrBuilder getFunctionMessageOrBuilder();
+  }
+  /**
+   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterFunctionMessage}
+   */
+  public  static final class RegisterFunctionMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
+      RegisterFunctionMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterFunctionMessage.newBuilder() to construct.
+    private RegisterFunctionMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterFunctionMessage() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegisterFunctionMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+
+              async_ = input.readBool();
+              break;
+            }
+            case 34: {
+              org.listware.sdk.Functions.FunctionMessage.Builder subBuilder = null;
+              if (functionMessage_ != null) {
+                subBuilder = functionMessage_.toBuilder();
+              }
+              functionMessage_ = input.readMessage(org.listware.sdk.Functions.FunctionMessage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(functionMessage_);
+                functionMessage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.class, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASYNC_FIELD_NUMBER = 2;
+    private boolean async_;
+    /**
+     * <code>bool async = 2;</code>
+     */
+    public boolean getAsync() {
+      return async_;
+    }
+
+    public static final int FUNCTION_MESSAGE_FIELD_NUMBER = 4;
+    private org.listware.sdk.Functions.FunctionMessage functionMessage_;
+    /**
+     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+     */
+    public boolean hasFunctionMessage() {
+      return functionMessage_ != null;
+    }
+    /**
+     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+     */
+    public org.listware.sdk.Functions.FunctionMessage getFunctionMessage() {
+      return functionMessage_ == null ? org.listware.sdk.Functions.FunctionMessage.getDefaultInstance() : functionMessage_;
+    }
+    /**
+     * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+     */
+    public org.listware.sdk.Functions.FunctionMessageOrBuilder getFunctionMessageOrBuilder() {
+      return getFunctionMessage();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (async_ != false) {
+        output.writeBool(2, async_);
+      }
+      if (functionMessage_ != null) {
+        output.writeMessage(4, getFunctionMessage());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (async_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, async_);
+      }
+      if (functionMessage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getFunctionMessage());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage)) {
+        return super.equals(obj);
+      }
+      org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage other = (org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getAsync()
+          != other.getAsync()) return false;
+      if (hasFunctionMessage() != other.hasFunctionMessage()) return false;
+      if (hasFunctionMessage()) {
+        if (!getFunctionMessage()
+            .equals(other.getFunctionMessage())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ASYNC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAsync());
+      if (hasFunctionMessage()) {
+        hash = (37 * hash) + FUNCTION_MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getFunctionMessage().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterFunctionMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
+        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.class, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder.class);
+      }
+
+      // Construct using org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        async_ = false;
+
+        if (functionMessageBuilder_ == null) {
+          functionMessage_ = null;
+        } else {
+          functionMessage_ = null;
+          functionMessageBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getDefaultInstanceForType() {
+        return org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage build() {
+        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage buildPartial() {
+        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage result = new org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage(this);
+        result.id_ = id_;
+        result.async_ = async_;
+        if (functionMessageBuilder_ == null) {
+          result.functionMessage_ = functionMessage_;
+        } else {
+          result.functionMessage_ = functionMessageBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage) {
+          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage other) {
+        if (other == org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.getAsync() != false) {
+          setAsync(other.getAsync());
+        }
+        if (other.hasFunctionMessage()) {
+          mergeFunctionMessage(other.getFunctionMessage());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean async_ ;
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public boolean getAsync() {
+        return async_;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder setAsync(boolean value) {
+        
+        async_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool async = 2;</code>
+       */
+      public Builder clearAsync() {
+        
+        async_ = false;
+        onChanged();
+        return this;
+      }
+
+      private org.listware.sdk.Functions.FunctionMessage functionMessage_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.Functions.FunctionMessage, org.listware.sdk.Functions.FunctionMessage.Builder, org.listware.sdk.Functions.FunctionMessageOrBuilder> functionMessageBuilder_;
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public boolean hasFunctionMessage() {
+        return functionMessageBuilder_ != null || functionMessage_ != null;
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public org.listware.sdk.Functions.FunctionMessage getFunctionMessage() {
+        if (functionMessageBuilder_ == null) {
+          return functionMessage_ == null ? org.listware.sdk.Functions.FunctionMessage.getDefaultInstance() : functionMessage_;
+        } else {
+          return functionMessageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public Builder setFunctionMessage(org.listware.sdk.Functions.FunctionMessage value) {
+        if (functionMessageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          functionMessage_ = value;
+          onChanged();
+        } else {
+          functionMessageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public Builder setFunctionMessage(
+          org.listware.sdk.Functions.FunctionMessage.Builder builderForValue) {
+        if (functionMessageBuilder_ == null) {
+          functionMessage_ = builderForValue.build();
+          onChanged();
+        } else {
+          functionMessageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public Builder mergeFunctionMessage(org.listware.sdk.Functions.FunctionMessage value) {
+        if (functionMessageBuilder_ == null) {
+          if (functionMessage_ != null) {
+            functionMessage_ =
+              org.listware.sdk.Functions.FunctionMessage.newBuilder(functionMessage_).mergeFrom(value).buildPartial();
+          } else {
+            functionMessage_ = value;
+          }
+          onChanged();
+        } else {
+          functionMessageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public Builder clearFunctionMessage() {
+        if (functionMessageBuilder_ == null) {
+          functionMessage_ = null;
+          onChanged();
+        } else {
+          functionMessage_ = null;
+          functionMessageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public org.listware.sdk.Functions.FunctionMessage.Builder getFunctionMessageBuilder() {
+        
+        onChanged();
+        return getFunctionMessageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      public org.listware.sdk.Functions.FunctionMessageOrBuilder getFunctionMessageOrBuilder() {
+        if (functionMessageBuilder_ != null) {
+          return functionMessageBuilder_.getMessageOrBuilder();
+        } else {
+          return functionMessage_ == null ?
+              org.listware.sdk.Functions.FunctionMessage.getDefaultInstance() : functionMessage_;
+        }
+      }
+      /**
+       * <code>.org.listware.sdk.pbtypes.FunctionMessage function_message = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.listware.sdk.Functions.FunctionMessage, org.listware.sdk.Functions.FunctionMessage.Builder, org.listware.sdk.Functions.FunctionMessageOrBuilder> 
+          getFunctionMessageFieldBuilder() {
+        if (functionMessageBuilder_ == null) {
+          functionMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.listware.sdk.Functions.FunctionMessage, org.listware.sdk.Functions.FunctionMessage.Builder, org.listware.sdk.Functions.FunctionMessageOrBuilder>(
+                  getFunctionMessage(),
+                  getParentForChildren(),
+                  isClean());
+          functionMessage_ = null;
+        }
+        return functionMessageBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterFunctionMessage)
+    private static final org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage();
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterFunctionMessage>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterFunctionMessage>() {
+      @java.lang.Override
+      public RegisterFunctionMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegisterFunctionMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterFunctionMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterFunctionMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbcmdb.RegisterMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> 
+        getTypeMessagesList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getTypeMessages(int index);
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    int getTypeMessagesCount();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
+        getTypeMessagesOrBuilderList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder getTypeMessagesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> 
+        getObjectMessagesList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getObjectMessages(int index);
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    int getObjectMessagesCount();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
+        getObjectMessagesOrBuilderList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder getObjectMessagesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> 
+        getLinkMessagesList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getLinkMessages(int index);
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    int getLinkMessagesCount();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
+        getLinkMessagesOrBuilderList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder getLinkMessagesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> 
+        getFunctionMessagesList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getFunctionMessages(int index);
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    int getFunctionMessagesCount();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
+        getFunctionMessagesOrBuilderList();
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder getFunctionMessagesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterMessage}
+   */
+  public  static final class RegisterMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbcmdb.RegisterMessage)
+      RegisterMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterMessage.newBuilder() to construct.
+    private RegisterMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterMessage() {
+      typeMessages_ = java.util.Collections.emptyList();
+      objectMessages_ = java.util.Collections.emptyList();
+      linkMessages_ = java.util.Collections.emptyList();
+      functionMessages_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RegisterMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                typeMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              typeMessages_.add(
+                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                objectMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              objectMessages_.add(
+                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                linkMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              linkMessages_.add(
+                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                functionMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              functionMessages_.add(
+                  input.readMessage(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          typeMessages_ = java.util.Collections.unmodifiableList(typeMessages_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          objectMessages_ = java.util.Collections.unmodifiableList(objectMessages_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          linkMessages_ = java.util.Collections.unmodifiableList(linkMessages_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          functionMessages_ = java.util.Collections.unmodifiableList(functionMessages_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.listware.sdk.pbcmdb.Core.RegisterMessage.class, org.listware.sdk.pbcmdb.Core.RegisterMessage.Builder.class);
+    }
+
+    public static final int TYPE_MESSAGES_FIELD_NUMBER = 1;
+    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> typeMessages_;
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> getTypeMessagesList() {
+      return typeMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
+        getTypeMessagesOrBuilderList() {
+      return typeMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    public int getTypeMessagesCount() {
+      return typeMessages_.size();
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getTypeMessages(int index) {
+      return typeMessages_.get(index);
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder getTypeMessagesOrBuilder(
+        int index) {
+      return typeMessages_.get(index);
+    }
+
+    public static final int OBJECT_MESSAGES_FIELD_NUMBER = 2;
+    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> objectMessages_;
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> getObjectMessagesList() {
+      return objectMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
+        getObjectMessagesOrBuilderList() {
+      return objectMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    public int getObjectMessagesCount() {
+      return objectMessages_.size();
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getObjectMessages(int index) {
+      return objectMessages_.get(index);
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder getObjectMessagesOrBuilder(
+        int index) {
+      return objectMessages_.get(index);
+    }
+
+    public static final int LINK_MESSAGES_FIELD_NUMBER = 3;
+    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> linkMessages_;
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> getLinkMessagesList() {
+      return linkMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
+        getLinkMessagesOrBuilderList() {
+      return linkMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    public int getLinkMessagesCount() {
+      return linkMessages_.size();
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getLinkMessages(int index) {
+      return linkMessages_.get(index);
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder getLinkMessagesOrBuilder(
+        int index) {
+      return linkMessages_.get(index);
+    }
+
+    public static final int FUNCTION_MESSAGES_FIELD_NUMBER = 4;
+    private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> functionMessages_;
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> getFunctionMessagesList() {
+      return functionMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
+        getFunctionMessagesOrBuilderList() {
+      return functionMessages_;
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    public int getFunctionMessagesCount() {
+      return functionMessages_.size();
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getFunctionMessages(int index) {
+      return functionMessages_.get(index);
+    }
+    /**
+     * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+     */
+    public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder getFunctionMessagesOrBuilder(
+        int index) {
+      return functionMessages_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < typeMessages_.size(); i++) {
+        output.writeMessage(1, typeMessages_.get(i));
+      }
+      for (int i = 0; i < objectMessages_.size(); i++) {
+        output.writeMessage(2, objectMessages_.get(i));
+      }
+      for (int i = 0; i < linkMessages_.size(); i++) {
+        output.writeMessage(3, linkMessages_.get(i));
+      }
+      for (int i = 0; i < functionMessages_.size(); i++) {
+        output.writeMessage(4, functionMessages_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < typeMessages_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, typeMessages_.get(i));
+      }
+      for (int i = 0; i < objectMessages_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, objectMessages_.get(i));
+      }
+      for (int i = 0; i < linkMessages_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, linkMessages_.get(i));
+      }
+      for (int i = 0; i < functionMessages_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, functionMessages_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.listware.sdk.pbcmdb.Core.RegisterMessage)) {
+        return super.equals(obj);
+      }
+      org.listware.sdk.pbcmdb.Core.RegisterMessage other = (org.listware.sdk.pbcmdb.Core.RegisterMessage) obj;
+
+      if (!getTypeMessagesList()
+          .equals(other.getTypeMessagesList())) return false;
+      if (!getObjectMessagesList()
+          .equals(other.getObjectMessagesList())) return false;
+      if (!getLinkMessagesList()
+          .equals(other.getLinkMessagesList())) return false;
+      if (!getFunctionMessagesList()
+          .equals(other.getFunctionMessagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTypeMessagesCount() > 0) {
+        hash = (37 * hash) + TYPE_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getTypeMessagesList().hashCode();
+      }
+      if (getObjectMessagesCount() > 0) {
+        hash = (37 * hash) + OBJECT_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectMessagesList().hashCode();
+      }
+      if (getLinkMessagesCount() > 0) {
+        hash = (37 * hash) + LINK_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getLinkMessagesList().hashCode();
+      }
+      if (getFunctionMessagesCount() > 0) {
+        hash = (37 * hash) + FUNCTION_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getFunctionMessagesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.listware.sdk.pbcmdb.Core.RegisterMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.listware.sdk.pbcmdb.RegisterMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbcmdb.RegisterMessage)
+        org.listware.sdk.pbcmdb.Core.RegisterMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.listware.sdk.pbcmdb.Core.RegisterMessage.class, org.listware.sdk.pbcmdb.Core.RegisterMessage.Builder.class);
+      }
+
+      // Construct using org.listware.sdk.pbcmdb.Core.RegisterMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTypeMessagesFieldBuilder();
+          getObjectMessagesFieldBuilder();
+          getLinkMessagesFieldBuilder();
+          getFunctionMessagesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (typeMessagesBuilder_ == null) {
+          typeMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          typeMessagesBuilder_.clear();
+        }
+        if (objectMessagesBuilder_ == null) {
+          objectMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          objectMessagesBuilder_.clear();
+        }
+        if (linkMessagesBuilder_ == null) {
+          linkMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          linkMessagesBuilder_.clear();
+        }
+        if (functionMessagesBuilder_ == null) {
+          functionMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          functionMessagesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.listware.sdk.pbcmdb.Core.internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterMessage getDefaultInstanceForType() {
+        return org.listware.sdk.pbcmdb.Core.RegisterMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterMessage build() {
+        org.listware.sdk.pbcmdb.Core.RegisterMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.pbcmdb.Core.RegisterMessage buildPartial() {
+        org.listware.sdk.pbcmdb.Core.RegisterMessage result = new org.listware.sdk.pbcmdb.Core.RegisterMessage(this);
+        int from_bitField0_ = bitField0_;
+        if (typeMessagesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            typeMessages_ = java.util.Collections.unmodifiableList(typeMessages_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.typeMessages_ = typeMessages_;
+        } else {
+          result.typeMessages_ = typeMessagesBuilder_.build();
+        }
+        if (objectMessagesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            objectMessages_ = java.util.Collections.unmodifiableList(objectMessages_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.objectMessages_ = objectMessages_;
+        } else {
+          result.objectMessages_ = objectMessagesBuilder_.build();
+        }
+        if (linkMessagesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            linkMessages_ = java.util.Collections.unmodifiableList(linkMessages_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.linkMessages_ = linkMessages_;
+        } else {
+          result.linkMessages_ = linkMessagesBuilder_.build();
+        }
+        if (functionMessagesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            functionMessages_ = java.util.Collections.unmodifiableList(functionMessages_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.functionMessages_ = functionMessages_;
+        } else {
+          result.functionMessages_ = functionMessagesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.listware.sdk.pbcmdb.Core.RegisterMessage) {
+          return mergeFrom((org.listware.sdk.pbcmdb.Core.RegisterMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.listware.sdk.pbcmdb.Core.RegisterMessage other) {
+        if (other == org.listware.sdk.pbcmdb.Core.RegisterMessage.getDefaultInstance()) return this;
+        if (typeMessagesBuilder_ == null) {
+          if (!other.typeMessages_.isEmpty()) {
+            if (typeMessages_.isEmpty()) {
+              typeMessages_ = other.typeMessages_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTypeMessagesIsMutable();
+              typeMessages_.addAll(other.typeMessages_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.typeMessages_.isEmpty()) {
+            if (typeMessagesBuilder_.isEmpty()) {
+              typeMessagesBuilder_.dispose();
+              typeMessagesBuilder_ = null;
+              typeMessages_ = other.typeMessages_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              typeMessagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTypeMessagesFieldBuilder() : null;
+            } else {
+              typeMessagesBuilder_.addAllMessages(other.typeMessages_);
+            }
+          }
+        }
+        if (objectMessagesBuilder_ == null) {
+          if (!other.objectMessages_.isEmpty()) {
+            if (objectMessages_.isEmpty()) {
+              objectMessages_ = other.objectMessages_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureObjectMessagesIsMutable();
+              objectMessages_.addAll(other.objectMessages_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.objectMessages_.isEmpty()) {
+            if (objectMessagesBuilder_.isEmpty()) {
+              objectMessagesBuilder_.dispose();
+              objectMessagesBuilder_ = null;
+              objectMessages_ = other.objectMessages_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              objectMessagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getObjectMessagesFieldBuilder() : null;
+            } else {
+              objectMessagesBuilder_.addAllMessages(other.objectMessages_);
+            }
+          }
+        }
+        if (linkMessagesBuilder_ == null) {
+          if (!other.linkMessages_.isEmpty()) {
+            if (linkMessages_.isEmpty()) {
+              linkMessages_ = other.linkMessages_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureLinkMessagesIsMutable();
+              linkMessages_.addAll(other.linkMessages_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.linkMessages_.isEmpty()) {
+            if (linkMessagesBuilder_.isEmpty()) {
+              linkMessagesBuilder_.dispose();
+              linkMessagesBuilder_ = null;
+              linkMessages_ = other.linkMessages_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              linkMessagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinkMessagesFieldBuilder() : null;
+            } else {
+              linkMessagesBuilder_.addAllMessages(other.linkMessages_);
+            }
+          }
+        }
+        if (functionMessagesBuilder_ == null) {
+          if (!other.functionMessages_.isEmpty()) {
+            if (functionMessages_.isEmpty()) {
+              functionMessages_ = other.functionMessages_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureFunctionMessagesIsMutable();
+              functionMessages_.addAll(other.functionMessages_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.functionMessages_.isEmpty()) {
+            if (functionMessagesBuilder_.isEmpty()) {
+              functionMessagesBuilder_.dispose();
+              functionMessagesBuilder_ = null;
+              functionMessages_ = other.functionMessages_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              functionMessagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFunctionMessagesFieldBuilder() : null;
+            } else {
+              functionMessagesBuilder_.addAllMessages(other.functionMessages_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.listware.sdk.pbcmdb.Core.RegisterMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.listware.sdk.pbcmdb.Core.RegisterMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> typeMessages_ =
+        java.util.Collections.emptyList();
+      private void ensureTypeMessagesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          typeMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage>(typeMessages_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterTypeMessage, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> typeMessagesBuilder_;
+
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> getTypeMessagesList() {
+        if (typeMessagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(typeMessages_);
+        } else {
+          return typeMessagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public int getTypeMessagesCount() {
+        if (typeMessagesBuilder_ == null) {
+          return typeMessages_.size();
+        } else {
+          return typeMessagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage getTypeMessages(int index) {
+        if (typeMessagesBuilder_ == null) {
+          return typeMessages_.get(index);
+        } else {
+          return typeMessagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder setTypeMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage value) {
+        if (typeMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTypeMessagesIsMutable();
+          typeMessages_.set(index, value);
+          onChanged();
+        } else {
+          typeMessagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder setTypeMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder builderForValue) {
+        if (typeMessagesBuilder_ == null) {
+          ensureTypeMessagesIsMutable();
+          typeMessages_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          typeMessagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder addTypeMessages(org.listware.sdk.pbcmdb.Core.RegisterTypeMessage value) {
+        if (typeMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTypeMessagesIsMutable();
+          typeMessages_.add(value);
+          onChanged();
+        } else {
+          typeMessagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder addTypeMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage value) {
+        if (typeMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTypeMessagesIsMutable();
+          typeMessages_.add(index, value);
+          onChanged();
+        } else {
+          typeMessagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder addTypeMessages(
+          org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder builderForValue) {
+        if (typeMessagesBuilder_ == null) {
+          ensureTypeMessagesIsMutable();
+          typeMessages_.add(builderForValue.build());
+          onChanged();
+        } else {
+          typeMessagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder addTypeMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder builderForValue) {
+        if (typeMessagesBuilder_ == null) {
+          ensureTypeMessagesIsMutable();
+          typeMessages_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          typeMessagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder addAllTypeMessages(
+          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessage> values) {
+        if (typeMessagesBuilder_ == null) {
+          ensureTypeMessagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, typeMessages_);
+          onChanged();
+        } else {
+          typeMessagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder clearTypeMessages() {
+        if (typeMessagesBuilder_ == null) {
+          typeMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          typeMessagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public Builder removeTypeMessages(int index) {
+        if (typeMessagesBuilder_ == null) {
+          ensureTypeMessagesIsMutable();
+          typeMessages_.remove(index);
+          onChanged();
+        } else {
+          typeMessagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder getTypeMessagesBuilder(
+          int index) {
+        return getTypeMessagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder getTypeMessagesOrBuilder(
+          int index) {
+        if (typeMessagesBuilder_ == null) {
+          return typeMessages_.get(index);  } else {
+          return typeMessagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
+           getTypeMessagesOrBuilderList() {
+        if (typeMessagesBuilder_ != null) {
+          return typeMessagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(typeMessages_);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder addTypeMessagesBuilder() {
+        return getTypeMessagesFieldBuilder().addBuilder(
+            org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder addTypeMessagesBuilder(
+          int index) {
+        return getTypeMessagesFieldBuilder().addBuilder(
+            index, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterTypeMessage type_messages = 1;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder> 
+           getTypeMessagesBuilderList() {
+        return getTypeMessagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterTypeMessage, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder> 
+          getTypeMessagesFieldBuilder() {
+        if (typeMessagesBuilder_ == null) {
+          typeMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.listware.sdk.pbcmdb.Core.RegisterTypeMessage, org.listware.sdk.pbcmdb.Core.RegisterTypeMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterTypeMessageOrBuilder>(
+                  typeMessages_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          typeMessages_ = null;
+        }
+        return typeMessagesBuilder_;
+      }
+
+      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> objectMessages_ =
+        java.util.Collections.emptyList();
+      private void ensureObjectMessagesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          objectMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage>(objectMessages_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterObjectMessage, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> objectMessagesBuilder_;
+
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> getObjectMessagesList() {
+        if (objectMessagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(objectMessages_);
+        } else {
+          return objectMessagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public int getObjectMessagesCount() {
+        if (objectMessagesBuilder_ == null) {
+          return objectMessages_.size();
+        } else {
+          return objectMessagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage getObjectMessages(int index) {
+        if (objectMessagesBuilder_ == null) {
+          return objectMessages_.get(index);
+        } else {
+          return objectMessagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder setObjectMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage value) {
+        if (objectMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObjectMessagesIsMutable();
+          objectMessages_.set(index, value);
+          onChanged();
+        } else {
+          objectMessagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder setObjectMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder builderForValue) {
+        if (objectMessagesBuilder_ == null) {
+          ensureObjectMessagesIsMutable();
+          objectMessages_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          objectMessagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder addObjectMessages(org.listware.sdk.pbcmdb.Core.RegisterObjectMessage value) {
+        if (objectMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObjectMessagesIsMutable();
+          objectMessages_.add(value);
+          onChanged();
+        } else {
+          objectMessagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder addObjectMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage value) {
+        if (objectMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObjectMessagesIsMutable();
+          objectMessages_.add(index, value);
+          onChanged();
+        } else {
+          objectMessagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder addObjectMessages(
+          org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder builderForValue) {
+        if (objectMessagesBuilder_ == null) {
+          ensureObjectMessagesIsMutable();
+          objectMessages_.add(builderForValue.build());
+          onChanged();
+        } else {
+          objectMessagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder addObjectMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder builderForValue) {
+        if (objectMessagesBuilder_ == null) {
+          ensureObjectMessagesIsMutable();
+          objectMessages_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          objectMessagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder addAllObjectMessages(
+          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessage> values) {
+        if (objectMessagesBuilder_ == null) {
+          ensureObjectMessagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, objectMessages_);
+          onChanged();
+        } else {
+          objectMessagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder clearObjectMessages() {
+        if (objectMessagesBuilder_ == null) {
+          objectMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          objectMessagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public Builder removeObjectMessages(int index) {
+        if (objectMessagesBuilder_ == null) {
+          ensureObjectMessagesIsMutable();
+          objectMessages_.remove(index);
+          onChanged();
+        } else {
+          objectMessagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder getObjectMessagesBuilder(
+          int index) {
+        return getObjectMessagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder getObjectMessagesOrBuilder(
+          int index) {
+        if (objectMessagesBuilder_ == null) {
+          return objectMessages_.get(index);  } else {
+          return objectMessagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
+           getObjectMessagesOrBuilderList() {
+        if (objectMessagesBuilder_ != null) {
+          return objectMessagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(objectMessages_);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder addObjectMessagesBuilder() {
+        return getObjectMessagesFieldBuilder().addBuilder(
+            org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder addObjectMessagesBuilder(
+          int index) {
+        return getObjectMessagesFieldBuilder().addBuilder(
+            index, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterObjectMessage object_messages = 2;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder> 
+           getObjectMessagesBuilderList() {
+        return getObjectMessagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterObjectMessage, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder> 
+          getObjectMessagesFieldBuilder() {
+        if (objectMessagesBuilder_ == null) {
+          objectMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.listware.sdk.pbcmdb.Core.RegisterObjectMessage, org.listware.sdk.pbcmdb.Core.RegisterObjectMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterObjectMessageOrBuilder>(
+                  objectMessages_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          objectMessages_ = null;
+        }
+        return objectMessagesBuilder_;
+      }
+
+      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> linkMessages_ =
+        java.util.Collections.emptyList();
+      private void ensureLinkMessagesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          linkMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage>(linkMessages_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterLinkMessage, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> linkMessagesBuilder_;
+
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> getLinkMessagesList() {
+        if (linkMessagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(linkMessages_);
+        } else {
+          return linkMessagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public int getLinkMessagesCount() {
+        if (linkMessagesBuilder_ == null) {
+          return linkMessages_.size();
+        } else {
+          return linkMessagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage getLinkMessages(int index) {
+        if (linkMessagesBuilder_ == null) {
+          return linkMessages_.get(index);
+        } else {
+          return linkMessagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder setLinkMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage value) {
+        if (linkMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkMessagesIsMutable();
+          linkMessages_.set(index, value);
+          onChanged();
+        } else {
+          linkMessagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder setLinkMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder builderForValue) {
+        if (linkMessagesBuilder_ == null) {
+          ensureLinkMessagesIsMutable();
+          linkMessages_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkMessagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder addLinkMessages(org.listware.sdk.pbcmdb.Core.RegisterLinkMessage value) {
+        if (linkMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkMessagesIsMutable();
+          linkMessages_.add(value);
+          onChanged();
+        } else {
+          linkMessagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder addLinkMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage value) {
+        if (linkMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkMessagesIsMutable();
+          linkMessages_.add(index, value);
+          onChanged();
+        } else {
+          linkMessagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder addLinkMessages(
+          org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder builderForValue) {
+        if (linkMessagesBuilder_ == null) {
+          ensureLinkMessagesIsMutable();
+          linkMessages_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linkMessagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder addLinkMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder builderForValue) {
+        if (linkMessagesBuilder_ == null) {
+          ensureLinkMessagesIsMutable();
+          linkMessages_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkMessagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder addAllLinkMessages(
+          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessage> values) {
+        if (linkMessagesBuilder_ == null) {
+          ensureLinkMessagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, linkMessages_);
+          onChanged();
+        } else {
+          linkMessagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder clearLinkMessages() {
+        if (linkMessagesBuilder_ == null) {
+          linkMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          linkMessagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public Builder removeLinkMessages(int index) {
+        if (linkMessagesBuilder_ == null) {
+          ensureLinkMessagesIsMutable();
+          linkMessages_.remove(index);
+          onChanged();
+        } else {
+          linkMessagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder getLinkMessagesBuilder(
+          int index) {
+        return getLinkMessagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder getLinkMessagesOrBuilder(
+          int index) {
+        if (linkMessagesBuilder_ == null) {
+          return linkMessages_.get(index);  } else {
+          return linkMessagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
+           getLinkMessagesOrBuilderList() {
+        if (linkMessagesBuilder_ != null) {
+          return linkMessagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(linkMessages_);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder addLinkMessagesBuilder() {
+        return getLinkMessagesFieldBuilder().addBuilder(
+            org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder addLinkMessagesBuilder(
+          int index) {
+        return getLinkMessagesFieldBuilder().addBuilder(
+            index, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterLinkMessage link_messages = 3;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder> 
+           getLinkMessagesBuilderList() {
+        return getLinkMessagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterLinkMessage, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder> 
+          getLinkMessagesFieldBuilder() {
+        if (linkMessagesBuilder_ == null) {
+          linkMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.listware.sdk.pbcmdb.Core.RegisterLinkMessage, org.listware.sdk.pbcmdb.Core.RegisterLinkMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterLinkMessageOrBuilder>(
+                  linkMessages_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          linkMessages_ = null;
+        }
+        return linkMessagesBuilder_;
+      }
+
+      private java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> functionMessages_ =
+        java.util.Collections.emptyList();
+      private void ensureFunctionMessagesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          functionMessages_ = new java.util.ArrayList<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage>(functionMessages_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> functionMessagesBuilder_;
+
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> getFunctionMessagesList() {
+        if (functionMessagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(functionMessages_);
+        } else {
+          return functionMessagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public int getFunctionMessagesCount() {
+        if (functionMessagesBuilder_ == null) {
+          return functionMessages_.size();
+        } else {
+          return functionMessagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage getFunctionMessages(int index) {
+        if (functionMessagesBuilder_ == null) {
+          return functionMessages_.get(index);
+        } else {
+          return functionMessagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder setFunctionMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage value) {
+        if (functionMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFunctionMessagesIsMutable();
+          functionMessages_.set(index, value);
+          onChanged();
+        } else {
+          functionMessagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder setFunctionMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder builderForValue) {
+        if (functionMessagesBuilder_ == null) {
+          ensureFunctionMessagesIsMutable();
+          functionMessages_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          functionMessagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder addFunctionMessages(org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage value) {
+        if (functionMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFunctionMessagesIsMutable();
+          functionMessages_.add(value);
+          onChanged();
+        } else {
+          functionMessagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder addFunctionMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage value) {
+        if (functionMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFunctionMessagesIsMutable();
+          functionMessages_.add(index, value);
+          onChanged();
+        } else {
+          functionMessagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder addFunctionMessages(
+          org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder builderForValue) {
+        if (functionMessagesBuilder_ == null) {
+          ensureFunctionMessagesIsMutable();
+          functionMessages_.add(builderForValue.build());
+          onChanged();
+        } else {
+          functionMessagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder addFunctionMessages(
+          int index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder builderForValue) {
+        if (functionMessagesBuilder_ == null) {
+          ensureFunctionMessagesIsMutable();
+          functionMessages_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          functionMessagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder addAllFunctionMessages(
+          java.lang.Iterable<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage> values) {
+        if (functionMessagesBuilder_ == null) {
+          ensureFunctionMessagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, functionMessages_);
+          onChanged();
+        } else {
+          functionMessagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder clearFunctionMessages() {
+        if (functionMessagesBuilder_ == null) {
+          functionMessages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          functionMessagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public Builder removeFunctionMessages(int index) {
+        if (functionMessagesBuilder_ == null) {
+          ensureFunctionMessagesIsMutable();
+          functionMessages_.remove(index);
+          onChanged();
+        } else {
+          functionMessagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder getFunctionMessagesBuilder(
+          int index) {
+        return getFunctionMessagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder getFunctionMessagesOrBuilder(
+          int index) {
+        if (functionMessagesBuilder_ == null) {
+          return functionMessages_.get(index);  } else {
+          return functionMessagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public java.util.List<? extends org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
+           getFunctionMessagesOrBuilderList() {
+        if (functionMessagesBuilder_ != null) {
+          return functionMessagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(functionMessages_);
+        }
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder addFunctionMessagesBuilder() {
+        return getFunctionMessagesFieldBuilder().addBuilder(
+            org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder addFunctionMessagesBuilder(
+          int index) {
+        return getFunctionMessagesFieldBuilder().addBuilder(
+            index, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .org.listware.sdk.pbcmdb.RegisterFunctionMessage function_messages = 4;</code>
+       */
+      public java.util.List<org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder> 
+           getFunctionMessagesBuilderList() {
+        return getFunctionMessagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder> 
+          getFunctionMessagesFieldBuilder() {
+        if (functionMessagesBuilder_ == null) {
+          functionMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessage.Builder, org.listware.sdk.pbcmdb.Core.RegisterFunctionMessageOrBuilder>(
+                  functionMessages_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          functionMessages_ = null;
+        }
+        return functionMessagesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbcmdb.RegisterMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbcmdb.RegisterMessage)
+    private static final org.listware.sdk.pbcmdb.Core.RegisterMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.listware.sdk.pbcmdb.Core.RegisterMessage();
+    }
+
+    public static org.listware.sdk.pbcmdb.Core.RegisterMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterMessage>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterMessage>() {
+      @java.lang.Override
+      public RegisterMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RegisterMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.listware.sdk.pbcmdb.Core.RegisterMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_org_listware_sdk_pbcmdb_ObjectMessage_descriptor;
   private static final 
@@ -11518,6 +11891,26 @@ public final class Core {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_listware_sdk_pbcmdb_LinkMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbcmdb_Meta_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbcmdb_Meta_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbcmdb_Request_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbcmdb_Request_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbcmdb_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbcmdb_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor;
   private static final 
@@ -11543,21 +11936,6 @@ public final class Core {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_listware_sdk_pbcmdb_RegisterMessage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_listware_sdk_pbcmdb_Meta_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_listware_sdk_pbcmdb_Meta_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_listware_sdk_pbcmdb_Request_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_listware_sdk_pbcmdb_Request_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_listware_sdk_pbcmdb_Response_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_org_listware_sdk_pbcmdb_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11568,48 +11946,50 @@ public final class Core {
   static {
     java.lang.String[] descriptorData = {
       "\n\023pbcmdb/pbcmdb.proto\022\027org.listware.sdk." +
-      "pbcmdb\032\030pbtypes/pbfunction.proto\"e\n\007Trig" +
-      "ger\022\014\n\004type\030\001 \001(\t\022L\n\rfunction_type\030\002 \001(\013" +
-      "2&.org.listware.sdk.pbtypes.FunctionType" +
-      "R\rfunction_type\"\253\001\n\rObjectMessage\022/\n\006met" +
-      "hod\030\001 \001(\0162\037.org.listware.sdk.pbcmdb.Meth" +
-      "od\022\014\n\004type\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\017\n\007payloa" +
-      "d\030\004 \001(\014\022<\n\tfunctions\030\005 \003(\0132).org.listwar" +
-      "e.sdk.pbtypes.FunctionMessage\"\233\001\n\013TypeMe" +
-      "ssage\022/\n\006method\030\001 \001(\0162\037.org.listware.sdk" +
-      ".pbcmdb.Method\022\014\n\004name\030\002 \001(\t\022\017\n\007payload\030" +
-      "\003 \001(\014\022<\n\tfunctions\030\004 \003(\0132).org.listware." +
-      "sdk.pbtypes.FunctionMessage\"w\n\013LinkMessa" +
-      "ge\022/\n\006method\030\001 \001(\0162\037.org.listware.sdk.pb" +
-      "cmdb.Method\022\014\n\004name\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022" +
-      "\n\n\002to\030\004 \001(\t\022\017\n\007payload\030\005 \001(\014\"]\n\023Register" +
-      "TypeMessage\022\n\n\002id\030\001 \001(\t\022:\n\014type_message\030" +
-      "\002 \001(\0132$.org.listware.sdk.pbcmdb.TypeMess" +
-      "age\"c\n\025RegisterObjectMessage\022\n\n\002id\030\001 \001(\t" +
-      "\022>\n\016object_message\030\002 \001(\0132&.org.listware." +
-      "sdk.pbcmdb.ObjectMessage\"]\n\023RegisterLink" +
-      "Message\022\n\n\002id\030\001 \001(\t\022:\n\014link_message\030\002 \001(" +
-      "\0132$.org.listware.sdk.pbcmdb.LinkMessage\"" +
-      "j\n\027RegisterFunctionMessage\022\n\n\002id\030\001 \001(\t\022C" +
-      "\n\020function_message\030\002 \001(\0132).org.listware." +
-      "sdk.pbtypes.FunctionMessage\"\261\002\n\017Register" +
-      "Message\022C\n\rtype_messages\030\001 \003(\0132,.org.lis" +
-      "tware.sdk.pbcmdb.RegisterTypeMessage\022G\n\017" +
-      "object_messages\030\002 \003(\0132..org.listware.sdk" +
-      ".pbcmdb.RegisterObjectMessage\022C\n\rlink_me" +
-      "ssages\030\003 \003(\0132,.org.listware.sdk.pbcmdb.R" +
-      "egisterLinkMessage\022K\n\021function_messages\030" +
-      "\004 \003(\01320.org.listware.sdk.pbcmdb.Register" +
-      "FunctionMessage\",\n\004Meta\022\013\n\003key\030\001 \001(\t\022\n\n\002" +
-      "id\030\002 \001(\t\022\013\n\003rev\030\003 \001(\t\";\n\007Request\022\013\n\003key\030" +
-      "\001 \001(\t\022\022\n\ncollection\030\002 \001(\t\022\017\n\007payload\030\003 \001" +
-      "(\014\"H\n\010Response\022+\n\004meta\030\001 \001(\0132\035.org.listw" +
-      "are.sdk.pbcmdb.Meta\022\017\n\007payload\030\002 \001(\014*f\n\006" +
-      "Method\022\n\n\006CREATE\020\000\022\020\n\014CREATE_CHILD\020\001\022\n\n\006" +
-      "UPDATE\020\002\022\n\n\006DELETE\020\003\022\022\n\016CREATE_TRIGGER\020\004" +
-      "\022\022\n\016DELETE_TRIGGER\020\005BI\n\027org.listware.sdk" +
-      ".pbcmdbB\004CoreZ(git.fg-tech.ru/listware/p" +
-      "roto/sdk/pbcmdbb\006proto3"
+      "pbcmdb\032\030pbtypes/pbfunction.proto\"\253\001\n\rObj" +
+      "ectMessage\022/\n\006method\030\001 \001(\0162\037.org.listwar" +
+      "e.sdk.pbcmdb.Method\022\014\n\004type\030\002 \001(\t\022\014\n\004nam" +
+      "e\030\003 \001(\t\022\017\n\007payload\030\004 \001(\014\022<\n\tfunctions\030\005 " +
+      "\003(\0132).org.listware.sdk.pbtypes.FunctionM" +
+      "essage\"\233\001\n\013TypeMessage\022/\n\006method\030\001 \001(\0162\037" +
+      ".org.listware.sdk.pbcmdb.Method\022\014\n\004name\030" +
+      "\002 \001(\t\022\017\n\007payload\030\003 \001(\014\022<\n\tfunctions\030\004 \003(" +
+      "\0132).org.listware.sdk.pbtypes.FunctionMes" +
+      "sage\"w\n\013LinkMessage\022/\n\006method\030\001 \001(\0162\037.or" +
+      "g.listware.sdk.pbcmdb.Method\022\014\n\004name\030\002 \001" +
+      "(\t\022\014\n\004type\030\003 \001(\t\022\n\n\002to\030\004 \001(\t\022\017\n\007payload\030" +
+      "\005 \001(\014\"e\n\007Trigger\022\014\n\004type\030\001 \001(\t\022L\n\rfuncti" +
+      "on_type\030\002 \001(\0132&.org.listware.sdk.pbtypes" +
+      ".FunctionTypeR\rfunction_type\",\n\004Meta\022\013\n\003" +
+      "key\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022\013\n\003rev\030\003 \001(\t\";\n\007Re" +
+      "quest\022\013\n\003key\030\001 \001(\t\022\022\n\ncollection\030\002 \001(\t\022\017" +
+      "\n\007payload\030\003 \001(\014\"H\n\010Response\022+\n\004meta\030\001 \001(" +
+      "\0132\035.org.listware.sdk.pbcmdb.Meta\022\017\n\007payl" +
+      "oad\030\002 \001(\014\"|\n\023RegisterTypeMessage\022\n\n\002id\030\001" +
+      " \001(\t\022\r\n\005async\030\002 \001(\010\022\016\n\006router\030\003 \001(\010\022:\n\014t" +
+      "ype_message\030\004 \001(\0132$.org.listware.sdk.pbc" +
+      "mdb.TypeMessage\"\202\001\n\025RegisterObjectMessag" +
+      "e\022\n\n\002id\030\001 \001(\t\022\r\n\005async\030\002 \001(\010\022\016\n\006router\030\003" +
+      " \001(\010\022>\n\016object_message\030\004 \001(\0132&.org.listw" +
+      "are.sdk.pbcmdb.ObjectMessage\"l\n\023Register" +
+      "LinkMessage\022\n\n\002id\030\001 \001(\t\022\r\n\005async\030\002 \001(\010\022:" +
+      "\n\014link_message\030\004 \001(\0132$.org.listware.sdk." +
+      "pbcmdb.LinkMessage\"y\n\027RegisterFunctionMe" +
+      "ssage\022\n\n\002id\030\001 \001(\t\022\r\n\005async\030\002 \001(\010\022C\n\020func" +
+      "tion_message\030\004 \001(\0132).org.listware.sdk.pb" +
+      "types.FunctionMessage\"\261\002\n\017RegisterMessag" +
+      "e\022C\n\rtype_messages\030\001 \003(\0132,.org.listware." +
+      "sdk.pbcmdb.RegisterTypeMessage\022G\n\017object" +
+      "_messages\030\002 \003(\0132..org.listware.sdk.pbcmd" +
+      "b.RegisterObjectMessage\022C\n\rlink_messages" +
+      "\030\003 \003(\0132,.org.listware.sdk.pbcmdb.Registe" +
+      "rLinkMessage\022K\n\021function_messages\030\004 \003(\0132" +
+      "0.org.listware.sdk.pbcmdb.RegisterFuncti" +
+      "onMessage*f\n\006Method\022\n\n\006CREATE\020\000\022\020\n\014CREAT" +
+      "E_CHILD\020\001\022\n\n\006UPDATE\020\002\022\n\n\006DELETE\020\003\022\022\n\016CRE" +
+      "ATE_TRIGGER\020\004\022\022\n\016DELETE_TRIGGER\020\005BI\n\027org" +
+      ".listware.sdk.pbcmdbB\004CoreZ(git.fg-tech." +
+      "ru/listware/proto/sdk/pbcmdbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11624,78 +12004,78 @@ public final class Core {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.listware.sdk.Functions.getDescriptor(),
         }, assigner);
-    internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor,
-        new java.lang.String[] { "Type", "FunctionType", });
     internal_static_org_listware_sdk_pbcmdb_ObjectMessage_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_org_listware_sdk_pbcmdb_ObjectMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbcmdb_ObjectMessage_descriptor,
         new java.lang.String[] { "Method", "Type", "Name", "Payload", "Functions", });
     internal_static_org_listware_sdk_pbcmdb_TypeMessage_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_org_listware_sdk_pbcmdb_TypeMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbcmdb_TypeMessage_descriptor,
         new java.lang.String[] { "Method", "Name", "Payload", "Functions", });
     internal_static_org_listware_sdk_pbcmdb_LinkMessage_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_org_listware_sdk_pbcmdb_LinkMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbcmdb_LinkMessage_descriptor,
         new java.lang.String[] { "Method", "Name", "Type", "To", "Payload", });
-    internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_fieldAccessorTable = new
+    internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_org_listware_sdk_pbcmdb_Trigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor,
-        new java.lang.String[] { "Id", "TypeMessage", });
-    internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor,
-        new java.lang.String[] { "Id", "ObjectMessage", });
-    internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor,
-        new java.lang.String[] { "Id", "LinkMessage", });
-    internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor,
-        new java.lang.String[] { "Id", "FunctionMessage", });
-    internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_org_listware_sdk_pbcmdb_RegisterMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor,
-        new java.lang.String[] { "TypeMessages", "ObjectMessages", "LinkMessages", "FunctionMessages", });
+        internal_static_org_listware_sdk_pbcmdb_Trigger_descriptor,
+        new java.lang.String[] { "Type", "FunctionType", });
     internal_static_org_listware_sdk_pbcmdb_Meta_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_org_listware_sdk_pbcmdb_Meta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbcmdb_Meta_descriptor,
         new java.lang.String[] { "Key", "Id", "Rev", });
     internal_static_org_listware_sdk_pbcmdb_Request_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_org_listware_sdk_pbcmdb_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbcmdb_Request_descriptor,
         new java.lang.String[] { "Key", "Collection", "Payload", });
     internal_static_org_listware_sdk_pbcmdb_Response_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_org_listware_sdk_pbcmdb_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbcmdb_Response_descriptor,
         new java.lang.String[] { "Meta", "Payload", });
+    internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbcmdb_RegisterTypeMessage_descriptor,
+        new java.lang.String[] { "Id", "Async", "Router", "TypeMessage", });
+    internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbcmdb_RegisterObjectMessage_descriptor,
+        new java.lang.String[] { "Id", "Async", "Router", "ObjectMessage", });
+    internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbcmdb_RegisterLinkMessage_descriptor,
+        new java.lang.String[] { "Id", "Async", "LinkMessage", });
+    internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbcmdb_RegisterFunctionMessage_descriptor,
+        new java.lang.String[] { "Id", "Async", "FunctionMessage", });
+    internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_org_listware_sdk_pbcmdb_RegisterMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbcmdb_RegisterMessage_descriptor,
+        new java.lang.String[] { "TypeMessages", "ObjectMessages", "LinkMessages", "FunctionMessages", });
     org.listware.sdk.Functions.getDescriptor();
   }
 

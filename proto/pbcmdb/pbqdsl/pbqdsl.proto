@@ -6,7 +6,7 @@ package org.listware.sdk.pbcmdb.pbqdsl;
 
 option java_outer_classname = "QDSL";
 option java_package = "org.listware.sdk.pbcmdb.pbqdsl";
-option go_package = "git.fg-tech.ru/flistware/proto/sdk/pbcmdb/pbqdsl";
+option go_package = "git.fg-tech.ru/listware/proto/sdk/pbcmdb/pbqdsl";
 
 message Options {
 	bool id = 1;

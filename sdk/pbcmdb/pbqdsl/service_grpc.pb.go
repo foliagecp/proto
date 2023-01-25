@@ -4,7 +4,6 @@ package pbqdsl
 
 import (
 	context "context"
-	pbqdsl "git.fg-tech.ru/flistware/proto/sdk/pbcmdb/pbqdsl"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -19,7 +18,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type QdslServiceClient interface {
-	Qdsl(ctx context.Context, in *pbqdsl.Query, opts ...grpc.CallOption) (*pbqdsl.Elements, error)
+	Qdsl(ctx context.Context, in *Query, opts ...grpc.CallOption) (*Elements, error)
 }
 
 type qdslServiceClient struct {
@@ -30,8 +29,8 @@ func NewQdslServiceClient(cc grpc.ClientConnInterface) QdslServiceClient {
 	return &qdslServiceClient{cc}
 }
 
-func (c *qdslServiceClient) Qdsl(ctx context.Context, in *pbqdsl.Query, opts ...grpc.CallOption) (*pbqdsl.Elements, error) {
-	out := new(pbqdsl.Elements)
+func (c *qdslServiceClient) Qdsl(ctx context.Context, in *Query, opts ...grpc.CallOption) (*Elements, error) {
+	out := new(Elements)
 	err := c.cc.Invoke(ctx, "/org.listware.sdk.pbcmdb.pbqdsl.QdslService/Qdsl", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -43,7 +42,7 @@ func (c *qdslServiceClient) Qdsl(ctx context.Context, in *pbqdsl.Query, opts ...
 // All implementations must embed UnimplementedQdslServiceServer
 // for forward compatibility
 type QdslServiceServer interface {
-	Qdsl(context.Context, *pbqdsl.Query) (*pbqdsl.Elements, error)
+	Qdsl(context.Context, *Query) (*Elements, error)
 	mustEmbedUnimplementedQdslServiceServer()
 }
 
@@ -51,7 +50,7 @@ type QdslServiceServer interface {
 type UnimplementedQdslServiceServer struct {
 }
 
-func (UnimplementedQdslServiceServer) Qdsl(context.Context, *pbqdsl.Query) (*pbqdsl.Elements, error) {
+func (UnimplementedQdslServiceServer) Qdsl(context.Context, *Query) (*Elements, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Qdsl not implemented")
 }
 func (UnimplementedQdslServiceServer) mustEmbedUnimplementedQdslServiceServer() {}
@@ -68,7 +67,7 @@ func RegisterQdslServiceServer(s grpc.ServiceRegistrar, srv QdslServiceServer) {
 }
 
 func _QdslService_Qdsl_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(pbqdsl.Query)
+	in := new(Query)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -80,7 +79,7 @@ func _QdslService_Qdsl_Handler(srv interface{}, ctx context.Context, dec func(in
 		FullMethod: "/org.listware.sdk.pbcmdb.pbqdsl.QdslService/Qdsl",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(QdslServiceServer).Qdsl(ctx, req.(*pbqdsl.Query))
+		return srv.(QdslServiceServer).Qdsl(ctx, req.(*Query))
 	}
 	return interceptor(ctx, in, info, handler)
 }
