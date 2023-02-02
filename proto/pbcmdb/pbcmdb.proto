@@ -1,4 +1,9 @@
-/* Copyright 2022 Listware */ syntax = "proto3";
+/*
+ *  Copyright 2023 NJWS Inc.
+ *  Copyright 2022 Listware
+ */
+
+syntax = "proto3";
 
 package org.listware.sdk.pbcmdb;
 
@@ -46,7 +51,7 @@ message LinkMessage {
 
 message Trigger {
 	string type = 1;
-	pbtypes.FunctionType function_type = 2 [json_name = "function_type"];
+	pbtypes.FunctionType function_type = 2;
 }
 
 message Meta {
