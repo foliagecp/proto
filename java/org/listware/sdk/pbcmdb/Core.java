@@ -3669,15 +3669,15 @@ public final class Core {
         getTypeBytes();
 
     /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
      */
     boolean hasFunctionType();
     /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
      */
     org.listware.sdk.Functions.FunctionType getFunctionType();
     /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
      */
     org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder();
   }
@@ -3809,19 +3809,19 @@ public final class Core {
     public static final int FUNCTION_TYPE_FIELD_NUMBER = 2;
     private org.listware.sdk.Functions.FunctionType functionType_;
     /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
      */
     public boolean hasFunctionType() {
       return functionType_ != null;
     }
     /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
      */
     public org.listware.sdk.Functions.FunctionType getFunctionType() {
       return functionType_ == null ? org.listware.sdk.Functions.FunctionType.getDefaultInstance() : functionType_;
     }
     /**
-     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+     * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
      */
     public org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder() {
       return getFunctionType();
@@ -4232,13 +4232,13 @@ public final class Core {
       private com.google.protobuf.SingleFieldBuilderV3<
           org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder> functionTypeBuilder_;
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public boolean hasFunctionType() {
         return functionTypeBuilder_ != null || functionType_ != null;
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public org.listware.sdk.Functions.FunctionType getFunctionType() {
         if (functionTypeBuilder_ == null) {
@@ -4248,7 +4248,7 @@ public final class Core {
         }
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public Builder setFunctionType(org.listware.sdk.Functions.FunctionType value) {
         if (functionTypeBuilder_ == null) {
@@ -4264,7 +4264,7 @@ public final class Core {
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public Builder setFunctionType(
           org.listware.sdk.Functions.FunctionType.Builder builderForValue) {
@@ -4278,7 +4278,7 @@ public final class Core {
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public Builder mergeFunctionType(org.listware.sdk.Functions.FunctionType value) {
         if (functionTypeBuilder_ == null) {
@@ -4296,7 +4296,7 @@ public final class Core {
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public Builder clearFunctionType() {
         if (functionTypeBuilder_ == null) {
@@ -4310,7 +4310,7 @@ public final class Core {
         return this;
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public org.listware.sdk.Functions.FunctionType.Builder getFunctionTypeBuilder() {
         
@@ -4318,7 +4318,7 @@ public final class Core {
         return getFunctionTypeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       public org.listware.sdk.Functions.FunctionTypeOrBuilder getFunctionTypeOrBuilder() {
         if (functionTypeBuilder_ != null) {
@@ -4329,7 +4329,7 @@ public final class Core {
         }
       }
       /**
-       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2[json_name = "function_type"];</code>
+       * <code>.org.listware.sdk.pbtypes.FunctionType function_type = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           org.listware.sdk.Functions.FunctionType, org.listware.sdk.Functions.FunctionType.Builder, org.listware.sdk.Functions.FunctionTypeOrBuilder> 
@@ -11958,38 +11958,38 @@ public final class Core {
       "sage\"w\n\013LinkMessage\022/\n\006method\030\001 \001(\0162\037.or" +
       "g.listware.sdk.pbcmdb.Method\022\014\n\004name\030\002 \001" +
       "(\t\022\014\n\004type\030\003 \001(\t\022\n\n\002to\030\004 \001(\t\022\017\n\007payload\030" +
-      "\005 \001(\014\"e\n\007Trigger\022\014\n\004type\030\001 \001(\t\022L\n\rfuncti" +
+      "\005 \001(\014\"V\n\007Trigger\022\014\n\004type\030\001 \001(\t\022=\n\rfuncti" +
       "on_type\030\002 \001(\0132&.org.listware.sdk.pbtypes" +
-      ".FunctionTypeR\rfunction_type\",\n\004Meta\022\013\n\003" +
-      "key\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022\013\n\003rev\030\003 \001(\t\";\n\007Re" +
-      "quest\022\013\n\003key\030\001 \001(\t\022\022\n\ncollection\030\002 \001(\t\022\017" +
-      "\n\007payload\030\003 \001(\014\"H\n\010Response\022+\n\004meta\030\001 \001(" +
-      "\0132\035.org.listware.sdk.pbcmdb.Meta\022\017\n\007payl" +
-      "oad\030\002 \001(\014\"|\n\023RegisterTypeMessage\022\n\n\002id\030\001" +
-      " \001(\t\022\r\n\005async\030\002 \001(\010\022\016\n\006router\030\003 \001(\010\022:\n\014t" +
-      "ype_message\030\004 \001(\0132$.org.listware.sdk.pbc" +
-      "mdb.TypeMessage\"\202\001\n\025RegisterObjectMessag" +
-      "e\022\n\n\002id\030\001 \001(\t\022\r\n\005async\030\002 \001(\010\022\016\n\006router\030\003" +
-      " \001(\010\022>\n\016object_message\030\004 \001(\0132&.org.listw" +
-      "are.sdk.pbcmdb.ObjectMessage\"l\n\023Register" +
-      "LinkMessage\022\n\n\002id\030\001 \001(\t\022\r\n\005async\030\002 \001(\010\022:" +
-      "\n\014link_message\030\004 \001(\0132$.org.listware.sdk." +
-      "pbcmdb.LinkMessage\"y\n\027RegisterFunctionMe" +
-      "ssage\022\n\n\002id\030\001 \001(\t\022\r\n\005async\030\002 \001(\010\022C\n\020func" +
-      "tion_message\030\004 \001(\0132).org.listware.sdk.pb" +
-      "types.FunctionMessage\"\261\002\n\017RegisterMessag" +
-      "e\022C\n\rtype_messages\030\001 \003(\0132,.org.listware." +
-      "sdk.pbcmdb.RegisterTypeMessage\022G\n\017object" +
-      "_messages\030\002 \003(\0132..org.listware.sdk.pbcmd" +
-      "b.RegisterObjectMessage\022C\n\rlink_messages" +
-      "\030\003 \003(\0132,.org.listware.sdk.pbcmdb.Registe" +
-      "rLinkMessage\022K\n\021function_messages\030\004 \003(\0132" +
-      "0.org.listware.sdk.pbcmdb.RegisterFuncti" +
-      "onMessage*f\n\006Method\022\n\n\006CREATE\020\000\022\020\n\014CREAT" +
-      "E_CHILD\020\001\022\n\n\006UPDATE\020\002\022\n\n\006DELETE\020\003\022\022\n\016CRE" +
-      "ATE_TRIGGER\020\004\022\022\n\016DELETE_TRIGGER\020\005BI\n\027org" +
-      ".listware.sdk.pbcmdbB\004CoreZ(git.fg-tech." +
-      "ru/listware/proto/sdk/pbcmdbb\006proto3"
+      ".FunctionType\",\n\004Meta\022\013\n\003key\030\001 \001(\t\022\n\n\002id" +
+      "\030\002 \001(\t\022\013\n\003rev\030\003 \001(\t\";\n\007Request\022\013\n\003key\030\001 " +
+      "\001(\t\022\022\n\ncollection\030\002 \001(\t\022\017\n\007payload\030\003 \001(\014" +
+      "\"H\n\010Response\022+\n\004meta\030\001 \001(\0132\035.org.listwar" +
+      "e.sdk.pbcmdb.Meta\022\017\n\007payload\030\002 \001(\014\"|\n\023Re" +
+      "gisterTypeMessage\022\n\n\002id\030\001 \001(\t\022\r\n\005async\030\002" +
+      " \001(\010\022\016\n\006router\030\003 \001(\010\022:\n\014type_message\030\004 \001" +
+      "(\0132$.org.listware.sdk.pbcmdb.TypeMessage" +
+      "\"\202\001\n\025RegisterObjectMessage\022\n\n\002id\030\001 \001(\t\022\r" +
+      "\n\005async\030\002 \001(\010\022\016\n\006router\030\003 \001(\010\022>\n\016object_" +
+      "message\030\004 \001(\0132&.org.listware.sdk.pbcmdb." +
+      "ObjectMessage\"l\n\023RegisterLinkMessage\022\n\n\002" +
+      "id\030\001 \001(\t\022\r\n\005async\030\002 \001(\010\022:\n\014link_message\030" +
+      "\004 \001(\0132$.org.listware.sdk.pbcmdb.LinkMess" +
+      "age\"y\n\027RegisterFunctionMessage\022\n\n\002id\030\001 \001" +
+      "(\t\022\r\n\005async\030\002 \001(\010\022C\n\020function_message\030\004 " +
+      "\001(\0132).org.listware.sdk.pbtypes.FunctionM" +
+      "essage\"\261\002\n\017RegisterMessage\022C\n\rtype_messa" +
+      "ges\030\001 \003(\0132,.org.listware.sdk.pbcmdb.Regi" +
+      "sterTypeMessage\022G\n\017object_messages\030\002 \003(\013" +
+      "2..org.listware.sdk.pbcmdb.RegisterObjec" +
+      "tMessage\022C\n\rlink_messages\030\003 \003(\0132,.org.li" +
+      "stware.sdk.pbcmdb.RegisterLinkMessage\022K\n" +
+      "\021function_messages\030\004 \003(\01320.org.listware." +
+      "sdk.pbcmdb.RegisterFunctionMessage*f\n\006Me" +
+      "thod\022\n\n\006CREATE\020\000\022\020\n\014CREATE_CHILD\020\001\022\n\n\006UP" +
+      "DATE\020\002\022\n\n\006DELETE\020\003\022\022\n\016CREATE_TRIGGER\020\004\022\022" +
+      "\n\016DELETE_TRIGGER\020\005BI\n\027org.listware.sdk.p" +
+      "bcmdbB\004CoreZ(git.fg-tech.ru/listware/pro" +
+      "to/sdk/pbcmdbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1,4 +1,7 @@
-/* Copyright 2022 Listware */
+/*
+ *  Copyright 2023 NJWS Inc.
+ *  Copyright 2022 Listware
+ */
 
 syntax = "proto3";
 
@@ -24,25 +27,27 @@ message FunctionParameter {
 
 // Function - is a CMDB object which represent Flink's stateful function
 message Function {
-	FunctionType type = 1 [json_name="function_type"];
+	FunctionType function_type = 1;
 	string description = 2;
 	repeated FunctionParameter params = 3;
 }
 
 message FunctionContext {
-	FunctionType function_type = 1 [json_name="function_type"];
+	FunctionType function_type = 1;
 	string id = 2;
 	bytes value = 3;
-	ReplyResult reply_result = 4 [json_name="reply_result"];
+	ReplyResult reply_result = 4;
 }
 
 // FunctionRoute - is a LinkMessage from cmdb.Object to Function
 message FunctionRoute {
 	string url = 1;
+	bool execute_on_create = 2;
+	bool execute_on_update = 3;
 }
 
 message FunctionMessage {
-	string type = 1;
+	FunctionType function_type = 1;
 	string mountpoint = 2;
 	FunctionRoute route = 3;
 }
