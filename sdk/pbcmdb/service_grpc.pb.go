@@ -21,6 +21,7 @@ type VertexServiceClient interface {
 	Create(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	Read(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	Update(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
+	Replace(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	Remove(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 }
 
@@ -59,6 +60,15 @@ func (c *vertexServiceClient) Update(ctx context.Context, in *Request, opts ...g
 	return out, nil
 }
 
+func (c *vertexServiceClient) Replace(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
+	out := new(Response)
+	err := c.cc.Invoke(ctx, "/org.listware.sdk.pbcmdb.VertexService/Replace", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *vertexServiceClient) Remove(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
 	err := c.cc.Invoke(ctx, "/org.listware.sdk.pbcmdb.VertexService/Remove", in, out, opts...)
@@ -75,6 +85,7 @@ type VertexServiceServer interface {
 	Create(context.Context, *Request) (*Response, error)
 	Read(context.Context, *Request) (*Response, error)
 	Update(context.Context, *Request) (*Response, error)
+	Replace(context.Context, *Request) (*Response, error)
 	Remove(context.Context, *Request) (*Response, error)
 	mustEmbedUnimplementedVertexServiceServer()
 }
@@ -91,6 +102,9 @@ func (UnimplementedVertexServiceServer) Read(context.Context, *Request) (*Respon
 }
 func (UnimplementedVertexServiceServer) Update(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Update not implemented")
+}
+func (UnimplementedVertexServiceServer) Replace(context.Context, *Request) (*Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Replace not implemented")
 }
 func (UnimplementedVertexServiceServer) Remove(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Remove not implemented")
@@ -162,6 +176,24 @@ func _VertexService_Update_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
+func _VertexService_Replace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(VertexServiceServer).Replace(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/org.listware.sdk.pbcmdb.VertexService/Replace",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(VertexServiceServer).Replace(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _VertexService_Remove_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(Request)
 	if err := dec(in); err != nil {
@@ -200,6 +232,10 @@ var VertexService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _VertexService_Update_Handler,
 		},
 		{
+			MethodName: "Replace",
+			Handler:    _VertexService_Replace_Handler,
+		},
+		{
 			MethodName: "Remove",
 			Handler:    _VertexService_Remove_Handler,
 		},
@@ -215,6 +251,7 @@ type EdgeServiceClient interface {
 	Create(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	Read(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	Update(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
+	Replace(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	Remove(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 }
 
@@ -253,6 +290,15 @@ func (c *edgeServiceClient) Update(ctx context.Context, in *Request, opts ...grp
 	return out, nil
 }
 
+func (c *edgeServiceClient) Replace(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
+	out := new(Response)
+	err := c.cc.Invoke(ctx, "/org.listware.sdk.pbcmdb.EdgeService/Replace", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *edgeServiceClient) Remove(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
 	err := c.cc.Invoke(ctx, "/org.listware.sdk.pbcmdb.EdgeService/Remove", in, out, opts...)
@@ -269,6 +315,7 @@ type EdgeServiceServer interface {
 	Create(context.Context, *Request) (*Response, error)
 	Read(context.Context, *Request) (*Response, error)
 	Update(context.Context, *Request) (*Response, error)
+	Replace(context.Context, *Request) (*Response, error)
 	Remove(context.Context, *Request) (*Response, error)
 	mustEmbedUnimplementedEdgeServiceServer()
 }
@@ -285,6 +332,9 @@ func (UnimplementedEdgeServiceServer) Read(context.Context, *Request) (*Response
 }
 func (UnimplementedEdgeServiceServer) Update(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Update not implemented")
+}
+func (UnimplementedEdgeServiceServer) Replace(context.Context, *Request) (*Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Replace not implemented")
 }
 func (UnimplementedEdgeServiceServer) Remove(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Remove not implemented")
@@ -356,6 +406,24 @@ func _EdgeService_Update_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
+func _EdgeService_Replace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EdgeServiceServer).Replace(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/org.listware.sdk.pbcmdb.EdgeService/Replace",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EdgeServiceServer).Replace(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _EdgeService_Remove_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(Request)
 	if err := dec(in); err != nil {
@@ -392,6 +460,10 @@ var EdgeService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Update",
 			Handler:    _EdgeService_Update_Handler,
+		},
+		{
+			MethodName: "Replace",
+			Handler:    _EdgeService_Replace_Handler,
 		},
 		{
 			MethodName: "Remove",
