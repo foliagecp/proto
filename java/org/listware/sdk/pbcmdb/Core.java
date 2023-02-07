@@ -32,17 +32,21 @@ public final class Core {
      */
     UPDATE(2),
     /**
-     * <code>DELETE = 3;</code>
+     * <code>REPLACE = 3;</code>
      */
-    DELETE(3),
+    REPLACE(3),
     /**
-     * <code>CREATE_TRIGGER = 4;</code>
+     * <code>DELETE = 4;</code>
      */
-    CREATE_TRIGGER(4),
+    DELETE(4),
     /**
-     * <code>DELETE_TRIGGER = 5;</code>
+     * <code>CREATE_TRIGGER = 5;</code>
      */
-    DELETE_TRIGGER(5),
+    CREATE_TRIGGER(5),
+    /**
+     * <code>DELETE_TRIGGER = 6;</code>
+     */
+    DELETE_TRIGGER(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -59,17 +63,21 @@ public final class Core {
      */
     public static final int UPDATE_VALUE = 2;
     /**
-     * <code>DELETE = 3;</code>
+     * <code>REPLACE = 3;</code>
      */
-    public static final int DELETE_VALUE = 3;
+    public static final int REPLACE_VALUE = 3;
     /**
-     * <code>CREATE_TRIGGER = 4;</code>
+     * <code>DELETE = 4;</code>
      */
-    public static final int CREATE_TRIGGER_VALUE = 4;
+    public static final int DELETE_VALUE = 4;
     /**
-     * <code>DELETE_TRIGGER = 5;</code>
+     * <code>CREATE_TRIGGER = 5;</code>
      */
-    public static final int DELETE_TRIGGER_VALUE = 5;
+    public static final int CREATE_TRIGGER_VALUE = 5;
+    /**
+     * <code>DELETE_TRIGGER = 6;</code>
+     */
+    public static final int DELETE_TRIGGER_VALUE = 6;
 
 
     public final int getNumber() {
@@ -93,9 +101,10 @@ public final class Core {
         case 0: return CREATE;
         case 1: return CREATE_CHILD;
         case 2: return UPDATE;
-        case 3: return DELETE;
-        case 4: return CREATE_TRIGGER;
-        case 5: return DELETE_TRIGGER;
+        case 3: return REPLACE;
+        case 4: return DELETE;
+        case 5: return CREATE_TRIGGER;
+        case 6: return DELETE_TRIGGER;
         default: return null;
       }
     }
@@ -11984,12 +11993,12 @@ public final class Core {
       "tMessage\022C\n\rlink_messages\030\003 \003(\0132,.org.li" +
       "stware.sdk.pbcmdb.RegisterLinkMessage\022K\n" +
       "\021function_messages\030\004 \003(\01320.org.listware." +
-      "sdk.pbcmdb.RegisterFunctionMessage*f\n\006Me" +
+      "sdk.pbcmdb.RegisterFunctionMessage*s\n\006Me" +
       "thod\022\n\n\006CREATE\020\000\022\020\n\014CREATE_CHILD\020\001\022\n\n\006UP" +
-      "DATE\020\002\022\n\n\006DELETE\020\003\022\022\n\016CREATE_TRIGGER\020\004\022\022" +
-      "\n\016DELETE_TRIGGER\020\005BI\n\027org.listware.sdk.p" +
-      "bcmdbB\004CoreZ(git.fg-tech.ru/listware/pro" +
-      "to/sdk/pbcmdbb\006proto3"
+      "DATE\020\002\022\013\n\007REPLACE\020\003\022\n\n\006DELETE\020\004\022\022\n\016CREAT" +
+      "E_TRIGGER\020\005\022\022\n\016DELETE_TRIGGER\020\006BI\n\027org.l" +
+      "istware.sdk.pbcmdbB\004CoreZ(git.fg-tech.ru" +
+      "/listware/proto/sdk/pbcmdbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

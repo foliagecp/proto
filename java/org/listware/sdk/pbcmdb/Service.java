@@ -24,26 +24,30 @@ public final class Service {
   static {
     java.lang.String[] descriptorData = {
       "\n\024pbcmdb/service.proto\022\027org.listware.sdk" +
-      ".pbcmdb\032\023pbcmdb/pbcmdb.proto2\321\002\n\rVertexS" +
+      ".pbcmdb\032\023pbcmdb/pbcmdb.proto2\243\003\n\rVertexS" +
       "ervice\022O\n\006Create\022 .org.listware.sdk.pbcm" +
       "db.Request\032!.org.listware.sdk.pbcmdb.Res" +
       "ponse\"\000\022M\n\004Read\022 .org.listware.sdk.pbcmd" +
       "b.Request\032!.org.listware.sdk.pbcmdb.Resp" +
       "onse\"\000\022O\n\006Update\022 .org.listware.sdk.pbcm" +
       "db.Request\032!.org.listware.sdk.pbcmdb.Res" +
-      "ponse\"\000\022O\n\006Remove\022 .org.listware.sdk.pbc" +
-      "mdb.Request\032!.org.listware.sdk.pbcmdb.Re" +
-      "sponse\"\0002\317\002\n\013EdgeService\022O\n\006Create\022 .org" +
-      ".listware.sdk.pbcmdb.Request\032!.org.listw" +
-      "are.sdk.pbcmdb.Response\"\000\022M\n\004Read\022 .org." +
-      "listware.sdk.pbcmdb.Request\032!.org.listwa" +
-      "re.sdk.pbcmdb.Response\"\000\022O\n\006Update\022 .org" +
-      ".listware.sdk.pbcmdb.Request\032!.org.listw" +
-      "are.sdk.pbcmdb.Response\"\000\022O\n\006Remove\022 .or" +
+      "ponse\"\000\022P\n\007Replace\022 .org.listware.sdk.pb" +
+      "cmdb.Request\032!.org.listware.sdk.pbcmdb.R" +
+      "esponse\"\000\022O\n\006Remove\022 .org.listware.sdk.p" +
+      "bcmdb.Request\032!.org.listware.sdk.pbcmdb." +
+      "Response\"\0002\241\003\n\013EdgeService\022O\n\006Create\022 .o" +
+      "rg.listware.sdk.pbcmdb.Request\032!.org.lis" +
+      "tware.sdk.pbcmdb.Response\"\000\022M\n\004Read\022 .or" +
       "g.listware.sdk.pbcmdb.Request\032!.org.list" +
-      "ware.sdk.pbcmdb.Response\"\000BL\n\027org.listwa" +
-      "re.sdk.pbcmdbB\007ServiceZ(git.fg-tech.ru/l" +
-      "istware/proto/sdk/pbcmdbb\006proto3"
+      "ware.sdk.pbcmdb.Response\"\000\022O\n\006Update\022 .o" +
+      "rg.listware.sdk.pbcmdb.Request\032!.org.lis" +
+      "tware.sdk.pbcmdb.Response\"\000\022P\n\007Replace\022 " +
+      ".org.listware.sdk.pbcmdb.Request\032!.org.l" +
+      "istware.sdk.pbcmdb.Response\"\000\022O\n\006Remove\022" +
+      " .org.listware.sdk.pbcmdb.Request\032!.org." +
+      "listware.sdk.pbcmdb.Response\"\000BL\n\027org.li" +
+      "stware.sdk.pbcmdbB\007ServiceZ(git.fg-tech." +
+      "ru/listware/proto/sdk/pbcmdbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
