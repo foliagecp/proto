@@ -124,6 +124,38 @@ public final class VertexServiceGrpc {
      return getUpdateMethod;
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getReplaceMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<org.listware.sdk.pbcmdb.Core.Request,
+      org.listware.sdk.pbcmdb.Core.Response> METHOD_REPLACE = getReplaceMethod();
+
+  private static volatile io.grpc.MethodDescriptor<org.listware.sdk.pbcmdb.Core.Request,
+      org.listware.sdk.pbcmdb.Core.Response> getReplaceMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<org.listware.sdk.pbcmdb.Core.Request,
+      org.listware.sdk.pbcmdb.Core.Response> getReplaceMethod() {
+    io.grpc.MethodDescriptor<org.listware.sdk.pbcmdb.Core.Request, org.listware.sdk.pbcmdb.Core.Response> getReplaceMethod;
+    if ((getReplaceMethod = VertexServiceGrpc.getReplaceMethod) == null) {
+      synchronized (VertexServiceGrpc.class) {
+        if ((getReplaceMethod = VertexServiceGrpc.getReplaceMethod) == null) {
+          VertexServiceGrpc.getReplaceMethod = getReplaceMethod = 
+              io.grpc.MethodDescriptor.<org.listware.sdk.pbcmdb.Core.Request, org.listware.sdk.pbcmdb.Core.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "org.listware.sdk.pbcmdb.VertexService", "Replace"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.listware.sdk.pbcmdb.Core.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.listware.sdk.pbcmdb.Core.Response.getDefaultInstance()))
+                  .setSchemaDescriptor(new VertexServiceMethodDescriptorSupplier("Replace"))
+                  .build();
+          }
+        }
+     }
+     return getReplaceMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   @java.lang.Deprecated // Use {@link #getRemoveMethod()} instead. 
   public static final io.grpc.MethodDescriptor<org.listware.sdk.pbcmdb.Core.Request,
       org.listware.sdk.pbcmdb.Core.Response> METHOD_REMOVE = getRemoveMethod();
@@ -206,6 +238,13 @@ public final class VertexServiceGrpc {
 
     /**
      */
+    public void replace(org.listware.sdk.pbcmdb.Core.Request request,
+        io.grpc.stub.StreamObserver<org.listware.sdk.pbcmdb.Core.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(getReplaceMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void remove(org.listware.sdk.pbcmdb.Core.Request request,
         io.grpc.stub.StreamObserver<org.listware.sdk.pbcmdb.Core.Response> responseObserver) {
       asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
@@ -234,6 +273,13 @@ public final class VertexServiceGrpc {
                 org.listware.sdk.pbcmdb.Core.Request,
                 org.listware.sdk.pbcmdb.Core.Response>(
                   this, METHODID_UPDATE)))
+          .addMethod(
+            getReplaceMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.listware.sdk.pbcmdb.Core.Request,
+                org.listware.sdk.pbcmdb.Core.Response>(
+                  this, METHODID_REPLACE)))
           .addMethod(
             getRemoveMethod(),
             asyncUnaryCall(
@@ -289,6 +335,14 @@ public final class VertexServiceGrpc {
 
     /**
      */
+    public void replace(org.listware.sdk.pbcmdb.Core.Request request,
+        io.grpc.stub.StreamObserver<org.listware.sdk.pbcmdb.Core.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getReplaceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void remove(org.listware.sdk.pbcmdb.Core.Request request,
         io.grpc.stub.StreamObserver<org.listware.sdk.pbcmdb.Core.Response> responseObserver) {
       asyncUnaryCall(
@@ -333,6 +387,13 @@ public final class VertexServiceGrpc {
     public org.listware.sdk.pbcmdb.Core.Response update(org.listware.sdk.pbcmdb.Core.Request request) {
       return blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.listware.sdk.pbcmdb.Core.Response replace(org.listware.sdk.pbcmdb.Core.Request request) {
+      return blockingUnaryCall(
+          getChannel(), getReplaceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -387,6 +448,14 @@ public final class VertexServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<org.listware.sdk.pbcmdb.Core.Response> replace(
+        org.listware.sdk.pbcmdb.Core.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(getReplaceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<org.listware.sdk.pbcmdb.Core.Response> remove(
         org.listware.sdk.pbcmdb.Core.Request request) {
       return futureUnaryCall(
@@ -397,7 +466,8 @@ public final class VertexServiceGrpc {
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_READ = 1;
   private static final int METHODID_UPDATE = 2;
-  private static final int METHODID_REMOVE = 3;
+  private static final int METHODID_REPLACE = 3;
+  private static final int METHODID_REMOVE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -426,6 +496,10 @@ public final class VertexServiceGrpc {
           break;
         case METHODID_UPDATE:
           serviceImpl.update((org.listware.sdk.pbcmdb.Core.Request) request,
+              (io.grpc.stub.StreamObserver<org.listware.sdk.pbcmdb.Core.Response>) responseObserver);
+          break;
+        case METHODID_REPLACE:
+          serviceImpl.replace((org.listware.sdk.pbcmdb.Core.Request) request,
               (io.grpc.stub.StreamObserver<org.listware.sdk.pbcmdb.Core.Response>) responseObserver);
           break;
         case METHODID_REMOVE:
@@ -496,6 +570,7 @@ public final class VertexServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getReadMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getReplaceMethod())
               .addMethod(getRemoveMethod())
               .build();
         }

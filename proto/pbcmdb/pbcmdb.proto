@@ -17,9 +17,10 @@ enum Method {
 	CREATE = 0;
 	CREATE_CHILD = 1;
 	UPDATE = 2;
-	DELETE = 3;
-	CREATE_TRIGGER = 4;
-	DELETE_TRIGGER = 5;
+	REPLACE = 3;
+	DELETE = 4;
+	CREATE_TRIGGER = 5;
+	DELETE_TRIGGER = 6;
 }
 
 message ObjectMessage {
