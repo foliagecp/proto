@@ -13,10 +13,23 @@ message ReplyResult {
 	string topic = 2;
 	string id = 3;
 	string key = 4;
+	bool egress = 5;
 }
 
 message FunctionResult {
 	ReplyResult reply_egress = 1;
 	bool complete = 2;
 	repeated string errors = 3;
+}
+
+message ErrorContainer {
+	repeated string errors = 1;
+    bool complete = 2;
+}
+
+message SyncTable {
+	map<string, ReplyResult> reply_table = 1;
+	map<string, ErrorContainer> errors_table = 2;
+	map<string, string> result_table = 3;
+
 }
