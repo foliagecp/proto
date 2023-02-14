@@ -57,6 +57,11 @@ public final class Result {
      */
     com.google.protobuf.ByteString
         getKeyBytes();
+
+    /**
+     * <code>bool egress = 5;</code>
+     */
+    boolean getEgress();
   }
   /**
    * Protobuf type {@code org.listware.sdk.pbtypes.ReplyResult}
@@ -123,6 +128,11 @@ public final class Result {
               java.lang.String s = input.readStringRequireUtf8();
 
               key_ = s;
+              break;
+            }
+            case 40: {
+
+              egress_ = input.readBool();
               break;
             }
             default: {
@@ -293,6 +303,15 @@ public final class Result {
       }
     }
 
+    public static final int EGRESS_FIELD_NUMBER = 5;
+    private boolean egress_;
+    /**
+     * <code>bool egress = 5;</code>
+     */
+    public boolean getEgress() {
+      return egress_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -319,6 +338,9 @@ public final class Result {
       if (!getKeyBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, key_);
       }
+      if (egress_ != false) {
+        output.writeBool(5, egress_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -339,6 +361,10 @@ public final class Result {
       }
       if (!getKeyBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, key_);
+      }
+      if (egress_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, egress_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -363,6 +389,8 @@ public final class Result {
           .equals(other.getId())) return false;
       if (!getKey()
           .equals(other.getKey())) return false;
+      if (getEgress()
+          != other.getEgress()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -382,6 +410,9 @@ public final class Result {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + EGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEgress());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -523,6 +554,8 @@ public final class Result {
 
         key_ = "";
 
+        egress_ = false;
+
         return this;
       }
 
@@ -553,6 +586,7 @@ public final class Result {
         result.topic_ = topic_;
         result.id_ = id_;
         result.key_ = key_;
+        result.egress_ = egress_;
         onBuilt();
         return result;
       }
@@ -616,6 +650,9 @@ public final class Result {
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
           onChanged();
+        }
+        if (other.getEgress() != false) {
+          setEgress(other.getEgress());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -918,6 +955,32 @@ public final class Result {
   checkByteStringIsUtf8(value);
         
         key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean egress_ ;
+      /**
+       * <code>bool egress = 5;</code>
+       */
+      public boolean getEgress() {
+        return egress_;
+      }
+      /**
+       * <code>bool egress = 5;</code>
+       */
+      public Builder setEgress(boolean value) {
+        
+        egress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool egress = 5;</code>
+       */
+      public Builder clearEgress() {
+        
+        egress_ = false;
         onChanged();
         return this;
       }
@@ -1837,6 +1900,1954 @@ public final class Result {
 
   }
 
+  public interface ErrorContainerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbtypes.ErrorContainer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    java.util.List<java.lang.String>
+        getErrorsList();
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    int getErrorsCount();
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    java.lang.String getErrors(int index);
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getErrorsBytes(int index);
+
+    /**
+     * <code>bool complete = 2;</code>
+     */
+    boolean getComplete();
+  }
+  /**
+   * Protobuf type {@code org.listware.sdk.pbtypes.ErrorContainer}
+   */
+  public  static final class ErrorContainer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbtypes.ErrorContainer)
+      ErrorContainerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ErrorContainer.newBuilder() to construct.
+    private ErrorContainer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ErrorContainer() {
+      errors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ErrorContainer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                errors_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              errors_.add(s);
+              break;
+            }
+            case 16: {
+
+              complete_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          errors_ = errors_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_ErrorContainer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_ErrorContainer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.listware.sdk.Result.ErrorContainer.class, org.listware.sdk.Result.ErrorContainer.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ERRORS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList errors_;
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getErrorsList() {
+      return errors_;
+    }
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    public int getErrorsCount() {
+      return errors_.size();
+    }
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    public java.lang.String getErrors(int index) {
+      return errors_.get(index);
+    }
+    /**
+     * <code>repeated string errors = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getErrorsBytes(int index) {
+      return errors_.getByteString(index);
+    }
+
+    public static final int COMPLETE_FIELD_NUMBER = 2;
+    private boolean complete_;
+    /**
+     * <code>bool complete = 2;</code>
+     */
+    public boolean getComplete() {
+      return complete_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < errors_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, errors_.getRaw(i));
+      }
+      if (complete_ != false) {
+        output.writeBool(2, complete_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < errors_.size(); i++) {
+          dataSize += computeStringSizeNoTag(errors_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getErrorsList().size();
+      }
+      if (complete_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, complete_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.listware.sdk.Result.ErrorContainer)) {
+        return super.equals(obj);
+      }
+      org.listware.sdk.Result.ErrorContainer other = (org.listware.sdk.Result.ErrorContainer) obj;
+
+      if (!getErrorsList()
+          .equals(other.getErrorsList())) return false;
+      if (getComplete()
+          != other.getComplete()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getErrorsCount() > 0) {
+        hash = (37 * hash) + ERRORS_FIELD_NUMBER;
+        hash = (53 * hash) + getErrorsList().hashCode();
+      }
+      hash = (37 * hash) + COMPLETE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getComplete());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.Result.ErrorContainer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.listware.sdk.Result.ErrorContainer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.listware.sdk.pbtypes.ErrorContainer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbtypes.ErrorContainer)
+        org.listware.sdk.Result.ErrorContainerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_ErrorContainer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_ErrorContainer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.listware.sdk.Result.ErrorContainer.class, org.listware.sdk.Result.ErrorContainer.Builder.class);
+      }
+
+      // Construct using org.listware.sdk.Result.ErrorContainer.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        errors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        complete_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_ErrorContainer_descriptor;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.Result.ErrorContainer getDefaultInstanceForType() {
+        return org.listware.sdk.Result.ErrorContainer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.Result.ErrorContainer build() {
+        org.listware.sdk.Result.ErrorContainer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.Result.ErrorContainer buildPartial() {
+        org.listware.sdk.Result.ErrorContainer result = new org.listware.sdk.Result.ErrorContainer(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          errors_ = errors_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.errors_ = errors_;
+        result.complete_ = complete_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.listware.sdk.Result.ErrorContainer) {
+          return mergeFrom((org.listware.sdk.Result.ErrorContainer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.listware.sdk.Result.ErrorContainer other) {
+        if (other == org.listware.sdk.Result.ErrorContainer.getDefaultInstance()) return this;
+        if (!other.errors_.isEmpty()) {
+          if (errors_.isEmpty()) {
+            errors_ = other.errors_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureErrorsIsMutable();
+            errors_.addAll(other.errors_);
+          }
+          onChanged();
+        }
+        if (other.getComplete() != false) {
+          setComplete(other.getComplete());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.listware.sdk.Result.ErrorContainer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.listware.sdk.Result.ErrorContainer) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList errors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureErrorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          errors_ = new com.google.protobuf.LazyStringArrayList(errors_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getErrorsList() {
+        return errors_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public int getErrorsCount() {
+        return errors_.size();
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public java.lang.String getErrors(int index) {
+        return errors_.get(index);
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getErrorsBytes(int index) {
+        return errors_.getByteString(index);
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public Builder setErrors(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureErrorsIsMutable();
+        errors_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public Builder addErrors(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureErrorsIsMutable();
+        errors_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public Builder addAllErrors(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureErrorsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, errors_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public Builder clearErrors() {
+        errors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string errors = 1;</code>
+       */
+      public Builder addErrorsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureErrorsIsMutable();
+        errors_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean complete_ ;
+      /**
+       * <code>bool complete = 2;</code>
+       */
+      public boolean getComplete() {
+        return complete_;
+      }
+      /**
+       * <code>bool complete = 2;</code>
+       */
+      public Builder setComplete(boolean value) {
+        
+        complete_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool complete = 2;</code>
+       */
+      public Builder clearComplete() {
+        
+        complete_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbtypes.ErrorContainer)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbtypes.ErrorContainer)
+    private static final org.listware.sdk.Result.ErrorContainer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.listware.sdk.Result.ErrorContainer();
+    }
+
+    public static org.listware.sdk.Result.ErrorContainer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ErrorContainer>
+        PARSER = new com.google.protobuf.AbstractParser<ErrorContainer>() {
+      @java.lang.Override
+      public ErrorContainer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ErrorContainer(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ErrorContainer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ErrorContainer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.listware.sdk.Result.ErrorContainer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SyncTableOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.listware.sdk.pbtypes.SyncTable)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+    int getReplyTableCount();
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+    boolean containsReplyTable(
+        java.lang.String key);
+    /**
+     * Use {@link #getReplyTableMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult>
+    getReplyTable();
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+    java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult>
+    getReplyTableMap();
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+
+    org.listware.sdk.Result.ReplyResult getReplyTableOrDefault(
+        java.lang.String key,
+        org.listware.sdk.Result.ReplyResult defaultValue);
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+
+    org.listware.sdk.Result.ReplyResult getReplyTableOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+    int getErrorsTableCount();
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+    boolean containsErrorsTable(
+        java.lang.String key);
+    /**
+     * Use {@link #getErrorsTableMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+    getErrorsTable();
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+    java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+    getErrorsTableMap();
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+
+    org.listware.sdk.Result.ErrorContainer getErrorsTableOrDefault(
+        java.lang.String key,
+        org.listware.sdk.Result.ErrorContainer defaultValue);
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+
+    org.listware.sdk.Result.ErrorContainer getErrorsTableOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+    int getResultTableCount();
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+    boolean containsResultTable(
+        java.lang.String key);
+    /**
+     * Use {@link #getResultTableMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getResultTable();
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getResultTableMap();
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+
+    java.lang.String getResultTableOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+
+    java.lang.String getResultTableOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code org.listware.sdk.pbtypes.SyncTable}
+   */
+  public  static final class SyncTable extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:org.listware.sdk.pbtypes.SyncTable)
+      SyncTableOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SyncTable.newBuilder() to construct.
+    private SyncTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SyncTable() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SyncTable(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                replyTable_ = com.google.protobuf.MapField.newMapField(
+                    ReplyTableDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.listware.sdk.Result.ReplyResult>
+              replyTable__ = input.readMessage(
+                  ReplyTableDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              replyTable_.getMutableMap().put(
+                  replyTable__.getKey(), replyTable__.getValue());
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                errorsTable_ = com.google.protobuf.MapField.newMapField(
+                    ErrorsTableDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+              errorsTable__ = input.readMessage(
+                  ErrorsTableDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              errorsTable_.getMutableMap().put(
+                  errorsTable__.getKey(), errorsTable__.getValue());
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                resultTable_ = com.google.protobuf.MapField.newMapField(
+                    ResultTableDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              resultTable__ = input.readMessage(
+                  ResultTableDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              resultTable_.getMutableMap().put(
+                  resultTable__.getKey(), resultTable__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetReplyTable();
+        case 2:
+          return internalGetErrorsTable();
+        case 3:
+          return internalGetResultTable();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.listware.sdk.Result.SyncTable.class, org.listware.sdk.Result.SyncTable.Builder.class);
+    }
+
+    public static final int REPLY_TABLE_FIELD_NUMBER = 1;
+    private static final class ReplyTableDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.listware.sdk.Result.ReplyResult> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.listware.sdk.Result.ReplyResult>newDefaultInstance(
+                  org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_ReplyTableEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.listware.sdk.Result.ReplyResult.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.listware.sdk.Result.ReplyResult> replyTable_;
+    private com.google.protobuf.MapField<java.lang.String, org.listware.sdk.Result.ReplyResult>
+    internalGetReplyTable() {
+      if (replyTable_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ReplyTableDefaultEntryHolder.defaultEntry);
+      }
+      return replyTable_;
+    }
+
+    public int getReplyTableCount() {
+      return internalGetReplyTable().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+
+    public boolean containsReplyTable(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetReplyTable().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getReplyTableMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> getReplyTable() {
+      return getReplyTableMap();
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> getReplyTableMap() {
+      return internalGetReplyTable().getMap();
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+
+    public org.listware.sdk.Result.ReplyResult getReplyTableOrDefault(
+        java.lang.String key,
+        org.listware.sdk.Result.ReplyResult defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> map =
+          internalGetReplyTable().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+     */
+
+    public org.listware.sdk.Result.ReplyResult getReplyTableOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> map =
+          internalGetReplyTable().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int ERRORS_TABLE_FIELD_NUMBER = 2;
+    private static final class ErrorsTableDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, org.listware.sdk.Result.ErrorContainer> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, org.listware.sdk.Result.ErrorContainer>newDefaultInstance(
+                  org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_ErrorsTableEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  org.listware.sdk.Result.ErrorContainer.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, org.listware.sdk.Result.ErrorContainer> errorsTable_;
+    private com.google.protobuf.MapField<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+    internalGetErrorsTable() {
+      if (errorsTable_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ErrorsTableDefaultEntryHolder.defaultEntry);
+      }
+      return errorsTable_;
+    }
+
+    public int getErrorsTableCount() {
+      return internalGetErrorsTable().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+
+    public boolean containsErrorsTable(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetErrorsTable().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getErrorsTableMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> getErrorsTable() {
+      return getErrorsTableMap();
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> getErrorsTableMap() {
+      return internalGetErrorsTable().getMap();
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+
+    public org.listware.sdk.Result.ErrorContainer getErrorsTableOrDefault(
+        java.lang.String key,
+        org.listware.sdk.Result.ErrorContainer defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> map =
+          internalGetErrorsTable().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+     */
+
+    public org.listware.sdk.Result.ErrorContainer getErrorsTableOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> map =
+          internalGetErrorsTable().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int RESULT_TABLE_FIELD_NUMBER = 3;
+    private static final class ResultTableDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_ResultTableEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> resultTable_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetResultTable() {
+      if (resultTable_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ResultTableDefaultEntryHolder.defaultEntry);
+      }
+      return resultTable_;
+    }
+
+    public int getResultTableCount() {
+      return internalGetResultTable().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+
+    public boolean containsResultTable(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetResultTable().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getResultTableMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getResultTable() {
+      return getResultTableMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getResultTableMap() {
+      return internalGetResultTable().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+
+    public java.lang.String getResultTableOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetResultTable().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; result_table = 3;</code>
+     */
+
+    public java.lang.String getResultTableOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetResultTable().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetReplyTable(),
+          ReplyTableDefaultEntryHolder.defaultEntry,
+          1);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetErrorsTable(),
+          ErrorsTableDefaultEntryHolder.defaultEntry,
+          2);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetResultTable(),
+          ResultTableDefaultEntryHolder.defaultEntry,
+          3);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, org.listware.sdk.Result.ReplyResult> entry
+           : internalGetReplyTable().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.listware.sdk.Result.ReplyResult>
+        replyTable__ = ReplyTableDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, replyTable__);
+      }
+      for (java.util.Map.Entry<java.lang.String, org.listware.sdk.Result.ErrorContainer> entry
+           : internalGetErrorsTable().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+        errorsTable__ = ErrorsTableDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, errorsTable__);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetResultTable().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        resultTable__ = ResultTableDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, resultTable__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.listware.sdk.Result.SyncTable)) {
+        return super.equals(obj);
+      }
+      org.listware.sdk.Result.SyncTable other = (org.listware.sdk.Result.SyncTable) obj;
+
+      if (!internalGetReplyTable().equals(
+          other.internalGetReplyTable())) return false;
+      if (!internalGetErrorsTable().equals(
+          other.internalGetErrorsTable())) return false;
+      if (!internalGetResultTable().equals(
+          other.internalGetResultTable())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetReplyTable().getMap().isEmpty()) {
+        hash = (37 * hash) + REPLY_TABLE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetReplyTable().hashCode();
+      }
+      if (!internalGetErrorsTable().getMap().isEmpty()) {
+        hash = (37 * hash) + ERRORS_TABLE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetErrorsTable().hashCode();
+      }
+      if (!internalGetResultTable().getMap().isEmpty()) {
+        hash = (37 * hash) + RESULT_TABLE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetResultTable().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.SyncTable parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.Result.SyncTable parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.listware.sdk.Result.SyncTable parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.listware.sdk.Result.SyncTable prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.listware.sdk.pbtypes.SyncTable}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.listware.sdk.pbtypes.SyncTable)
+        org.listware.sdk.Result.SyncTableOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetReplyTable();
+          case 2:
+            return internalGetErrorsTable();
+          case 3:
+            return internalGetResultTable();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableReplyTable();
+          case 2:
+            return internalGetMutableErrorsTable();
+          case 3:
+            return internalGetMutableResultTable();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.listware.sdk.Result.SyncTable.class, org.listware.sdk.Result.SyncTable.Builder.class);
+      }
+
+      // Construct using org.listware.sdk.Result.SyncTable.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableReplyTable().clear();
+        internalGetMutableErrorsTable().clear();
+        internalGetMutableResultTable().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.listware.sdk.Result.internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.Result.SyncTable getDefaultInstanceForType() {
+        return org.listware.sdk.Result.SyncTable.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.Result.SyncTable build() {
+        org.listware.sdk.Result.SyncTable result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.listware.sdk.Result.SyncTable buildPartial() {
+        org.listware.sdk.Result.SyncTable result = new org.listware.sdk.Result.SyncTable(this);
+        int from_bitField0_ = bitField0_;
+        result.replyTable_ = internalGetReplyTable();
+        result.replyTable_.makeImmutable();
+        result.errorsTable_ = internalGetErrorsTable();
+        result.errorsTable_.makeImmutable();
+        result.resultTable_ = internalGetResultTable();
+        result.resultTable_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.listware.sdk.Result.SyncTable) {
+          return mergeFrom((org.listware.sdk.Result.SyncTable)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.listware.sdk.Result.SyncTable other) {
+        if (other == org.listware.sdk.Result.SyncTable.getDefaultInstance()) return this;
+        internalGetMutableReplyTable().mergeFrom(
+            other.internalGetReplyTable());
+        internalGetMutableErrorsTable().mergeFrom(
+            other.internalGetErrorsTable());
+        internalGetMutableResultTable().mergeFrom(
+            other.internalGetResultTable());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.listware.sdk.Result.SyncTable parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.listware.sdk.Result.SyncTable) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.listware.sdk.Result.ReplyResult> replyTable_;
+      private com.google.protobuf.MapField<java.lang.String, org.listware.sdk.Result.ReplyResult>
+      internalGetReplyTable() {
+        if (replyTable_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ReplyTableDefaultEntryHolder.defaultEntry);
+        }
+        return replyTable_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.listware.sdk.Result.ReplyResult>
+      internalGetMutableReplyTable() {
+        onChanged();;
+        if (replyTable_ == null) {
+          replyTable_ = com.google.protobuf.MapField.newMapField(
+              ReplyTableDefaultEntryHolder.defaultEntry);
+        }
+        if (!replyTable_.isMutable()) {
+          replyTable_ = replyTable_.copy();
+        }
+        return replyTable_;
+      }
+
+      public int getReplyTableCount() {
+        return internalGetReplyTable().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+       */
+
+      public boolean containsReplyTable(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetReplyTable().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getReplyTableMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> getReplyTable() {
+        return getReplyTableMap();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> getReplyTableMap() {
+        return internalGetReplyTable().getMap();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+       */
+
+      public org.listware.sdk.Result.ReplyResult getReplyTableOrDefault(
+          java.lang.String key,
+          org.listware.sdk.Result.ReplyResult defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> map =
+            internalGetReplyTable().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+       */
+
+      public org.listware.sdk.Result.ReplyResult getReplyTableOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> map =
+            internalGetReplyTable().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearReplyTable() {
+        internalGetMutableReplyTable().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+       */
+
+      public Builder removeReplyTable(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableReplyTable().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult>
+      getMutableReplyTable() {
+        return internalGetMutableReplyTable().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+       */
+      public Builder putReplyTable(
+          java.lang.String key,
+          org.listware.sdk.Result.ReplyResult value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableReplyTable().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ReplyResult&gt; reply_table = 1;</code>
+       */
+
+      public Builder putAllReplyTable(
+          java.util.Map<java.lang.String, org.listware.sdk.Result.ReplyResult> values) {
+        internalGetMutableReplyTable().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, org.listware.sdk.Result.ErrorContainer> errorsTable_;
+      private com.google.protobuf.MapField<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+      internalGetErrorsTable() {
+        if (errorsTable_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ErrorsTableDefaultEntryHolder.defaultEntry);
+        }
+        return errorsTable_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+      internalGetMutableErrorsTable() {
+        onChanged();;
+        if (errorsTable_ == null) {
+          errorsTable_ = com.google.protobuf.MapField.newMapField(
+              ErrorsTableDefaultEntryHolder.defaultEntry);
+        }
+        if (!errorsTable_.isMutable()) {
+          errorsTable_ = errorsTable_.copy();
+        }
+        return errorsTable_;
+      }
+
+      public int getErrorsTableCount() {
+        return internalGetErrorsTable().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+       */
+
+      public boolean containsErrorsTable(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetErrorsTable().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getErrorsTableMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> getErrorsTable() {
+        return getErrorsTableMap();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> getErrorsTableMap() {
+        return internalGetErrorsTable().getMap();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+       */
+
+      public org.listware.sdk.Result.ErrorContainer getErrorsTableOrDefault(
+          java.lang.String key,
+          org.listware.sdk.Result.ErrorContainer defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> map =
+            internalGetErrorsTable().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+       */
+
+      public org.listware.sdk.Result.ErrorContainer getErrorsTableOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> map =
+            internalGetErrorsTable().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearErrorsTable() {
+        internalGetMutableErrorsTable().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+       */
+
+      public Builder removeErrorsTable(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableErrorsTable().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer>
+      getMutableErrorsTable() {
+        return internalGetMutableErrorsTable().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+       */
+      public Builder putErrorsTable(
+          java.lang.String key,
+          org.listware.sdk.Result.ErrorContainer value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableErrorsTable().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .org.listware.sdk.pbtypes.ErrorContainer&gt; errors_table = 2;</code>
+       */
+
+      public Builder putAllErrorsTable(
+          java.util.Map<java.lang.String, org.listware.sdk.Result.ErrorContainer> values) {
+        internalGetMutableErrorsTable().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> resultTable_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetResultTable() {
+        if (resultTable_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ResultTableDefaultEntryHolder.defaultEntry);
+        }
+        return resultTable_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableResultTable() {
+        onChanged();;
+        if (resultTable_ == null) {
+          resultTable_ = com.google.protobuf.MapField.newMapField(
+              ResultTableDefaultEntryHolder.defaultEntry);
+        }
+        if (!resultTable_.isMutable()) {
+          resultTable_ = resultTable_.copy();
+        }
+        return resultTable_;
+      }
+
+      public int getResultTableCount() {
+        return internalGetResultTable().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; result_table = 3;</code>
+       */
+
+      public boolean containsResultTable(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetResultTable().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getResultTableMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getResultTable() {
+        return getResultTableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; result_table = 3;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getResultTableMap() {
+        return internalGetResultTable().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; result_table = 3;</code>
+       */
+
+      public java.lang.String getResultTableOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetResultTable().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; result_table = 3;</code>
+       */
+
+      public java.lang.String getResultTableOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetResultTable().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearResultTable() {
+        internalGetMutableResultTable().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; result_table = 3;</code>
+       */
+
+      public Builder removeResultTable(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableResultTable().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableResultTable() {
+        return internalGetMutableResultTable().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; result_table = 3;</code>
+       */
+      public Builder putResultTable(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableResultTable().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; result_table = 3;</code>
+       */
+
+      public Builder putAllResultTable(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableResultTable().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:org.listware.sdk.pbtypes.SyncTable)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.listware.sdk.pbtypes.SyncTable)
+    private static final org.listware.sdk.Result.SyncTable DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.listware.sdk.Result.SyncTable();
+    }
+
+    public static org.listware.sdk.Result.SyncTable getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SyncTable>
+        PARSER = new com.google.protobuf.AbstractParser<SyncTable>() {
+      @java.lang.Override
+      public SyncTable parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SyncTable(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SyncTable> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SyncTable> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.listware.sdk.Result.SyncTable getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_org_listware_sdk_pbtypes_ReplyResult_descriptor;
   private static final 
@@ -1847,6 +3858,31 @@ public final class Result {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_org_listware_sdk_pbtypes_FunctionResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbtypes_ErrorContainer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbtypes_ErrorContainer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbtypes_SyncTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ReplyTableEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbtypes_SyncTable_ReplyTableEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ErrorsTableEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbtypes_SyncTable_ErrorsTableEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ResultTableEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_org_listware_sdk_pbtypes_SyncTable_ResultTableEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1857,13 +3893,27 @@ public final class Result {
   static {
     java.lang.String[] descriptorData = {
       "\n\026pbtypes/pbresult.proto\022\030org.listware.s" +
-      "dk.pbtypes\"H\n\013ReplyResult\022\021\n\tnamespace\030\001" +
+      "dk.pbtypes\"X\n\013ReplyResult\022\021\n\tnamespace\030\001" +
       " \001(\t\022\r\n\005topic\030\002 \001(\t\022\n\n\002id\030\003 \001(\t\022\013\n\003key\030\004" +
-      " \001(\t\"o\n\016FunctionResult\022;\n\014reply_egress\030\001" +
-      " \001(\0132%.org.listware.sdk.pbtypes.ReplyRes" +
-      "ult\022\020\n\010complete\030\002 \001(\010\022\016\n\006errors\030\003 \003(\tBE\n" +
-      "\020org.listware.sdkB\006ResultZ)git.fg-tech.r" +
-      "u/listware/proto/sdk/pbtypesb\006proto3"
+      " \001(\t\022\016\n\006egress\030\005 \001(\010\"o\n\016FunctionResult\022;" +
+      "\n\014reply_egress\030\001 \001(\0132%.org.listware.sdk." +
+      "pbtypes.ReplyResult\022\020\n\010complete\030\002 \001(\010\022\016\n" +
+      "\006errors\030\003 \003(\t\"2\n\016ErrorContainer\022\016\n\006error" +
+      "s\030\001 \003(\t\022\020\n\010complete\030\002 \001(\010\"\331\003\n\tSyncTable\022" +
+      "H\n\013reply_table\030\001 \003(\01323.org.listware.sdk." +
+      "pbtypes.SyncTable.ReplyTableEntry\022J\n\014err" +
+      "ors_table\030\002 \003(\01324.org.listware.sdk.pbtyp" +
+      "es.SyncTable.ErrorsTableEntry\022J\n\014result_" +
+      "table\030\003 \003(\01324.org.listware.sdk.pbtypes.S" +
+      "yncTable.ResultTableEntry\032X\n\017ReplyTableE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\0224\n\005value\030\002 \001(\0132%.org.l" +
+      "istware.sdk.pbtypes.ReplyResult:\0028\001\032\\\n\020E" +
+      "rrorsTableEntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030\002 " +
+      "\001(\0132(.org.listware.sdk.pbtypes.ErrorCont" +
+      "ainer:\0028\001\0322\n\020ResultTableEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001BE\n\020org.listware.sd" +
+      "kB\006ResultZ)git.fg-tech.ru/listware/proto" +
+      "/sdk/pbtypesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1882,13 +3932,43 @@ public final class Result {
     internal_static_org_listware_sdk_pbtypes_ReplyResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbtypes_ReplyResult_descriptor,
-        new java.lang.String[] { "Namespace", "Topic", "Id", "Key", });
+        new java.lang.String[] { "Namespace", "Topic", "Id", "Key", "Egress", });
     internal_static_org_listware_sdk_pbtypes_FunctionResult_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_org_listware_sdk_pbtypes_FunctionResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbtypes_FunctionResult_descriptor,
         new java.lang.String[] { "ReplyEgress", "Complete", "Errors", });
+    internal_static_org_listware_sdk_pbtypes_ErrorContainer_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_org_listware_sdk_pbtypes_ErrorContainer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbtypes_ErrorContainer_descriptor,
+        new java.lang.String[] { "Errors", "Complete", });
+    internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_org_listware_sdk_pbtypes_SyncTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor,
+        new java.lang.String[] { "ReplyTable", "ErrorsTable", "ResultTable", });
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ReplyTableEntry_descriptor =
+      internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor.getNestedTypes().get(0);
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ReplyTableEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbtypes_SyncTable_ReplyTableEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ErrorsTableEntry_descriptor =
+      internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor.getNestedTypes().get(1);
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ErrorsTableEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbtypes_SyncTable_ErrorsTableEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ResultTableEntry_descriptor =
+      internal_static_org_listware_sdk_pbtypes_SyncTable_descriptor.getNestedTypes().get(2);
+    internal_static_org_listware_sdk_pbtypes_SyncTable_ResultTableEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_org_listware_sdk_pbtypes_SyncTable_ResultTableEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
