@@ -1630,6 +1630,11 @@ public final class Functions {
      */
     org.listware.sdk.Functions.FunctionParameterOrBuilder getParamsOrBuilder(
         int index);
+
+    /**
+     * <code>bool grounded = 4;</code>
+     */
+    boolean getGrounded();
   }
   /**
    * <pre>
@@ -1702,6 +1707,11 @@ public final class Functions {
               }
               params_.add(
                   input.readMessage(org.listware.sdk.Functions.FunctionParameter.parser(), extensionRegistry));
+              break;
+            }
+            case 32: {
+
+              grounded_ = input.readBool();
               break;
             }
             default: {
@@ -1830,6 +1840,15 @@ public final class Functions {
       return params_.get(index);
     }
 
+    public static final int GROUNDED_FIELD_NUMBER = 4;
+    private boolean grounded_;
+    /**
+     * <code>bool grounded = 4;</code>
+     */
+    public boolean getGrounded() {
+      return grounded_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1853,6 +1872,9 @@ public final class Functions {
       for (int i = 0; i < params_.size(); i++) {
         output.writeMessage(3, params_.get(i));
       }
+      if (grounded_ != false) {
+        output.writeBool(4, grounded_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1872,6 +1894,10 @@ public final class Functions {
       for (int i = 0; i < params_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, params_.get(i));
+      }
+      if (grounded_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, grounded_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1897,6 +1923,8 @@ public final class Functions {
           .equals(other.getDescription())) return false;
       if (!getParamsList()
           .equals(other.getParamsList())) return false;
+      if (getGrounded()
+          != other.getGrounded()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1918,6 +1946,9 @@ public final class Functions {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParamsList().hashCode();
       }
+      hash = (37 * hash) + GROUNDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getGrounded());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2070,6 +2101,8 @@ public final class Functions {
         } else {
           paramsBuilder_.clear();
         }
+        grounded_ = false;
+
         return this;
       }
 
@@ -2113,6 +2146,7 @@ public final class Functions {
         } else {
           result.params_ = paramsBuilder_.build();
         }
+        result.grounded_ = grounded_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2194,6 +2228,9 @@ public final class Functions {
               paramsBuilder_.addAllMessages(other.params_);
             }
           }
+        }
+        if (other.getGrounded() != false) {
+          setGrounded(other.getGrounded());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2649,6 +2686,32 @@ public final class Functions {
           params_ = null;
         }
         return paramsBuilder_;
+      }
+
+      private boolean grounded_ ;
+      /**
+       * <code>bool grounded = 4;</code>
+       */
+      public boolean getGrounded() {
+        return grounded_;
+      }
+      /**
+       * <code>bool grounded = 4;</code>
+       */
+      public Builder setGrounded(boolean value) {
+        
+        grounded_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool grounded = 4;</code>
+       */
+      public Builder clearGrounded() {
+        
+        grounded_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3721,12 +3784,17 @@ public final class Functions {
         getUrlBytes();
 
     /**
-     * <code>bool execute_on_create = 2;</code>
+     * <code>bytes value = 2;</code>
+     */
+    com.google.protobuf.ByteString getValue();
+
+    /**
+     * <code>bool execute_on_create = 3;</code>
      */
     boolean getExecuteOnCreate();
 
     /**
-     * <code>bool execute_on_update = 3;</code>
+     * <code>bool execute_on_update = 4;</code>
      */
     boolean getExecuteOnUpdate();
   }
@@ -3748,6 +3816,7 @@ public final class Functions {
     }
     private FunctionRoute() {
       url_ = "";
+      value_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @java.lang.Override
@@ -3780,12 +3849,17 @@ public final class Functions {
               url_ = s;
               break;
             }
-            case 16: {
+            case 18: {
+
+              value_ = input.readBytes();
+              break;
+            }
+            case 24: {
 
               executeOnCreate_ = input.readBool();
               break;
             }
-            case 24: {
+            case 32: {
 
               executeOnUpdate_ = input.readBool();
               break;
@@ -3856,19 +3930,28 @@ public final class Functions {
       }
     }
 
-    public static final int EXECUTE_ON_CREATE_FIELD_NUMBER = 2;
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString value_;
+    /**
+     * <code>bytes value = 2;</code>
+     */
+    public com.google.protobuf.ByteString getValue() {
+      return value_;
+    }
+
+    public static final int EXECUTE_ON_CREATE_FIELD_NUMBER = 3;
     private boolean executeOnCreate_;
     /**
-     * <code>bool execute_on_create = 2;</code>
+     * <code>bool execute_on_create = 3;</code>
      */
     public boolean getExecuteOnCreate() {
       return executeOnCreate_;
     }
 
-    public static final int EXECUTE_ON_UPDATE_FIELD_NUMBER = 3;
+    public static final int EXECUTE_ON_UPDATE_FIELD_NUMBER = 4;
     private boolean executeOnUpdate_;
     /**
-     * <code>bool execute_on_update = 3;</code>
+     * <code>bool execute_on_update = 4;</code>
      */
     public boolean getExecuteOnUpdate() {
       return executeOnUpdate_;
@@ -3891,11 +3974,14 @@ public final class Functions {
       if (!getUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
       }
+      if (!value_.isEmpty()) {
+        output.writeBytes(2, value_);
+      }
       if (executeOnCreate_ != false) {
-        output.writeBool(2, executeOnCreate_);
+        output.writeBool(3, executeOnCreate_);
       }
       if (executeOnUpdate_ != false) {
-        output.writeBool(3, executeOnUpdate_);
+        output.writeBool(4, executeOnUpdate_);
       }
       unknownFields.writeTo(output);
     }
@@ -3909,13 +3995,17 @@ public final class Functions {
       if (!getUrlBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
       }
+      if (!value_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, value_);
+      }
       if (executeOnCreate_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, executeOnCreate_);
+          .computeBoolSize(3, executeOnCreate_);
       }
       if (executeOnUpdate_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, executeOnUpdate_);
+          .computeBoolSize(4, executeOnUpdate_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3934,6 +4024,8 @@ public final class Functions {
 
       if (!getUrl()
           .equals(other.getUrl())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
       if (getExecuteOnCreate()
           != other.getExecuteOnCreate()) return false;
       if (getExecuteOnUpdate()
@@ -3951,6 +4043,8 @@ public final class Functions {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
       hash = (37 * hash) + EXECUTE_ON_CREATE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExecuteOnCreate());
@@ -4096,6 +4190,8 @@ public final class Functions {
         super.clear();
         url_ = "";
 
+        value_ = com.google.protobuf.ByteString.EMPTY;
+
         executeOnCreate_ = false;
 
         executeOnUpdate_ = false;
@@ -4127,6 +4223,7 @@ public final class Functions {
       public org.listware.sdk.Functions.FunctionRoute buildPartial() {
         org.listware.sdk.Functions.FunctionRoute result = new org.listware.sdk.Functions.FunctionRoute(this);
         result.url_ = url_;
+        result.value_ = value_;
         result.executeOnCreate_ = executeOnCreate_;
         result.executeOnUpdate_ = executeOnUpdate_;
         onBuilt();
@@ -4180,6 +4277,9 @@ public final class Functions {
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
           onChanged();
+        }
+        if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
+          setValue(other.getValue());
         }
         if (other.getExecuteOnCreate() != false) {
           setExecuteOnCreate(other.getExecuteOnCreate());
@@ -4285,15 +4385,44 @@ public final class Functions {
         return this;
       }
 
+      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes value = 2;</code>
+       */
+      public com.google.protobuf.ByteString getValue() {
+        return value_;
+      }
+      /**
+       * <code>bytes value = 2;</code>
+       */
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes value = 2;</code>
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+
       private boolean executeOnCreate_ ;
       /**
-       * <code>bool execute_on_create = 2;</code>
+       * <code>bool execute_on_create = 3;</code>
        */
       public boolean getExecuteOnCreate() {
         return executeOnCreate_;
       }
       /**
-       * <code>bool execute_on_create = 2;</code>
+       * <code>bool execute_on_create = 3;</code>
        */
       public Builder setExecuteOnCreate(boolean value) {
         
@@ -4302,7 +4431,7 @@ public final class Functions {
         return this;
       }
       /**
-       * <code>bool execute_on_create = 2;</code>
+       * <code>bool execute_on_create = 3;</code>
        */
       public Builder clearExecuteOnCreate() {
         
@@ -4313,13 +4442,13 @@ public final class Functions {
 
       private boolean executeOnUpdate_ ;
       /**
-       * <code>bool execute_on_update = 3;</code>
+       * <code>bool execute_on_update = 4;</code>
        */
       public boolean getExecuteOnUpdate() {
         return executeOnUpdate_;
       }
       /**
-       * <code>bool execute_on_update = 3;</code>
+       * <code>bool execute_on_update = 4;</code>
        */
       public Builder setExecuteOnUpdate(boolean value) {
         
@@ -4328,7 +4457,7 @@ public final class Functions {
         return this;
       }
       /**
-       * <code>bool execute_on_update = 3;</code>
+       * <code>bool execute_on_update = 4;</code>
        */
       public Builder clearExecuteOnUpdate() {
         
@@ -5371,23 +5500,24 @@ public final class Functions {
       "\021\n\tnamespace\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"V\n\021Func" +
       "tionParameter\022\014\n\004type\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
       "\t\022%\n\007default\030\003 \001(\0132\024.google.protobuf.Any" +
-      "\"\233\001\n\010Function\022=\n\rfunction_type\030\001 \001(\0132&.o" +
+      "\"\255\001\n\010Function\022=\n\rfunction_type\030\001 \001(\0132&.o" +
       "rg.listware.sdk.pbtypes.FunctionType\022\023\n\013" +
       "description\030\002 \001(\t\022;\n\006params\030\003 \003(\0132+.org." +
-      "listware.sdk.pbtypes.FunctionParameter\"\250" +
-      "\001\n\017FunctionContext\022=\n\rfunction_type\030\001 \001(" +
-      "\0132&.org.listware.sdk.pbtypes.FunctionTyp" +
-      "e\022\n\n\002id\030\002 \001(\t\022\r\n\005value\030\003 \001(\014\022;\n\014reply_re" +
-      "sult\030\004 \001(\0132%.org.listware.sdk.pbtypes.Re" +
-      "plyResult\"R\n\rFunctionRoute\022\013\n\003url\030\001 \001(\t\022" +
-      "\031\n\021execute_on_create\030\002 \001(\010\022\031\n\021execute_on" +
-      "_update\030\003 \001(\010\"\234\001\n\017FunctionMessage\022=\n\rfun" +
-      "ction_type\030\001 \001(\0132&.org.listware.sdk.pbty" +
-      "pes.FunctionType\022\022\n\nmountpoint\030\002 \001(\t\0226\n\005" +
-      "route\030\003 \001(\0132\'.org.listware.sdk.pbtypes.F" +
-      "unctionRouteBH\n\020org.listware.sdkB\tFuncti" +
-      "onsZ)git.fg-tech.ru/listware/proto/sdk/p" +
-      "btypesb\006proto3"
+      "listware.sdk.pbtypes.FunctionParameter\022\020" +
+      "\n\010grounded\030\004 \001(\010\"\250\001\n\017FunctionContext\022=\n\r" +
+      "function_type\030\001 \001(\0132&.org.listware.sdk.p" +
+      "btypes.FunctionType\022\n\n\002id\030\002 \001(\t\022\r\n\005value" +
+      "\030\003 \001(\014\022;\n\014reply_result\030\004 \001(\0132%.org.listw" +
+      "are.sdk.pbtypes.ReplyResult\"a\n\rFunctionR" +
+      "oute\022\013\n\003url\030\001 \001(\t\022\r\n\005value\030\002 \001(\014\022\031\n\021exec" +
+      "ute_on_create\030\003 \001(\010\022\031\n\021execute_on_update" +
+      "\030\004 \001(\010\"\234\001\n\017FunctionMessage\022=\n\rfunction_t" +
+      "ype\030\001 \001(\0132&.org.listware.sdk.pbtypes.Fun" +
+      "ctionType\022\022\n\nmountpoint\030\002 \001(\t\0226\n\005route\030\003" +
+      " \001(\0132\'.org.listware.sdk.pbtypes.Function" +
+      "RouteBH\n\020org.listware.sdkB\tFunctionsZ)gi" +
+      "t.fg-tech.ru/listware/proto/sdk/pbtypesb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5420,7 +5550,7 @@ public final class Functions {
     internal_static_org_listware_sdk_pbtypes_Function_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbtypes_Function_descriptor,
-        new java.lang.String[] { "FunctionType", "Description", "Params", });
+        new java.lang.String[] { "FunctionType", "Description", "Params", "Grounded", });
     internal_static_org_listware_sdk_pbtypes_FunctionContext_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_org_listware_sdk_pbtypes_FunctionContext_fieldAccessorTable = new
@@ -5432,7 +5562,7 @@ public final class Functions {
     internal_static_org_listware_sdk_pbtypes_FunctionRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbtypes_FunctionRoute_descriptor,
-        new java.lang.String[] { "Url", "ExecuteOnCreate", "ExecuteOnUpdate", });
+        new java.lang.String[] { "Url", "Value", "ExecuteOnCreate", "ExecuteOnUpdate", });
     internal_static_org_listware_sdk_pbtypes_FunctionMessage_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_org_listware_sdk_pbtypes_FunctionMessage_fieldAccessorTable = new
