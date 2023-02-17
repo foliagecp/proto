@@ -30,6 +30,7 @@ message Function {
 	FunctionType function_type = 1;
 	string description = 2;
 	repeated FunctionParameter params = 3;
+	bool grounded = 4;
 }
 
 message FunctionContext {
@@ -42,8 +43,9 @@ message FunctionContext {
 // FunctionRoute - is a LinkMessage from cmdb.Object to Function
 message FunctionRoute {
 	string url = 1;
-	bool execute_on_create = 2;
-	bool execute_on_update = 3;
+	bytes value = 2;
+	bool execute_on_create = 3;
+	bool execute_on_update = 4;
 }
 
 message FunctionMessage {
