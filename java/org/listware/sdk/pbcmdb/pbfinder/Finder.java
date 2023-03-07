@@ -47,6 +47,16 @@ public final class Finder {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>string type = 4;</code>
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
   }
   /**
    * Protobuf type {@code org.listware.sdk.pbcmdb.pbfinder.Request}
@@ -64,6 +74,7 @@ public final class Finder {
       from_ = "";
       to_ = "";
       name_ = "";
+      type_ = "";
     }
 
     @java.lang.Override
@@ -106,6 +117,12 @@ public final class Finder {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
               break;
             }
             default: {
@@ -242,6 +259,40 @@ public final class Finder {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object type_;
+    /**
+     * <code>string type = 4;</code>
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -265,6 +316,9 @@ public final class Finder {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, type_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -282,6 +336,9 @@ public final class Finder {
       }
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -304,6 +361,8 @@ public final class Finder {
           .equals(other.getTo())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -321,6 +380,8 @@ public final class Finder {
       hash = (53 * hash) + getTo().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -460,6 +521,8 @@ public final class Finder {
 
         name_ = "";
 
+        type_ = "";
+
         return this;
       }
 
@@ -489,6 +552,7 @@ public final class Finder {
         result.from_ = from_;
         result.to_ = to_;
         result.name_ = name_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -547,6 +611,10 @@ public final class Finder {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -781,6 +849,75 @@ public final class Finder {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 4;</code>
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 4;</code>
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 4;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 4;</code>
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
         onChanged();
         return this;
       }
@@ -1639,12 +1776,12 @@ public final class Finder {
     java.lang.String[] descriptorData = {
       "\n\036pbcmdb/pbfinder/pbfinder.proto\022 org.li" +
       "stware.sdk.pbcmdb.pbfinder\032\023pbcmdb/pbcmd" +
-      "b.proto\"1\n\007Request\022\014\n\004from\030\001 \001(\t\022\n\n\002to\030\002" +
-      " \001(\t\022\014\n\004name\030\003 \001(\t\"<\n\010Response\0220\n\005Links\030" +
-      "\001 \003(\0132!.org.listware.sdk.pbcmdb.Response" +
-      "B]\n org.listware.sdk.pbcmdb.pbfinderB\006Fi" +
-      "nderZ1git.fg-tech.ru/listware/proto/sdk/" +
-      "pbcmdb/pbfinderb\006proto3"
+      "b.proto\"?\n\007Request\022\014\n\004from\030\001 \001(\t\022\n\n\002to\030\002" +
+      " \001(\t\022\014\n\004name\030\003 \001(\t\022\014\n\004type\030\004 \001(\t\"<\n\010Resp" +
+      "onse\0220\n\005Links\030\001 \003(\0132!.org.listware.sdk.p" +
+      "bcmdb.ResponseB]\n org.listware.sdk.pbcmd" +
+      "b.pbfinderB\006FinderZ1git.fg-tech.ru/listw" +
+      "are/proto/sdk/pbcmdb/pbfinderb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1664,7 +1801,7 @@ public final class Finder {
     internal_static_org_listware_sdk_pbcmdb_pbfinder_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_listware_sdk_pbcmdb_pbfinder_Request_descriptor,
-        new java.lang.String[] { "From", "To", "Name", });
+        new java.lang.String[] { "From", "To", "Name", "Type", });
     internal_static_org_listware_sdk_pbcmdb_pbfinder_Response_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_org_listware_sdk_pbcmdb_pbfinder_Response_fieldAccessorTable = new
